@@ -22,6 +22,7 @@ import FlagIcon from "../components/FlagIcon";
 import { getAllTeams } from "../utils/countryUtils";
 import { sortByDateTime } from "../utils/dateUtils";
 
+//version 01
 /* ── Constants ─────────────────────────────────────────── */
 const TOURNAMENT_START = "2026-06-12";
 const TOURNAMENT_END = "2026-07-20";
