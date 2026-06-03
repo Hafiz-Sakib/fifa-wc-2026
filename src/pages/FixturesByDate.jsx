@@ -14,7 +14,7 @@ export default function FixturesByDate() {
   }, [selectedDate, groupedFixtures]);
 
   return (
-    <div style={{ background: "#050d0a", minHeight: "100vh" }}>
+    <div style={{ background: "var(--bg, #03080A)", minHeight: "100vh" }}>
       <div className="max-w-5xl mx-auto px-4 py-10">
         {/* Header */}
         <div className="mb-8">
@@ -28,7 +28,7 @@ export default function FixturesByDate() {
             >
               <CalendarDays size={18} style={{ color: "#69F0AE" }} />
             </div>
-            <h1 className="text-2xl font-bold text-white">Fixtures by Date</h1>
+            <h1 className="text-4xl text-white tracking-wide">Fixtures by Date</h1>
           </div>
           <p className="text-gray-400 text-sm pl-12">
             একটি তারিখ বেছে নিন এবং সেদিনের সব ম্যাচ দেখুন।
