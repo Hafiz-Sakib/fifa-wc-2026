@@ -1,17 +1,13 @@
 import React from "react";
 import { MapPin, Clock, Calendar } from "lucide-react";
 import FlagIcon from "./FlagIcon";
-import { formatDateCard, formatTime } from "../utils/dateUtils";
+import { formatDateCard, formatTime, getTimePeriod } from "../utils/dateUtils";
 import { isKnockoutRound, getGroupColorClass } from "../utils/countryUtils";
 
-/**
- * MatchCard – displays a single FIFA World Cup match.
- * Props:
- *   match: { id, date, time, team1, team2, group, venue, city, country }
- */
 export default function MatchCard({ match }) {
   const knockout = isKnockoutRound(match.group);
   const groupColor = getGroupColorClass(match.group);
+  const period = getTimePeriod(match.time);
 
   const cardClass =
     match.group === "Final"
@@ -20,30 +16,27 @@ export default function MatchCard({ match }) {
         ? "glass-card knockout-card"
         : "glass-card";
 
+  const groupLabel =
+    match.group === "Round of 32" ? "R32"
+    : match.group === "Round of 16" ? "R16"
+    : match.group === "Quarter-Final" ? "QF"
+    : match.group === "Semi-Final" ? "SF"
+    : match.group === "Third Place" ? "3rd Place"
+    : match.group === "Final" ? "🏆 FINAL"
+    : `Group ${match.group}`;
+
   return (
     <div className={`${cardClass} p-4 fade-in`}>
       {/* Header: Group badge + date */}
       <div className="flex items-center justify-between mb-3">
         <span className={`group-badge ${groupColor} border-current`}>
-          {match.group === "Round of 32"
-            ? "R32"
-            : match.group === "Round of 16"
-              ? "R16"
-              : match.group === "Quarter-Final"
-                ? "QF"
-                : match.group === "Semi-Final"
-                  ? "SF"
-                  : match.group === "Third Place"
-                    ? "3rd"
-                    : match.group === "Final"
-                      ? "🏆 FINAL"
-                      : `Group ${match.group}`}
+          {groupLabel}
         </span>
         <div
-          className="flex items-center gap-1 text-gray-400"
-          style={{ fontSize: "0.72rem" }}
+          className="flex items-center gap-1 text-gray-500"
+          style={{ fontSize: "0.7rem" }}
         >
-          <Calendar size={11} />
+          <Calendar size={10} />
           <span>{formatDateCard(match.date)}</span>
         </div>
       </div>
@@ -63,7 +56,7 @@ export default function MatchCard({ match }) {
           </span>
         </div>
 
-        {/* VS Badge */}
+        {/* VS */}
         <div className="flex flex-col items-center gap-1 flex-shrink-0">
           <span className="vs-badge">VS</span>
           {match.group === "Final" && (
@@ -88,25 +81,23 @@ export default function MatchCard({ match }) {
       {/* Divider */}
       <hr className="gold-line my-2.5" />
 
-      {/* Footer: Time + Venue */}
-      <div className="flex items-center justify-between gap-2 text-xs text-gray-400 flex-wrap">
-        <div className="flex items-center gap-1">
-          <Clock
-            size={12}
-            className="text-fifa-gold flex-shrink-0"
-            style={{ color: "#C9A84C" }}
-          />
-          <span className="font-medium" style={{ color: "#F0C040" }}>
+      {/* Footer: Time + period + Venue */}
+      <div className="flex items-center justify-between gap-2 flex-wrap" style={{ fontSize: "0.72rem" }}>
+        {/* Time block */}
+        <div className="flex items-center gap-1.5">
+          <Clock size={11} style={{ color: "#00C853", flexShrink: 0 }} />
+          <span className="font-bold" style={{ color: "#00E676" }}>
             {formatTime(match.time)}
           </span>
+          <span className={period.className}>
+            {period.emoji} {period.label.split(" ")[0]}
+          </span>
         </div>
-        <div className="flex items-center gap-1 text-right">
-          <MapPin
-            size={12}
-            className="flex-shrink-0"
-            style={{ color: "#9ca3af" }}
-          />
-          <span className="truncate" style={{ maxWidth: "160px" }}>
+
+        {/* Venue */}
+        <div className="flex items-center gap-1 text-gray-500 text-right">
+          <MapPin size={11} style={{ flexShrink: 0 }} />
+          <span className="truncate" style={{ maxWidth: "150px" }}>
             {match.venue}, {match.city}
           </span>
         </div>

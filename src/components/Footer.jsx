@@ -10,7 +10,7 @@ export default function Footer() {
     <footer
       className="mt-16 border-t"
       style={{
-        borderColor: "rgba(201,168,76,0.12)",
+        borderColor: "rgba(0,200,83,0.12)",
         background: "rgba(6,9,17,0.98)",
       }}
     >
@@ -21,7 +21,7 @@ export default function Footer() {
             <div
               className="flex items-center justify-center w-10 h-10 rounded-xl"
               style={{
-                background: "linear-gradient(135deg, #C9A84C, #F0C040)",
+                background: "linear-gradient(135deg, #00C853, #00E676)",
               }}
             >
               <Trophy size={20} color="#0A0E1A" strokeWidth={2.5} />

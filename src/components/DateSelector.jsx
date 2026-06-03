@@ -33,10 +33,10 @@ export default function DateSelector({ fixtures, selectedDate, onSelect }) {
           disabled={monthIdx === 0}
           onClick={() => setMonthIdx((i) => i - 1)}
           className="p-2 rounded-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed"
-          style={{ color: "#C9A84C" }}
+          style={{ color: "#00C853" }}
           onMouseEnter={(e) => {
             if (monthIdx > 0)
-              e.currentTarget.style.background = "rgba(201,168,76,0.1)";
+              e.currentTarget.style.background = "rgba(0,200,83,0.1)";
           }}
           onMouseLeave={(e) =>
             (e.currentTarget.style.background = "transparent")
@@ -46,7 +46,7 @@ export default function DateSelector({ fixtures, selectedDate, onSelect }) {
         </button>
 
         <div className="flex items-center gap-2">
-          <Calendar size={15} style={{ color: "#C9A84C" }} />
+          <Calendar size={15} style={{ color: "#00C853" }} />
           <span className="font-semibold text-white text-sm">
             {currentMonth}
           </span>
@@ -57,10 +57,10 @@ export default function DateSelector({ fixtures, selectedDate, onSelect }) {
           disabled={monthIdx === monthKeys.length - 1}
           onClick={() => setMonthIdx((i) => i + 1)}
           className="p-2 rounded-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed"
-          style={{ color: "#C9A84C" }}
+          style={{ color: "#00C853" }}
           onMouseEnter={(e) => {
             if (monthIdx < monthKeys.length - 1)
-              e.currentTarget.style.background = "rgba(201,168,76,0.1)";
+              e.currentTarget.style.background = "rgba(0,200,83,0.1)";
           }}
           onMouseLeave={(e) =>
             (e.currentTarget.style.background = "transparent")
@@ -85,12 +85,12 @@ export default function DateSelector({ fixtures, selectedDate, onSelect }) {
               style={{
                 minWidth: "52px",
                 background: isActive
-                  ? "linear-gradient(135deg, #C9A84C, #F0C040)"
+                  ? "linear-gradient(135deg, #00C853, #00E676)"
                   : "rgba(15,22,40,0.85)",
                 color: isActive ? "#0A0E1A" : "#94a3b8",
                 border: isActive
-                  ? "1px solid #F0C040"
-                  : "1px solid rgba(201,168,76,0.18)",
+                  ? "1px solid #00E676"
+                  : "1px solid rgba(0,200,83,0.18)",
                 fontWeight: isActive ? 700 : 500,
               }}
             >
