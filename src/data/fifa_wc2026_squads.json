@@ -4130,6 +4130,3910 @@
           "image": "https://ui-avatars.com/api/?name=Arthur+Masuaku&background=00A3E0&color=fff&size=200"
         }
       ]
+    },
+    {
+      "team": "Ivory Coast",
+      "code": "CIV",
+      "head_coach": {
+        "name": "Emerse Fae",
+        "nationality": "Côte D'Ivoire"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Yahia Fofana",
+          "dob": "2000-08-21",
+          "club": "Çaykur Rizespor (TUR)",
+          "height_cm": 194,
+          "image": "https://ui-avatars.com/api/?name=Yahia+Fofana&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Ousmane Diomande",
+          "dob": "2003-12-04",
+          "club": "Sporting CP (POR)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Ousmane+Diomande&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Ghislain Konan",
+          "dob": "1995-12-27",
+          "club": "Gil Vicente FC (POR)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Ghislain+Konan&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "MF",
+          "name": "Jean Michael Seri",
+          "dob": "1991-07-19",
+          "club": "NK Maribor (SVN)",
+          "height_cm": 168,
+          "image": "https://ui-avatars.com/api/?name=Jean+Michael+Seri&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Wilfried Singo",
+          "dob": "2000-12-25",
+          "club": "Galatasaray SK (TUR)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Wilfried+Singo&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "MF",
+          "name": "Seko Fofana",
+          "dob": "1995-05-07",
+          "club": "FC Porto (POR)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Seko+Fofana&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "DF",
+          "name": "Odilon Kossounou",
+          "dob": "2001-01-04",
+          "club": "Atalanta Bergamo (ITA)",
+          "height_cm": 191,
+          "image": "https://ui-avatars.com/api/?name=Odilon+Kossounou&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Franck Kessie",
+          "dob": "1996-12-19",
+          "club": "Al Ahli FC (KSA)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Franck+Kessie&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Ange-Yoan Bonny",
+          "dob": "2003-10-25",
+          "club": "FC Internazionale Milano (ITA)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Ange-Yoan+Bonny&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Simon Adingra",
+          "dob": "2002-01-01",
+          "club": "AS Monaco (FRA)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Simon+Adingra&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Yan Diomande",
+          "dob": "2006-11-14",
+          "club": "RB Leipzig (GER)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Yan+Diomande&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "FW",
+          "name": "Elye Wahi",
+          "dob": "2003-01-02",
+          "club": "OGC Nice (FRA)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Elye+Wahi&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "DF",
+          "name": "Christopher Operi",
+          "dob": "1997-04-29",
+          "club": "Başakşehir FK (TUR)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Christopher+Operi&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "FW",
+          "name": "Oumar Diakite",
+          "dob": "2003-12-20",
+          "club": "Cercle Brugge (BEL)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Oumar+Diakite&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "FW",
+          "name": "Amad Diallo",
+          "dob": "2002-07-11",
+          "club": "Manchester United FC (ENG)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Amad+Diallo&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "GK",
+          "name": "Mohamed Kone",
+          "dob": "2002-03-07",
+          "club": "Sporting Charleroi (BEL)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Mohamed+Kone&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "DF",
+          "name": "Guela Doue",
+          "dob": "2002-10-17",
+          "club": "RC Strasbourg (FRA)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Guela+Doue&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "MF",
+          "name": "Ibrahim Sangare",
+          "dob": "1997-12-02",
+          "club": "Nottingham Forest FC (ENG)",
+          "height_cm": 191,
+          "image": "https://ui-avatars.com/api/?name=Ibrahim+Sangare&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "FW",
+          "name": "Nicolas Pepe",
+          "dob": "1995-05-29",
+          "club": "Villarreal CF (ESP)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Nicolas+Pepe&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "DF",
+          "name": "Emmanuel Agbadou",
+          "dob": "1997-06-17",
+          "club": "Beşiktaş JK (TUR)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Emmanuel+Agbadou&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "DF",
+          "name": "Evan Ndicka",
+          "dob": "1999-08-20",
+          "club": "AS Roma (ITA)",
+          "height_cm": 192,
+          "image": "https://ui-avatars.com/api/?name=Evan+Ndicka&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "FW",
+          "name": "Evann Guessand",
+          "dob": "2001-07-01",
+          "club": "Crystal Palace FC (ENG)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Evann+Guessand&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "GK",
+          "name": "Alban Lafont",
+          "dob": "1999-01-23",
+          "club": "Panathinaikos FC (GRE)",
+          "height_cm": 196,
+          "image": "https://ui-avatars.com/api/?name=Alban+Lafont&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "FW",
+          "name": "Bazoumana Toure",
+          "dob": "2006-03-02",
+          "club": "TSG Hoffenheim (GER)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Bazoumana+Toure&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "MF",
+          "name": "Parfait Guiagon",
+          "dob": "2001-02-22",
+          "club": "Sporting Charleroi (BEL)",
+          "height_cm": 165,
+          "image": "https://ui-avatars.com/api/?name=Parfait+Guiagon&background=F77F00&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "MF",
+          "name": "Christ Inao Oulai",
+          "dob": "2006-04-06",
+          "club": "Trabzonspor (TUR)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Christ+Inao+Oulai&background=F77F00&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Croatia",
+      "code": "CRO",
+      "head_coach": {
+        "name": "Zlatko Dalic",
+        "nationality": "Croatia"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Dominik Livakovic",
+          "dob": "1995-01-09",
+          "club": "GNK Dinamo Zagreb (CRO)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Dominik+Livakovic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Josip Stanisic",
+          "dob": "2000-04-02",
+          "club": "FC Bayern München (GER)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Josip+Stanisic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Marin Pongracic",
+          "dob": "1997-09-11",
+          "club": "ACF Fiorentina (ITA)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Marin+Pongracic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Josko Gvardiol",
+          "dob": "2002-01-23",
+          "club": "Manchester City FC (ENG)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Josko+Gvardiol&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Duje Caleta-Car",
+          "dob": "1996-09-17",
+          "club": "Real Sociedad (ESP)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Duje+Caleta-Car&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "DF",
+          "name": "Josip Sutalo",
+          "dob": "2000-02-28",
+          "club": "AFC Ajax (NED)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Josip+Sutalo&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "MF",
+          "name": "Nikola Moro",
+          "dob": "1998-03-12",
+          "club": "Bologna FC (ITA)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Nikola+Moro&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Mateo Kovacic",
+          "dob": "1994-05-06",
+          "club": "Manchester City FC (ENG)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Mateo+Kovacic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Andrej Kramaric",
+          "dob": "1991-06-19",
+          "club": "TSG Hoffenheim (GER)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Andrej+Kramaric&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "MF",
+          "name": "Luka Modric",
+          "dob": "1985-09-09",
+          "club": "AC Milan (ITA)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Luka+Modric&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Ante Budimir",
+          "dob": "1991-07-22",
+          "club": "CA Osasuna (ESP)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Ante+Budimir&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Ivor Pandur",
+          "dob": "2000-03-25",
+          "club": "Hull City FC (ENG)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Ivor+Pandur&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "MF",
+          "name": "Nikola Vlasic",
+          "dob": "1997-10-04",
+          "club": "Torino FC (ITA)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Nikola+Vlasic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "FW",
+          "name": "Ivan Perisic",
+          "dob": "1989-02-02",
+          "club": "PSV Eindhoven (NED)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Ivan+Perisic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "MF",
+          "name": "Mario Pasalic",
+          "dob": "1995-02-09",
+          "club": "Atalanta Bergamo (ITA)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Mario+Pasalic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "MF",
+          "name": "Martin Baturina",
+          "dob": "2003-02-16",
+          "club": "Como (ITA)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Martin+Baturina&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "MF",
+          "name": "Petar Sucic",
+          "dob": "2003-10-25",
+          "club": "FC Internazionale Milano (ITA)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Petar+Sucic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "DF",
+          "name": "Kristijan Jakic",
+          "dob": "1997-05-14",
+          "club": "FC Augsburg (GER)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Kristijan+Jakic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "MF",
+          "name": "Toni Fruk",
+          "dob": "2001-03-09",
+          "club": "HNK Rijeka (CRO)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Toni+Fruk&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "FW",
+          "name": "Igor Matanovic",
+          "dob": "2003-03-31",
+          "club": "SC Freiburg (GER)",
+          "height_cm": 194,
+          "image": "https://ui-avatars.com/api/?name=Igor+Matanovic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "MF",
+          "name": "Luka Sucic",
+          "dob": "2002-09-08",
+          "club": "Real Sociedad (ESP)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Luka+Sucic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "DF",
+          "name": "Luka Vuskovic",
+          "dob": "2007-02-24",
+          "club": "Hamburger SV (GER)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Luka+Vuskovic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "GK",
+          "name": "Dominik Kotarski",
+          "dob": "2000-02-10",
+          "club": "FC København (DEN)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Dominik+Kotarski&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "FW",
+          "name": "Marco Pasalic",
+          "dob": "2000-09-14",
+          "club": "Orlando City SC (USA)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Marco+Pasalic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "DF",
+          "name": "Martin Erlic",
+          "dob": "1998-01-24",
+          "club": "FC Midtjylland (DEN)",
+          "height_cm": 192,
+          "image": "https://ui-avatars.com/api/?name=Martin+Erlic&background=FF0000&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "FW",
+          "name": "Petar Musa",
+          "dob": "1998-03-04",
+          "club": "FC Dallas (USA)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Petar+Musa&background=FF0000&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Curacao",
+      "code": "CUW",
+      "head_coach": {
+        "name": "Dick Advocaat",
+        "nationality": "Netherlands"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Eloy Room",
+          "dob": "1989-02-06",
+          "club": "Miami FC (USA)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Eloy+Room&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Shurandy Sambo",
+          "dob": "2001-08-19",
+          "club": "Sparta Rotterdam (NED)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Shurandy+Sambo&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Jurien Gaari",
+          "dob": "1993-12-23",
+          "club": "Abha Club (KSA)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Jurien+Gaari&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Roshon Van Eijma",
+          "dob": "1998-06-09",
+          "club": "RKC Waalwijk (NED)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Roshon+Van+Eijma&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Sherel Floranus",
+          "dob": "1998-08-23",
+          "club": "PEC Zwolle (NED)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Sherel+Floranus&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "MF",
+          "name": "Godfried Roemeratoe",
+          "dob": "1999-08-19",
+          "club": "RKC Waalwijk (NED)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Godfried+Roemeratoe&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "MF",
+          "name": "Juninho Bacuna",
+          "dob": "1997-08-07",
+          "club": "FC Volendam (NED)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Juninho+Bacuna&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Livano Comenencia",
+          "dob": "2004-02-03",
+          "club": "FC Zürich (SUI)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Livano+Comenencia&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Jurgen Locadia",
+          "dob": "1993-11-07",
+          "club": "Miami FC (USA)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Jurgen+Locadia&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "MF",
+          "name": "Leandro Bacuna",
+          "dob": "1991-08-21",
+          "club": "Iğdır FK (TUR)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Leandro+Bacuna&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Jeremy Antonisse",
+          "dob": "2002-03-29",
+          "club": "AE Kifisia FC (GRE)",
+          "height_cm": 164,
+          "image": "https://ui-avatars.com/api/?name=Jeremy+Antonisse&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "FW",
+          "name": "Sontje Hansen",
+          "dob": "2002-05-18",
+          "club": "Middlesbrough FC (ENG)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Sontje+Hansen&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "FW",
+          "name": "Tyrese Noslin",
+          "dob": "2002-09-11",
+          "club": "SC Telstar (NED)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Tyrese+Noslin&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "FW",
+          "name": "Kenji Gorre",
+          "dob": "1994-09-29",
+          "club": "Maccabi Haifa FC (ISR)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Kenji+Gorre&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "MF",
+          "name": "Arjany Martha",
+          "dob": "2003-09-04",
+          "club": "Rotherham United FC (ENG)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Arjany+Martha&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "FW",
+          "name": "Jearl Margaritha",
+          "dob": "2000-04-10",
+          "club": "SK Beveren (BEL)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Jearl+Margaritha&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "FW",
+          "name": "Brandley Kuwas",
+          "dob": "1992-09-19",
+          "club": "FC Volendam (NED)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Brandley+Kuwas&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "DF",
+          "name": "Armando Obispo",
+          "dob": "1999-03-05",
+          "club": "PSV Eindhoven (NED)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Armando+Obispo&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "FW",
+          "name": "Gervane Kastaneer",
+          "dob": "1996-06-09",
+          "club": "Terengganu FC (MAS)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Gervane+Kastaneer&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "DF",
+          "name": "Joshua Brenet",
+          "dob": "1994-03-20",
+          "club": "Kayserispor (TUR)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Joshua+Brenet&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "MF",
+          "name": "Tahith Chong",
+          "dob": "1999-12-04",
+          "club": "Sheffield United FC (ENG)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Tahith+Chong&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "MF",
+          "name": "Kevin Felida",
+          "dob": "1999-11-11",
+          "club": "FC Den Bosch (NED)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Kevin+Felida&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "DF",
+          "name": "Riechedly Bazoer",
+          "dob": "1996-10-12",
+          "club": "Konyaspor (TUR)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Riechedly+Bazoer&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "DF",
+          "name": "Deveron Fonville",
+          "dob": "2003-05-16",
+          "club": "NEC Nijmegen (NED)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Deveron+Fonville&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "GK",
+          "name": "Tyrick Bodak",
+          "dob": "2002-05-15",
+          "club": "SC Telstar (NED)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Tyrick+Bodak&background=003DA5&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "GK",
+          "name": "Trevor Doornbusch",
+          "dob": "1999-07-06",
+          "club": "VVV Venlo (NED)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Trevor+Doornbusch&background=003DA5&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Czechia",
+      "code": "CZE",
+      "head_coach": {
+        "name": "Miroslav Koubek",
+        "nationality": "Czech Republic"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Matej Kovar",
+          "dob": "2000-05-17",
+          "club": "PSV Eindhoven (NED)",
+          "height_cm": 196,
+          "image": "https://ui-avatars.com/api/?name=Matej+Kovar&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "David Zima",
+          "dob": "2000-11-08",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=David+Zima&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Tomas Holes",
+          "dob": "1993-03-31",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Tomas+Holes&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Robin Hranac",
+          "dob": "2000-01-29",
+          "club": "TSG Hoffenheim (GER)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Robin+Hranac&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Vladimir Coufal",
+          "dob": "1992-08-22",
+          "club": "TSG Hoffenheim (GER)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Vladimir+Coufal&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "DF",
+          "name": "Stepan Chaloupek",
+          "dob": "2003-03-08",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Stepan+Chaloupek&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "DF",
+          "name": "Ladislav Krejci",
+          "dob": "1999-04-20",
+          "club": "Wolverhampton Wanderers FC (ENG)",
+          "height_cm": 191,
+          "image": "https://ui-avatars.com/api/?name=Ladislav+Krejci&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Vladimir Darida",
+          "dob": "1990-08-08",
+          "club": "FC Hradec Králové (CZE)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Vladimir+Darida&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Adam Hlozek",
+          "dob": "2002-07-25",
+          "club": "TSG Hoffenheim (GER)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Adam+Hlozek&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Patrik Schick",
+          "dob": "1996-01-24",
+          "club": "Bayer Leverkusen (GER)",
+          "height_cm": 191,
+          "image": "https://ui-avatars.com/api/?name=Patrik+Schick&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Jan Kuchta",
+          "dob": "1997-01-08",
+          "club": "AC Sparta Praha (CZE)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Jan+Kuchta&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "MF",
+          "name": "Lukas Cerv",
+          "dob": "2001-04-10",
+          "club": "FC Viktoria Plzeň (CZE)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Lukas+Cerv&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "FW",
+          "name": "Mojmir Chytil",
+          "dob": "1999-04-29",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Mojmir+Chytil&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "DF",
+          "name": "David Jurasek",
+          "dob": "2000-08-07",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=David+Jurasek&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "FW",
+          "name": "Pavel Sulc",
+          "dob": "2000-12-29",
+          "club": "Olympique Lyonnais (FRA)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Pavel+Sulc&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "GK",
+          "name": "Jindrich Stanek",
+          "dob": "1996-04-27",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 192,
+          "image": "https://ui-avatars.com/api/?name=Jindrich+Stanek&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "MF",
+          "name": "Lukas Provod",
+          "dob": "1996-10-23",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 191,
+          "image": "https://ui-avatars.com/api/?name=Lukas+Provod&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "MF",
+          "name": "Michal Sadilek",
+          "dob": "1999-05-31",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 169,
+          "image": "https://ui-avatars.com/api/?name=Michal+Sadilek&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "FW",
+          "name": "Tomas Chory",
+          "dob": "1995-01-26",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 199,
+          "image": "https://ui-avatars.com/api/?name=Tomas+Chory&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "DF",
+          "name": "Jaroslav Zeleny",
+          "dob": "1992-08-20",
+          "club": "AC Sparta Praha (CZE)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Jaroslav+Zeleny&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "DF",
+          "name": "David Doudera",
+          "dob": "1998-05-31",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=David+Doudera&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "MF",
+          "name": "Tomas Soucek",
+          "dob": "1995-02-27",
+          "club": "West Ham United FC (ENG)",
+          "height_cm": 192,
+          "image": "https://ui-avatars.com/api/?name=Tomas+Soucek&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "GK",
+          "name": "Lukas Hornicek",
+          "dob": "2002-07-13",
+          "club": "SC Braga (POR)",
+          "height_cm": 198,
+          "image": "https://ui-avatars.com/api/?name=Lukas+Hornicek&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "MF",
+          "name": "Alexandr Sojka",
+          "dob": "2003-04-02",
+          "club": "FC Viktoria Plzeň (CZE)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Alexandr+Sojka&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "MF",
+          "name": "Hugo Sochurek",
+          "dob": "2008-06-07",
+          "club": "AC Sparta Praha (CZE)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Hugo+Sochurek&background=D7141A&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "FW",
+          "name": "Denis Visinsky",
+          "dob": "2003-03-21",
+          "club": "FC Viktoria Plzeň (CZE)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Denis+Visinsky&background=D7141A&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Ecuador",
+      "code": "ECU",
+      "head_coach": {
+        "name": "",
+        "nationality": ""
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Hernan Galindez",
+          "dob": "1987-03-30",
+          "club": "CA Huracán (ARG)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Hernan+Galindez&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Felix Torres",
+          "dob": "1997-01-11",
+          "club": "SC Internacional (BRA)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Felix+Torres&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Piero Hincapie",
+          "dob": "2002-01-09",
+          "club": "Arsenal FC (ENG)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Piero+Hincapie&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Joel Ordonez",
+          "dob": "2004-04-21",
+          "club": "Club Brugge (BEL)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Joel+Ordonez&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "MF",
+          "name": "Jordy Alcivar",
+          "dob": "1999-08-05",
+          "club": "Independiente del Valle (ECU)",
+          "height_cm": 168,
+          "image": "https://ui-avatars.com/api/?name=Jordy+Alcivar&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "DF",
+          "name": "Willian Pacho",
+          "dob": "2001-10-16",
+          "club": "Paris Saint-Germain (FRA)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Willian+Pacho&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "DF",
+          "name": "Pervis Estupinan",
+          "dob": "1998-01-21",
+          "club": "AC Milan (ITA)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Pervis+Estupinan&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Anthony Valencia",
+          "dob": "2003-07-21",
+          "club": "Royal Antwerp FC (BEL)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Anthony+Valencia&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "John Yeboah",
+          "dob": "2000-06-23",
+          "club": "Venezia FC (ITA)",
+          "height_cm": 170,
+          "image": "https://ui-avatars.com/api/?name=John+Yeboah&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "MF",
+          "name": "Kendry Paez",
+          "dob": "2007-05-04",
+          "club": "CA River Plate (ARG)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Kendry+Paez&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Kevin Rodriguez",
+          "dob": "2000-03-04",
+          "club": "Royale Union Saint-Gilloise (BEL)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Kevin+Rodriguez&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Moises Ramirez",
+          "dob": "2000-09-09",
+          "club": "AE Kifisia FC (GRE)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Moises+Ramirez&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "FW",
+          "name": "Enner Valencia",
+          "dob": "1989-11-04",
+          "club": "CF Pachuca (MEX)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Enner+Valencia&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "MF",
+          "name": "Alan Minda",
+          "dob": "2003-05-14",
+          "club": "Atlético Mineiro (BRA)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Alan+Minda&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "MF",
+          "name": "Pedro Vite",
+          "dob": "2002-03-09",
+          "club": "Pumas UNAM (MEX)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Pedro+Vite&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "FW",
+          "name": "Jordy Caicedo",
+          "dob": "1997-11-18",
+          "club": "CA Huracán (ARG)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Jordy+Caicedo&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "DF",
+          "name": "Angelo Preciado",
+          "dob": "1998-02-18",
+          "club": "Atlético Mineiro (BRA)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Angelo+Preciado&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "MF",
+          "name": "Denil Castillo",
+          "dob": "2004-03-24",
+          "club": "FC Midtjylland (DEN)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Denil+Castillo&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "FW",
+          "name": "Gonzalo Plata",
+          "dob": "2000-11-01",
+          "club": "CR Flamengo (BRA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Gonzalo+Plata&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "FW",
+          "name": "Nilson Angulo",
+          "dob": "2003-06-19",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Nilson+Angulo&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "MF",
+          "name": "Alan Franco",
+          "dob": "1998-08-21",
+          "club": "Atlético Mineiro (BRA)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Alan+Franco&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "GK",
+          "name": "Gonzalo Valle",
+          "dob": "1996-02-28",
+          "club": "LDU Quito (ECU)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Gonzalo+Valle&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "MF",
+          "name": "Moises Caicedo",
+          "dob": "2001-11-02",
+          "club": "Chelsea FC (ENG)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Moises+Caicedo&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "FW",
+          "name": "Jeremy Arevalo",
+          "dob": "2005-03-19",
+          "club": "VfB Stuttgart (GER)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Jeremy+Arevalo&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "DF",
+          "name": "Jackson Porozo",
+          "dob": "2000-08-04",
+          "club": "Club Tijuana (MEX)",
+          "height_cm": 192,
+          "image": "https://ui-avatars.com/api/?name=Jackson+Porozo&background=FCD116&color=000&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "DF",
+          "name": "Yaimar Medina",
+          "dob": "2004-11-05",
+          "club": "KRC Genk (BEL)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Yaimar+Medina&background=FCD116&color=000&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Egypt",
+      "code": "EGY",
+      "head_coach": {
+        "name": "Hossam Hassan",
+        "nationality": "Egypt"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Mohamed Elshenawy",
+          "dob": "1988-12-18",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 191,
+          "image": "https://ui-avatars.com/api/?name=Mohamed+Elshenawy&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Yasser Ibrahim",
+          "dob": "1993-02-10",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Yasser+Ibrahim&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Mohamed Hany",
+          "dob": "1996-02-02",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Mohamed+Hany&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Hossam Abdelmaguid",
+          "dob": "2001-04-30",
+          "club": "Zamalek SC (EGY)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Hossam+Abdelmaguid&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Ramy Rabia",
+          "dob": "1993-05-20",
+          "club": "Al Ain FC (UAE)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Ramy+Rabia&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "DF",
+          "name": "Mohamed Abdelmoneim",
+          "dob": "1999-02-01",
+          "club": "OGC Nice (FRA)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Mohamed+Abdelmoneim&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "FW",
+          "name": "Mahmoud Hassan Trezeguet",
+          "dob": "1994-10-01",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Mahmoud+Hassan+Trezeguet&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Emam Ashour",
+          "dob": "1998-02-20",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Emam+Ashour&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Hamza Abdelkarim",
+          "dob": "2008-01-01",
+          "club": "FC Barcelona (ESP)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Hamza+Abdelkarim&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Mohamed Salah",
+          "dob": "1992-06-15",
+          "club": "Liverpool FC (ENG)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Mohamed+Salah&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "MF",
+          "name": "Mostafa Zico",
+          "dob": "1997-04-27",
+          "club": "Pyramids FC (EGY)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Mostafa+Zico&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "FW",
+          "name": "Haissem Hassan",
+          "dob": "2002-02-08",
+          "club": "Real Oviedo (ESP)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Haissem+Hassan&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "DF",
+          "name": "Ahmed Fatouh",
+          "dob": "1998-03-22",
+          "club": "Zamalek SC (EGY)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Ahmed+Fatouh&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "MF",
+          "name": "Hamdy Fathy",
+          "dob": "1994-09-29",
+          "club": "Al Wakrah SC (QAT)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Hamdy+Fathy&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "DF",
+          "name": "Karim Hafez",
+          "dob": "1996-03-12",
+          "club": "Pyramids FC (EGY)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Karim+Hafez&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "GK",
+          "name": "Mahdy Soliman",
+          "dob": "1987-06-08",
+          "club": "Zamalek SC (EGY)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Mahdy+Soliman&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "MF",
+          "name": "Mohanad Lashin",
+          "dob": "1996-05-29",
+          "club": "Pyramids FC (EGY)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Mohanad+Lashin&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "MF",
+          "name": "Nabil Donga",
+          "dob": "1996-04-06",
+          "club": "Al Najmah SC (KSA)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Nabil+Donga&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "MF",
+          "name": "Marawan Attia",
+          "dob": "1998-08-01",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Marawan+Attia&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "FW",
+          "name": "Ibrahim Adel",
+          "dob": "2001-04-23",
+          "club": "FC Nordsjælland (DEN)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Ibrahim+Adel&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "MF",
+          "name": "Mahmoud Saber",
+          "dob": "2001-07-30",
+          "club": "ZED FC (EGY)",
+          "height_cm": 170,
+          "image": "https://ui-avatars.com/api/?name=Mahmoud+Saber&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "FW",
+          "name": "Omar Marmoush",
+          "dob": "1999-02-07",
+          "club": "Manchester City FC (ENG)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Omar+Marmoush&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "GK",
+          "name": "Mostafa Shoubir",
+          "dob": "2000-05-15",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 195,
+          "image": "https://ui-avatars.com/api/?name=Mostafa+Shoubir&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "DF",
+          "name": "Tarek Alaa",
+          "dob": "2002-01-05",
+          "club": "ZED FC (EGY)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Tarek+Alaa&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "FW",
+          "name": "Ahmed Mostafa Zizo",
+          "dob": "1996-01-10",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Ahmed+Mostafa+Zizo&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "GK",
+          "name": "Mohamed Alaa",
+          "dob": "1999-01-01",
+          "club": "El Gouna FC (EGY)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Mohamed+Alaa&background=CE1126&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Ghana",
+      "code": "GHA",
+      "head_coach": {
+        "name": "Carlos Queiroz",
+        "nationality": "Portugal"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Lawrence Ati Zigi",
+          "dob": "1996-11-29",
+          "club": "FC St. Gallen (SUI)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Lawrence+Ati+Zigi&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Alidu Seidu",
+          "dob": "2000-06-04",
+          "club": "Stade Rennais FC (FRA)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Alidu+Seidu&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "MF",
+          "name": "Caleb Yirenkyi",
+          "dob": "2006-01-15",
+          "club": "FC Nordsjælland (DEN)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Caleb+Yirenkyi&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Jonas Adjetey",
+          "dob": "2003-12-13",
+          "club": "VfL Wolfsburg (GER)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Jonas+Adjetey&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "MF",
+          "name": "Thomas Partey",
+          "dob": "1993-06-13",
+          "club": "Villarreal CF (ESP)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Thomas+Partey&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "DF",
+          "name": "Abdul Mumin",
+          "dob": "1998-06-06",
+          "club": "Rayo Vallecano (ESP)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Abdul+Mumin&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "FW",
+          "name": "Abdul Fatawu Issahaku",
+          "dob": "2004-03-08",
+          "club": "Leicester City FC (ENG)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Abdul+Fatawu+Issahaku&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Kwasi Sibo",
+          "dob": "1998-06-24",
+          "club": "Real Oviedo (ESP)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Kwasi+Sibo&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Jordan Ayew",
+          "dob": "1991-09-11",
+          "club": "Leicester City FC (ENG)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Jordan+Ayew&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Brandon Thomas-Asante",
+          "dob": "1998-12-29",
+          "club": "Coventry City FC (ENG)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Brandon+Thomas-Asante&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Antoine Semenyo",
+          "dob": "2000-01-07",
+          "club": "Manchester City FC (ENG)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Antoine+Semenyo&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Joseph Anang",
+          "dob": "2000-06-08",
+          "club": "St Patrick's Athletic FC (IRL)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Joseph+Anang&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "FW",
+          "name": "Christopher Bonsu Baah",
+          "dob": "2004-12-14",
+          "club": "Al Qadsiah FC (KSA)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Christopher+Bonsu+Baah&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "DF",
+          "name": "Gideon Mensah",
+          "dob": "1998-07-18",
+          "club": "AJ Auxerre (FRA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Gideon+Mensah&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "MF",
+          "name": "Elisha Owusu",
+          "dob": "1997-11-07",
+          "club": "AJ Auxerre (FRA)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Elisha+Owusu&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "GK",
+          "name": "Benjamin Asare",
+          "dob": "1992-07-13",
+          "club": "Hearts Of Oak SC (GHA)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Benjamin+Asare&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "DF",
+          "name": "Baba Rahman",
+          "dob": "1994-07-02",
+          "club": "PAOK Saloniki (GRE)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Baba+Rahman&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "DF",
+          "name": "Jerome Opoku",
+          "dob": "1998-10-14",
+          "club": "Başakşehir FK (TUR)",
+          "height_cm": 197,
+          "image": "https://ui-avatars.com/api/?name=Jerome+Opoku&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "FW",
+          "name": "Inaki Williams",
+          "dob": "1994-06-15",
+          "club": "Athletic Club (ESP)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Inaki+Williams&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "MF",
+          "name": "Augustine Boakye",
+          "dob": "2000-11-03",
+          "club": "AS Saint-Etienne (FRA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Augustine+Boakye&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "DF",
+          "name": "Kojo Peprah Oppong",
+          "dob": "2004-06-04",
+          "club": "OGC Nice (FRA)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Kojo+Peprah+Oppong&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "FW",
+          "name": "Kamaldeen Sulemana",
+          "dob": "2002-02-15",
+          "club": "Atalanta Bergamo (ITA)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Kamaldeen+Sulemana&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "DF",
+          "name": "Derrick Luckassen",
+          "dob": "1995-07-03",
+          "club": "Pafos FC (CYP)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Derrick+Luckassen&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "FW",
+          "name": "Ernest Nuamah",
+          "dob": "2003-11-01",
+          "club": "Olympique Lyonnais (FRA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Ernest+Nuamah&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "FW",
+          "name": "Prince Adu",
+          "dob": "2003-09-23",
+          "club": "FC Viktoria Plzeň (CZE)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Prince+Adu&background=CE1126&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "DF",
+          "name": "Marvin Senaya",
+          "dob": "2001-01-28",
+          "club": "AJ Auxerre (FRA)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Marvin+Senaya&background=CE1126&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Haiti",
+      "code": "HAI",
+      "head_coach": {
+        "name": "Sebastien Migne",
+        "nationality": "France"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Johny Placide",
+          "dob": "1988-01-29",
+          "club": "SC Bastia (FRA)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Johny+Placide&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Carlens Arcus",
+          "dob": "1996-06-28",
+          "club": "Angers SCO (FRA)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Carlens+Arcus&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Keeto Thermoncy",
+          "dob": "2006-03-29",
+          "club": "BSC Young Boys (SUI)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Keeto+Thermoncy&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Ricardo Ade",
+          "dob": "1990-05-21",
+          "club": "LDU Quito (ECU)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Ricardo+Ade&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Hannes Delcroix",
+          "dob": "1999-02-28",
+          "club": "FC Lugano (SUI)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Hannes+Delcroix&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "MF",
+          "name": "Carl Sainte",
+          "dob": "2002-08-09",
+          "club": "El Paso Locomotive FC (USA)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Carl+Sainte&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "FW",
+          "name": "Derrick Etienne Jr",
+          "dob": "1996-11-25",
+          "club": "Toronto FC (CAN)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Derrick+Etienne+Jr&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "DF",
+          "name": "Martin Experience",
+          "dob": "1999-03-09",
+          "club": "AS Nancy (FRA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Martin+Experience&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Duckens Nazon",
+          "dob": "1994-04-07",
+          "club": "Esteghlal Tehran FC (IRN)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Duckens+Nazon&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "MF",
+          "name": "Jean-Ricner Bellegarde",
+          "dob": "1998-06-27",
+          "club": "Wolverhampton Wanderers FC (ENG)",
+          "height_cm": 170,
+          "image": "https://ui-avatars.com/api/?name=Jean-Ricner+Bellegarde&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Don Louicius Deedson",
+          "dob": "2001-02-11",
+          "club": "FC Dallas (USA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Don+Louicius+Deedson&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Alexandre Pierre",
+          "dob": "2001-02-25",
+          "club": "FC Sochaux-Montbeliard (FRA)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Alexandre+Pierre&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "DF",
+          "name": "Markhus Lacroix",
+          "dob": "1993-10-14",
+          "club": "Colorado Springs Switchbacks FC (USA)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Markhus+Lacroix&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "MF",
+          "name": "Leverton Pierre",
+          "dob": "1998-03-09",
+          "club": "FC Vizela (POR)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Leverton+Pierre&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "FW",
+          "name": "Ruben Providence",
+          "dob": "2001-07-07",
+          "club": "Almere City FC (NED)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Ruben+Providence&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "FW",
+          "name": "Lenny Joseph",
+          "dob": "2000-10-12",
+          "club": "Ferencvarosi TC (HUN)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Lenny+Joseph&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "MF",
+          "name": "Danley Jean Jacques",
+          "dob": "2000-05-20",
+          "club": "Philadelphia Union (USA)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Danley+Jean+Jacques&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "FW",
+          "name": "Wilson Isidor",
+          "dob": "2000-08-27",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Wilson+Isidor&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "FW",
+          "name": "Yassin Fortune",
+          "dob": "1999-01-30",
+          "club": "FC Vizela (POR)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Yassin+Fortune&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "FW",
+          "name": "Frantzdy Pierrot",
+          "dob": "1995-03-29",
+          "club": "Çaykur Rizespor (TUR)",
+          "height_cm": 194,
+          "image": "https://ui-avatars.com/api/?name=Frantzdy+Pierrot&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "FW",
+          "name": "Josue Casimir",
+          "dob": "2001-09-24",
+          "club": "AJ Auxerre (FRA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Josue+Casimir&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "DF",
+          "name": "Jean-Kevin Duverne",
+          "dob": "1997-07-12",
+          "club": "KAA Gent (BEL)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Jean-Kevin+Duverne&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "GK",
+          "name": "Josue Duverger",
+          "dob": "2000-04-27",
+          "club": "FC Cosmos Koblenz (GER)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Josue+Duverger&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "DF",
+          "name": "Wilguens Paugain",
+          "dob": "2001-08-24",
+          "club": "SV Zulte Waregem (BEL)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Wilguens+Paugain&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "MF",
+          "name": "Dominique Simon",
+          "dob": "2000-07-29",
+          "club": "FC Tatran Presov (SVK)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Dominique+Simon&background=00209F&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "MF",
+          "name": "Woodensky Olivier Pierre",
+          "dob": "2004-12-30",
+          "club": "Violette AC (HAI)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Woodensky+Olivier+Pierre&background=00209F&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Iran",
+      "code": "IRN",
+      "head_coach": {
+        "name": "Amir Ghalenoy",
+        "nationality": "Iran"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Alireza Beiranvand",
+          "dob": "1992-09-21",
+          "club": "Tractor Sazi Tabriz FC (IRN)",
+          "height_cm": 195,
+          "image": "https://ui-avatars.com/api/?name=Alireza+Beiranvand&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Saleh Hardani",
+          "dob": "1998-12-26",
+          "club": "Esteghlal Tehran FC (IRN)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Saleh+Hardani&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Ehsan Hajsafi",
+          "dob": "1990-02-25",
+          "club": "Sepahan SC (IRN)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Ehsan+Hajsafi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Shoja Khalilzadeh",
+          "dob": "1989-05-14",
+          "club": "Tractor Sazi Tabriz FC (IRN)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Shoja+Khalilzadeh&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Milad Mohammadi",
+          "dob": "1993-09-29",
+          "club": "Persepolis FC (IRN)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Milad+Mohammadi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "MF",
+          "name": "Saeid Ezatolahi",
+          "dob": "1996-10-01",
+          "club": "Shabab Al Ahli Club (UAE)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Saeid+Ezatolahi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "MF",
+          "name": "Alireza Jahanbakhsh",
+          "dob": "1993-08-11",
+          "club": "FCV Dender EH (BEL)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Alireza+Jahanbakhsh&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Mohammad Mohebbi",
+          "dob": "1998-12-20",
+          "club": "FC Rostov (RUS)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Mohammad+Mohebbi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Mehdi Taremi",
+          "dob": "1992-07-18",
+          "club": "Olympiacos FC (GRE)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Mehdi+Taremi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Mehdi Ghayedi",
+          "dob": "1998-12-05",
+          "club": "Al Nasr SC (UAE)",
+          "height_cm": 166,
+          "image": "https://ui-avatars.com/api/?name=Mehdi+Ghayedi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Ali Alipour",
+          "dob": "1995-11-11",
+          "club": "Persepolis FC (IRN)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Ali+Alipour&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Payam Niazmand",
+          "dob": "1995-04-06",
+          "club": "Persepolis FC (IRN)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Payam+Niazmand&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "DF",
+          "name": "Hossein Kanani",
+          "dob": "1994-03-23",
+          "club": "Persepolis FC (IRN)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Hossein+Kanani&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "MF",
+          "name": "Saman Ghoddos",
+          "dob": "1993-09-06",
+          "club": "Al Ittihad Kalba SCC (UAE)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Saman+Ghoddos&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "MF",
+          "name": "Roozbeh Cheshmi",
+          "dob": "1993-07-24",
+          "club": "Esteghlal Tehran FC (IRN)",
+          "height_cm": 192,
+          "image": "https://ui-avatars.com/api/?name=Roozbeh+Cheshmi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "MF",
+          "name": "Mehdi Torabi",
+          "dob": "1994-09-10",
+          "club": "Tractor Sazi Tabriz FC (IRN)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Mehdi+Torabi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "DF",
+          "name": "Arya Yousefi",
+          "dob": "2002-04-22",
+          "club": "Sepahan SC (IRN)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Arya+Yousefi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "FW",
+          "name": "Amirhossein Hosseinzadeh",
+          "dob": "2000-10-30",
+          "club": "Tractor Sazi Tabriz FC (IRN)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Amirhossein+Hosseinzadeh&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "DF",
+          "name": "Ali Nemati",
+          "dob": "1996-02-08",
+          "club": "Foolad Khuzestan FC (IRN)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Ali+Nemati&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "FW",
+          "name": "Shahriyar Moghanloo",
+          "dob": "1994-12-21",
+          "club": "Al Ittihad Kalba SCC (UAE)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Shahriyar+Moghanloo&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "MF",
+          "name": "Mohammad Ghorbani",
+          "dob": "2001-10-07",
+          "club": "Al Wahda SC (UAE)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Mohammad+Ghorbani&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "GK",
+          "name": "Hossein Hosseini",
+          "dob": "1992-06-30",
+          "club": "Sepahan SC (IRN)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Hossein+Hosseini&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "DF",
+          "name": "Ramin Rezaeian",
+          "dob": "1990-03-21",
+          "club": "Foolad Khuzestan FC (IRN)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Ramin+Rezaeian&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "FW",
+          "name": "Dennis Dargahi",
+          "dob": "1997-01-09",
+          "club": "Standard Liege (BEL)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Dennis+Dargahi&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "DF",
+          "name": "Danial Iri",
+          "dob": "2003-10-26",
+          "club": "Malavan Anzali FC (IRN)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Danial+Iri&background=239F40&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "MF",
+          "name": "Amirmohammad Razaghinia",
+          "dob": "2006-04-11",
+          "club": "Esteghlal Tehran FC (IRN)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Amirmohammad+Razaghinia&background=239F40&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Iraq",
+      "code": "IRQ",
+      "head_coach": {
+        "name": "Graham Arnold",
+        "nationality": "Australia"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Fahad Talib",
+          "dob": "1994-10-21",
+          "club": "Al Talaba SC (IRQ)",
+          "height_cm": 192,
+          "image": "https://ui-avatars.com/api/?name=Fahad+Talib&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Rebin Ghareeb",
+          "dob": "1992-04-12",
+          "club": "Port FC (THA)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Rebin+Ghareeb&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Hussein Ali",
+          "dob": "2002-03-01",
+          "club": "Pogoń Szczecin (POL)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Hussein+Ali&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Zaid Tahseen",
+          "dob": "2001-01-29",
+          "club": "Pakhtakor Tashkent FK (UZB)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Zaid+Tahseen&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Akam Hashim",
+          "dob": "1998-08-16",
+          "club": "Al Zawra'a SC (IRQ)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Akam+Hashim&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "DF",
+          "name": "Munaf Younus",
+          "dob": "1996-11-16",
+          "club": "Al Shorta SC (IRQ)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Munaf+Younus&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "MF",
+          "name": "Youssef Amyn",
+          "dob": "2003-08-21",
+          "club": "AEK Larnaca FC (CYP)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Youssef+Amyn&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Ibrahim Bayesh",
+          "dob": "2000-05-01",
+          "club": "Al Dhafra SCC (UAE)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Ibrahim+Bayesh&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Ali Al-Hamadi",
+          "dob": "2002-03-01",
+          "club": "Luton Town FC (ENG)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Ali+Al-Hamadi&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Mohanad Ali",
+          "dob": "2000-06-20",
+          "club": "Dibba FC (UAE)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Mohanad+Ali&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Ahmed Qasim",
+          "dob": "2003-07-12",
+          "club": "Nashville SC (USA)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Ahmed+Qasim&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Jalal Hassan",
+          "dob": "1991-05-18",
+          "club": "Al Zawra'a SC (IRQ)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Jalal+Hassan&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "FW",
+          "name": "Ali Yousif",
+          "dob": "1996-01-19",
+          "club": "Al Talaba SC (IRQ)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Ali+Yousif&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "MF",
+          "name": "Zidane Iqbal",
+          "dob": "2003-04-27",
+          "club": "FC Utrecht (NED)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Zidane+Iqbal&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "DF",
+          "name": "Ahmed Yahya",
+          "dob": "1995-07-01",
+          "club": "Al Shorta SC (IRQ)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Ahmed+Yahya&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "MF",
+          "name": "Amir Alammari",
+          "dob": "1997-07-27",
+          "club": "KS Cracovia (POL)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Amir+Alammari&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "FW",
+          "name": "Ali Jasim",
+          "dob": "2004-01-20",
+          "club": "Al Najmah SC (KSA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Ali+Jasim&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "FW",
+          "name": "Aymen Hussein",
+          "dob": "1996-03-22",
+          "club": "Al Karma SC (IRQ)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Aymen+Hussein&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "MF",
+          "name": "Kevin Yakob",
+          "dob": "2000-10-10",
+          "club": "Aarhus GF (DEN)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Kevin+Yakob&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "MF",
+          "name": "Aimar Sher",
+          "dob": "2002-12-20",
+          "club": "Sarpsborg 08 FF (NOR)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Aimar+Sher&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "FW",
+          "name": "Marko Farji",
+          "dob": "2004-03-16",
+          "club": "Venezia FC (ITA)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Marko+Farji&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "GK",
+          "name": "Ahmed Basil",
+          "dob": "1996-08-19",
+          "club": "Al Shorta SC (IRQ)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Ahmed+Basil&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "DF",
+          "name": "Merchas Doski",
+          "dob": "1999-12-07",
+          "club": "FC Viktoria Plzeň (CZE)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Merchas+Doski&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "MF",
+          "name": "Zaid Ismael",
+          "dob": "2002-01-03",
+          "club": "Al Talaba SC (IRQ)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Zaid+Ismael&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "DF",
+          "name": "Mustafa Saadoon",
+          "dob": "2001-05-25",
+          "club": "Al Shorta SC (IRQ)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Mustafa+Saadoon&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "DF",
+          "name": "Frans Putros",
+          "dob": "1993-07-14",
+          "club": "Persib Bandung (IDN)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Frans+Putros&background=007A3D&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Japan",
+      "code": "JPN",
+      "head_coach": {
+        "name": "Hajime Moriyasu",
+        "nationality": "Japan"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Zion Suzuki",
+          "dob": "2002-08-21",
+          "club": "Parma (ITA)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Zion+Suzuki&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Yukinari Sugawara",
+          "dob": "2000-06-28",
+          "club": "SV Werder Bremen (GER)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Yukinari+Sugawara&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Shogo Taniguchi",
+          "dob": "1991-07-15",
+          "club": "Sint-Truiden VV (BEL)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Shogo+Taniguchi&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Kou Itakura",
+          "dob": "1997-01-27",
+          "club": "AFC Ajax (NED)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Kou+Itakura&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Yuto Nagatomo",
+          "dob": "1986-09-12",
+          "club": "FC Tokyo (JPN)",
+          "height_cm": 170,
+          "image": "https://ui-avatars.com/api/?name=Yuto+Nagatomo&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "MF",
+          "name": "Wataru Endo",
+          "dob": "1993-02-09",
+          "club": "Liverpool FC (ENG)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Wataru+Endo&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "MF",
+          "name": "Ao Tanaka",
+          "dob": "1998-09-10",
+          "club": "Leeds United FC (ENG)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Ao+Tanaka&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Takefusa Kubo",
+          "dob": "2001-06-04",
+          "club": "Real Sociedad (ESP)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Takefusa+Kubo&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Keisuke Goto",
+          "dob": "2005-06-03",
+          "club": "Sint-Truiden VV (BEL)",
+          "height_cm": 191,
+          "image": "https://ui-avatars.com/api/?name=Keisuke+Goto&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "MF",
+          "name": "Ritsu Doan",
+          "dob": "1998-06-16",
+          "club": "Eintracht Frankfurt (GER)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Ritsu+Doan&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "MF",
+          "name": "Daizen Maeda",
+          "dob": "1997-10-20",
+          "club": "Celtic FC (SCO)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Daizen+Maeda&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Keisuke Osako",
+          "dob": "1999-07-28",
+          "club": "Sanfrecce Hiroshima (JPN)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Keisuke+Osako&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "MF",
+          "name": "Keito Nakamura",
+          "dob": "2000-07-28",
+          "club": "Stade Reims (FRA)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Keito+Nakamura&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "MF",
+          "name": "Junya Ito",
+          "dob": "1993-03-09",
+          "club": "KRC Genk (BEL)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Junya+Ito&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "MF",
+          "name": "Daichi Kamada",
+          "dob": "1996-08-05",
+          "club": "Crystal Palace FC (ENG)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Daichi+Kamada&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "DF",
+          "name": "Tsuyoshi Watanabe",
+          "dob": "1997-02-05",
+          "club": "Feyenoord Rotterdam (NED)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Tsuyoshi+Watanabe&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "MF",
+          "name": "Yuito Suzuki",
+          "dob": "2001-10-25",
+          "club": "SC Freiburg (GER)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Yuito+Suzuki&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "FW",
+          "name": "Ayase Ueda",
+          "dob": "1998-08-28",
+          "club": "Feyenoord Rotterdam (NED)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Ayase+Ueda&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "FW",
+          "name": "Koki Ogawa",
+          "dob": "1997-08-08",
+          "club": "NEC Nijmegen (NED)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Koki+Ogawa&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "DF",
+          "name": "Ayumu Seko",
+          "dob": "2000-06-07",
+          "club": "Le Havre AC (FRA)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Ayumu+Seko&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "DF",
+          "name": "Hiroki Ito",
+          "dob": "1999-05-12",
+          "club": "FC Bayern München (GER)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Hiroki+Ito&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "DF",
+          "name": "Takehiro Tomiyasu",
+          "dob": "1998-11-05",
+          "club": "AFC Ajax (NED)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Takehiro+Tomiyasu&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "GK",
+          "name": "Tomoki Hayakawa",
+          "dob": "1999-03-03",
+          "club": "Kashima Antlers (JPN)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Tomoki+Hayakawa&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "MF",
+          "name": "Kaishu Sano",
+          "dob": "2000-12-30",
+          "club": "1. FSV Mainz 05 (GER)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Kaishu+Sano&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "DF",
+          "name": "Junnosuke Suzuki",
+          "dob": "2003-07-12",
+          "club": "FC København (DEN)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Junnosuke+Suzuki&background=BC002D&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "FW",
+          "name": "Kento Shiogai",
+          "dob": "2005-03-26",
+          "club": "VfL Wolfsburg (GER)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Kento+Shiogai&background=BC002D&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Jordan",
+      "code": "JOR",
+      "head_coach": {
+        "name": "Jamal Sellami",
+        "nationality": "Morocco"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Yazeed Abulaila",
+          "dob": "1993-01-08",
+          "club": "Al Hussein SC (JOR)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Yazeed+Abulaila&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Mohammad Abuhasheesh",
+          "dob": "1995-05-09",
+          "club": "Al Karma SC (IRQ)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Mohammad+Abuhasheesh&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Abdallah Nasib",
+          "dob": "1994-02-25",
+          "club": "Al Zawra'a SC (IRQ)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Abdallah+Nasib&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Husam Abudahab",
+          "dob": "2000-05-13",
+          "club": "Al Faisaly SC (JOR)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Husam+Abudahab&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Yazan Alarab",
+          "dob": "1996-01-31",
+          "club": "FC Seoul (KOR)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Yazan+Alarab&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "MF",
+          "name": "Amer Jamous",
+          "dob": "2002-07-03",
+          "club": "Al Zawra'a SC (IRQ)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Amer+Jamous&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "FW",
+          "name": "Mohammad Abuzraiq",
+          "dob": "1997-12-30",
+          "club": "Raja Casablanca (MAR)",
+          "height_cm": 170,
+          "image": "https://ui-avatars.com/api/?name=Mohammad+Abuzraiq&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Noor Alrawabdeh",
+          "dob": "1997-02-24",
+          "club": "Selangor FC (MAS)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Noor+Alrawabdeh&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Ali Olwan",
+          "dob": "2000-03-26",
+          "club": "Al Sailiya SC (QAT)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Ali+Olwan&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Mousa Al Tamari",
+          "dob": "1997-06-10",
+          "club": "Stade Rennais FC (FRA)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Mousa+Al+Tamari&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Odeh Fakhoury",
+          "dob": "2005-11-22",
+          "club": "Pyramids FC (EGY)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Odeh+Fakhoury&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Nour Baniateyah",
+          "dob": "1993-01-25",
+          "club": "Al Faisaly SC (JOR)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Nour+Baniateyah&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "FW",
+          "name": "Mahmoud Almardi",
+          "dob": "1993-10-06",
+          "club": "Al Hussein SC (JOR)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Mahmoud+Almardi&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "MF",
+          "name": "Rajaei Ayed",
+          "dob": "1993-07-25",
+          "club": "Al Hussein SC (JOR)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Rajaei+Ayed&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "MF",
+          "name": "Ibrahim Sadeh",
+          "dob": "2000-04-27",
+          "club": "Al Karma SC (IRQ)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Ibrahim+Sadeh&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "DF",
+          "name": "Mohammad Abualnadi",
+          "dob": "2001-02-08",
+          "club": "Selangor FC (MAS)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Mohammad+Abualnadi&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "DF",
+          "name": "Saleem Obaid",
+          "dob": "1992-01-17",
+          "club": "Al Hussein SC (JOR)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Saleem+Obaid&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "FW",
+          "name": "Ibrahim Sabra",
+          "dob": "2006-02-01",
+          "club": "NK Lokomotiva Zagreb (CRO)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Ibrahim+Sabra&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "DF",
+          "name": "Saed Alrosan",
+          "dob": "1997-02-01",
+          "club": "Al Hussein SC (JOR)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Saed+Alrosan&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "MF",
+          "name": "Mohannad Abutaha",
+          "dob": "2003-02-02",
+          "club": "Al-Quwa Al-Jawiya (IRQ)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Mohannad+Abutaha&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "MF",
+          "name": "Nizar Alrashdan",
+          "dob": "1999-03-23",
+          "club": "Qatar SC (QAT)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Nizar+Alrashdan&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "GK",
+          "name": "Abdallah Alfakhori",
+          "dob": "2000-01-22",
+          "club": "Al Wahdat SC (JOR)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Abdallah+Alfakhori&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "DF",
+          "name": "Ehsan Haddad",
+          "dob": "1994-02-05",
+          "club": "Al Hussein SC (JOR)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Ehsan+Haddad&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "FW",
+          "name": "Ali Azaizeh",
+          "dob": "2004-04-13",
+          "club": "Al Shabab FC (KSA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Ali+Azaizeh&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "MF",
+          "name": "Mohammad Aldaoud",
+          "dob": "1992-04-12",
+          "club": "Al Wahdat SC (JOR)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Mohammad+Aldaoud&background=007A3D&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "DF",
+          "name": "Anas Badawi",
+          "dob": "1997-09-13",
+          "club": "Al Faisaly SC (JOR)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Anas+Badawi&background=007A3D&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "South Korea",
+      "code": "KOR",
+      "head_coach": {
+        "name": "Hong Myung-bo",
+        "nationality": "South Korea"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Kim Seunggyu",
+          "dob": "1990-09-30",
+          "club": "FC Tokyo (JPN)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Kim+Seunggyu&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Lee Hanbeom",
+          "dob": "2002-06-17",
+          "club": "FC Midtjylland (DEN)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Lee+Hanbeom&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "MF",
+          "name": "Lee Gihyuk",
+          "dob": "2000-07-07",
+          "club": "Gangwon FC (KOR)",
+          "height_cm": 184,
+          "image": "https://ui-avatars.com/api/?name=Lee+Gihyuk&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Kim Minjae",
+          "dob": "1996-11-15",
+          "club": "FC Bayern München (GER)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Kim+Minjae&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Kim Taehyeon",
+          "dob": "2000-09-17",
+          "club": "Kashima Antlers (JPN)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Kim+Taehyeon&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "MF",
+          "name": "Hwang Inbeom",
+          "dob": "1996-09-20",
+          "club": "Feyenoord Rotterdam (NED)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Hwang+Inbeom&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "FW",
+          "name": "Son Heung-min",
+          "dob": "1992-07-08",
+          "club": "LAFC (USA)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Son+Heungmin&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Paik Seungho",
+          "dob": "1997-03-17",
+          "club": "Birmingham City FC (ENG)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Paik+Seungho&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Cho Guesung",
+          "dob": "1998-01-25",
+          "club": "FC Midtjylland (DEN)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Cho+Guesung&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "MF",
+          "name": "Lee Jaesung",
+          "dob": "1992-08-10",
+          "club": "1. FSV Mainz 05 (GER)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Lee+Jaesung&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "MF",
+          "name": "Hwang Heechan",
+          "dob": "1996-01-26",
+          "club": "Wolverhampton Wanderers FC (ENG)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Hwang+Heechan&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Song Bumkeun",
+          "dob": "1997-10-15",
+          "club": "Jeonbuk Hyundai Motors FC (KOR)",
+          "height_cm": 196,
+          "image": "https://ui-avatars.com/api/?name=Song+Bumkeun&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "DF",
+          "name": "Lee Taeseok",
+          "dob": "2002-07-28",
+          "club": "FK Austria Wien (AUT)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Lee+Taeseok&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "DF",
+          "name": "Cho Wije",
+          "dob": "2001-08-25",
+          "club": "Jeonbuk Hyundai Motors FC (KOR)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Cho+Wije&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "DF",
+          "name": "Kim Moonhwan",
+          "dob": "1995-08-01",
+          "club": "Daejeon Hana Citizen FC (KOR)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Kim+Moonhwan&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "DF",
+          "name": "Park Jinseob",
+          "dob": "1995-10-23",
+          "club": "Zhejiang FC (CHN)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Park+Jinseob&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "MF",
+          "name": "Bae Junho",
+          "dob": "2003-08-21",
+          "club": "Stoke City FC (ENG)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Bae+Junho&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "FW",
+          "name": "Oh Hyeongyu",
+          "dob": "2001-04-12",
+          "club": "Beşiktaş JK (TUR)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Oh+Hyeongyu&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "MF",
+          "name": "Lee Kangin",
+          "dob": "2001-02-19",
+          "club": "Paris Saint-Germain (FRA)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Lee+Kangin&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "MF",
+          "name": "Yang Hyunjun",
+          "dob": "2002-05-25",
+          "club": "Celtic FC (SCO)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Yang+Hyunjun&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "GK",
+          "name": "Jo Hyeonwoo",
+          "dob": "1991-09-25",
+          "club": "Ulsan HD (KOR)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Jo+Hyeonwoo&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "DF",
+          "name": "Seol Youngwoo",
+          "dob": "1998-12-05",
+          "club": "FK Crvena Zvezda (SRB)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Seol+Youngwoo&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "DF",
+          "name": "Jens Castrop",
+          "dob": "2003-07-29",
+          "club": "Borussia Mönchengladbach (GER)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Jens+Castrop&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "MF",
+          "name": "Kim Jingyu",
+          "dob": "1997-02-24",
+          "club": "Jeonbuk Hyundai Motors FC (KOR)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Kim+Jingyu&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "MF",
+          "name": "Eom Jisung",
+          "dob": "2002-05-09",
+          "club": "Swansea City AFC (WAL)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Eom+Jisung&background=CD2E3A&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "MF",
+          "name": "Lee Donggyeong",
+          "dob": "1997-09-20",
+          "club": "Ulsan HD (KOR)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Lee+Donggyeong&background=CD2E3A&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Mexico",
+      "code": "MEX",
+      "head_coach": {
+        "name": "Javier Aguirre",
+        "nationality": "Mexico"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Raul Rangel",
+          "dob": "2000-02-25",
+          "club": "CD Guadalajara (MEX)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Raul+Rangel&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Jorge Sanchez",
+          "dob": "1997-12-10",
+          "club": "PAOK Saloniki (GRE)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Jorge+Sanchez&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Cesar Montes",
+          "dob": "1997-02-24",
+          "club": "FC Lokomotiv Moscow (RUS)",
+          "height_cm": 191,
+          "image": "https://ui-avatars.com/api/?name=Cesar+Montes&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Edson Alvarez",
+          "dob": "1997-10-24",
+          "club": "Fenerbahçe SK (TUR)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Edson+Alvarez&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Johan Vasquez",
+          "dob": "1998-10-22",
+          "club": "Genoa CFC (ITA)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Johan+Vasquez&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "MF",
+          "name": "Erik Lira",
+          "dob": "2000-05-08",
+          "club": "CF Cruz Azul (MEX)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Erik+Lira&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "MF",
+          "name": "Luis Romo",
+          "dob": "1995-06-05",
+          "club": "CD Guadalajara (MEX)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Luis+Romo&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Alvaro Fidalgo",
+          "dob": "1997-04-09",
+          "club": "Real Betis (ESP)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Alvaro+Fidalgo&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Raul Jimenez",
+          "dob": "1991-05-05",
+          "club": "Fulham FC (ENG)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Raul+Jimenez&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Alexis Vega",
+          "dob": "1997-11-25",
+          "club": "Deportivo Toluca FC (MEX)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Alexis+Vega&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Santiago Gimenez",
+          "dob": "2001-04-18",
+          "club": "AC Milan (ITA)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Santiago+Gimenez&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Carlos Acevedo",
+          "dob": "1996-04-19",
+          "club": "Club Santos Laguna (MEX)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Carlos+Acevedo&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "GK",
+          "name": "Guillermo Ochoa",
+          "dob": "1985-07-13",
+          "club": "AEL Limassol (CYP)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Guillermo+Ochoa&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "FW",
+          "name": "Armando Gonzalez",
+          "dob": "2003-04-20",
+          "club": "CD Guadalajara (MEX)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Armando+Gonzalez&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "DF",
+          "name": "Israel Reyes",
+          "dob": "2000-05-23",
+          "club": "Club América (MEX)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Israel+Reyes&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "FW",
+          "name": "Julian Quinones",
+          "dob": "1997-03-24",
+          "club": "Al Qadsiah FC (KSA)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Julian+Quinones&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "MF",
+          "name": "Orbelin Pineda",
+          "dob": "1996-03-24",
+          "club": "AEK Athens (GRE)",
+          "height_cm": 169,
+          "image": "https://ui-avatars.com/api/?name=Orbelin+Pineda&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "MF",
+          "name": "Obed Vargas",
+          "dob": "2005-08-05",
+          "club": "Atlético De Madrid (ESP)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Obed+Vargas&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "MF",
+          "name": "Gilberto Mora",
+          "dob": "2008-10-14",
+          "club": "Club Tijuana (MEX)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Gilberto+Mora&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "DF",
+          "name": "Mateo Chavez",
+          "dob": "2004-05-12",
+          "club": "AZ Alkmaar (NED)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Mateo+Chavez&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "FW",
+          "name": "Cesar Huerta",
+          "dob": "2000-12-03",
+          "club": "RSC Anderlecht (BEL)",
+          "height_cm": 171,
+          "image": "https://ui-avatars.com/api/?name=Cesar+Huerta&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "FW",
+          "name": "Guillermo Martinez",
+          "dob": "1995-03-15",
+          "club": "Pumas UNAM (MEX)",
+          "height_cm": 191,
+          "image": "https://ui-avatars.com/api/?name=Guillermo+Martinez&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "DF",
+          "name": "Jesus Gallardo",
+          "dob": "1994-08-15",
+          "club": "Deportivo Toluca FC (MEX)",
+          "height_cm": 174,
+          "image": "https://ui-avatars.com/api/?name=Jesus+Gallardo&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "MF",
+          "name": "Luis Chavez",
+          "dob": "1996-01-15",
+          "club": "FC Dynamo Moscow (RUS)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Luis+Chavez&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "FW",
+          "name": "Roberto Alvarado",
+          "dob": "1998-09-07",
+          "club": "CD Guadalajara (MEX)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Roberto+Alvarado&background=006847&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "MF",
+          "name": "Brian Gutierrez",
+          "dob": "2003-06-17",
+          "club": "CD Guadalajara (MEX)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Brian+Gutierrez&background=006847&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Morocco",
+      "code": "MAR",
+      "head_coach": {
+        "name": "Mohamed Ouahbi",
+        "nationality": "Morocco"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Yassine Bounou",
+          "dob": "1991-04-05",
+          "club": "Al Hilal SC (KSA)",
+          "height_cm": 192,
+          "image": "https://ui-avatars.com/api/?name=Yassine+Bounou&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Achraf Hakimi",
+          "dob": "1998-11-04",
+          "club": "Paris Saint-Germain (FRA)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Achraf+Hakimi&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "DF",
+          "name": "Noussair Mazraoui",
+          "dob": "1997-11-14",
+          "club": "Manchester United FC (ENG)",
+          "height_cm": 183,
+          "image": "https://ui-avatars.com/api/?name=Noussair+Mazraoui&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "MF",
+          "name": "Sofyan Amrabat",
+          "dob": "1996-08-21",
+          "club": "Real Betis (ESP)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Sofyan+Amrabat&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Nayef Aguerd",
+          "dob": "1996-03-30",
+          "club": "Olympique Marseille (FRA)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Nayef+Aguerd&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "MF",
+          "name": "Ayyoub Bouaddi",
+          "dob": "2007-10-02",
+          "club": "Lille OSC (FRA)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Ayyoub+Bouaddi&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "MF",
+          "name": "Chemsdine Talbi",
+          "dob": "2005-05-09",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Chemsdine+Talbi&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Azzedine Ounahi",
+          "dob": "2000-04-19",
+          "club": "Girona FC (ESP)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Azzedine+Ounahi&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Soufiane Rahimi",
+          "dob": "1996-06-02",
+          "club": "Al Ain FC (UAE)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Soufiane+Rahimi&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Brahim Diaz",
+          "dob": "1999-08-03",
+          "club": "Real Madrid C. F. (ESP)",
+          "height_cm": 170,
+          "image": "https://ui-avatars.com/api/?name=Brahim+Diaz&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "MF",
+          "name": "Ismael Saibari",
+          "dob": "2001-01-28",
+          "club": "PSV Eindhoven (NED)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Ismael+Saibari&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "GK",
+          "name": "Munir El Kajoui",
+          "dob": "1989-05-10",
+          "club": "RS Berkane (MAR)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Munir+El+Kajoui&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "DF",
+          "name": "Zakaria El Ouahdi",
+          "dob": "2001-12-31",
+          "club": "KRC Genk (BEL)",
+          "height_cm": 171,
+          "image": "https://ui-avatars.com/api/?name=Zakaria+El+Ouahdi&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "DF",
+          "name": "Issa Diop",
+          "dob": "1997-01-09",
+          "club": "Fulham FC (ENG)",
+          "height_cm": 194,
+          "image": "https://ui-avatars.com/api/?name=Issa+Diop&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "MF",
+          "name": "Samir El Mourabet",
+          "dob": "2005-10-06",
+          "club": "RC Strasbourg (FRA)",
+          "height_cm": 187,
+          "image": "https://ui-avatars.com/api/?name=Samir+El+Mourabet&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "MF",
+          "name": "Gessime Yassine",
+          "dob": "2005-11-22",
+          "club": "RC Strasbourg (FRA)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Gessime+Yassine&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "FW",
+          "name": "Abde Ezzalzouli",
+          "dob": "2001-12-17",
+          "club": "Real Betis (ESP)",
+          "height_cm": 177,
+          "image": "https://ui-avatars.com/api/?name=Abde+Ezzalzouli&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "DF",
+          "name": "Chadi Riad",
+          "dob": "2003-06-17",
+          "club": "Crystal Palace FC (ENG)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Chadi+Riad&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "DF",
+          "name": "Youssef Belammari",
+          "dob": "1998-09-20",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 175,
+          "image": "https://ui-avatars.com/api/?name=Youssef+Belammari&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "FW",
+          "name": "Ayoub El Kaabi",
+          "dob": "1993-06-25",
+          "club": "Olympiacos FC (GRE)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Ayoub+El+Kaabi&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "FW",
+          "name": "Ayoub Amaimouni",
+          "dob": "2004-11-30",
+          "club": "Eintracht Frankfurt (GER)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Ayoub+Amaimouni&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "GK",
+          "name": "Ahmed Reda Tagnaouti",
+          "dob": "1996-04-05",
+          "club": "ASFAR (MAR)",
+          "height_cm": 194,
+          "image": "https://ui-avatars.com/api/?name=Ahmed+Reda+Tagnaouti&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "MF",
+          "name": "Bilal El Khannouss",
+          "dob": "2004-05-10",
+          "club": "VfB Stuttgart (GER)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Bilal+El+Khannouss&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "MF",
+          "name": "Neil El Aynaoui",
+          "dob": "2001-07-02",
+          "club": "AS Roma (ITA)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Neil+El+Aynaoui&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "DF",
+          "name": "Redouane Halhal",
+          "dob": "2003-03-05",
+          "club": "KV Mechelen (BEL)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Redouane+Halhal&background=C1272D&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "DF",
+          "name": "Anass Salah-Eddine",
+          "dob": "2002-01-18",
+          "club": "PSV Eindhoven (NED)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Anass+Salah+Eddine&background=C1272D&color=fff&size=200"
+        }
+      ]
+    },
+    {
+      "team": "Netherlands",
+      "code": "NED",
+      "head_coach": {
+        "name": "Ronald Koeman",
+        "nationality": "Netherlands"
+      },
+      "players": [
+        {
+          "number": 1,
+          "pos": "GK",
+          "name": "Bart Verbruggen",
+          "dob": "2002-08-18",
+          "club": "Brighton & Hove Albion FC (ENG)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Bart+Verbruggen&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 2,
+          "pos": "DF",
+          "name": "Jurrien Timber",
+          "dob": "2001-06-17",
+          "club": "Arsenal FC (ENG)",
+          "height_cm": 179,
+          "image": "https://ui-avatars.com/api/?name=Jurrien+Timber&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 3,
+          "pos": "MF",
+          "name": "Marten de Roon",
+          "dob": "1991-03-29",
+          "club": "Atalanta Bergamo (ITA)",
+          "height_cm": 186,
+          "image": "https://ui-avatars.com/api/?name=Marten+de+Roon&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 4,
+          "pos": "DF",
+          "name": "Virgil van Dijk",
+          "dob": "1991-07-08",
+          "club": "Liverpool FC (ENG)",
+          "height_cm": 195,
+          "image": "https://ui-avatars.com/api/?name=Virgil+van+Dijk&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 5,
+          "pos": "DF",
+          "name": "Nathan Ake",
+          "dob": "1995-02-18",
+          "club": "Manchester City FC (ENG)",
+          "height_cm": 180,
+          "image": "https://ui-avatars.com/api/?name=Nathan+Ake&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 6,
+          "pos": "DF",
+          "name": "Jan Paul van Hecke",
+          "dob": "2000-06-08",
+          "club": "Brighton & Hove Albion FC (ENG)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Jan+Paul+van+Hecke&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 7,
+          "pos": "MF",
+          "name": "Justin Kluivert",
+          "dob": "1999-05-05",
+          "club": "AFC Bournemouth (ENG)",
+          "height_cm": 173,
+          "image": "https://ui-avatars.com/api/?name=Justin+Kluivert&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 8,
+          "pos": "MF",
+          "name": "Ryan Gravenberch",
+          "dob": "2002-05-16",
+          "club": "Liverpool FC (ENG)",
+          "height_cm": 190,
+          "image": "https://ui-avatars.com/api/?name=Ryan+Gravenberch&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 9,
+          "pos": "FW",
+          "name": "Wout Weghorst",
+          "dob": "1992-08-07",
+          "club": "AFC Ajax (NED)",
+          "height_cm": 197,
+          "image": "https://ui-avatars.com/api/?name=Wout+Weghorst&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 10,
+          "pos": "FW",
+          "name": "Memphis Depay",
+          "dob": "1994-02-13",
+          "club": "SC Corinthians (BRA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Memphis+Depay&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 11,
+          "pos": "FW",
+          "name": "Cody Gakpo",
+          "dob": "1999-05-07",
+          "club": "Liverpool FC (ENG)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Cody+Gakpo&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 12,
+          "pos": "DF",
+          "name": "Mats Wieffer",
+          "dob": "1999-11-16",
+          "club": "Brighton & Hove Albion FC (ENG)",
+          "height_cm": 189,
+          "image": "https://ui-avatars.com/api/?name=Mats+Wieffer&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 13,
+          "pos": "GK",
+          "name": "Robin Roefs",
+          "dob": "2003-01-17",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Robin+Roefs&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 14,
+          "pos": "MF",
+          "name": "Tijjani Reijnders",
+          "dob": "1998-07-29",
+          "club": "Manchester City FC (ENG)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Tijjani+Reijnders&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 15,
+          "pos": "DF",
+          "name": "Micky van de Ven",
+          "dob": "2001-04-19",
+          "club": "Tottenham Hotspur FC (ENG)",
+          "height_cm": 193,
+          "image": "https://ui-avatars.com/api/?name=Micky+van+de+Ven&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 16,
+          "pos": "MF",
+          "name": "Guus Til",
+          "dob": "1997-12-22",
+          "club": "PSV Eindhoven (NED)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Guus+Til&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 17,
+          "pos": "FW",
+          "name": "Noa Lang",
+          "dob": "1999-06-17",
+          "club": "Galatasaray SK (TUR)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Noa+Lang&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 18,
+          "pos": "FW",
+          "name": "Donyell Malen",
+          "dob": "1999-01-19",
+          "club": "AS Roma (ITA)",
+          "height_cm": 178,
+          "image": "https://ui-avatars.com/api/?name=Donyell+Malen&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 19,
+          "pos": "FW",
+          "name": "Brian Brobbey",
+          "dob": "2002-02-01",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Brian+Brobbey&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 20,
+          "pos": "MF",
+          "name": "Teun Koopmeiners",
+          "dob": "1998-02-28",
+          "club": "Juventus FC (ITA)",
+          "height_cm": 185,
+          "image": "https://ui-avatars.com/api/?name=Teun+Koopmeiners&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 21,
+          "pos": "MF",
+          "name": "Frenkie de Jong",
+          "dob": "1997-05-12",
+          "club": "FC Barcelona (ESP)",
+          "height_cm": 181,
+          "image": "https://ui-avatars.com/api/?name=Frenkie+de+Jong&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 22,
+          "pos": "DF",
+          "name": "Denzel Dumfries",
+          "dob": "1996-04-18",
+          "club": "FC Internazionale Milano (ITA)",
+          "height_cm": 188,
+          "image": "https://ui-avatars.com/api/?name=Denzel+Dumfries&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 23,
+          "pos": "GK",
+          "name": "Mark Flekken",
+          "dob": "1993-06-13",
+          "club": "Bayer Leverkusen (GER)",
+          "height_cm": 195,
+          "image": "https://ui-avatars.com/api/?name=Mark+Flekken&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 24,
+          "pos": "FW",
+          "name": "Crysencio Summerville",
+          "dob": "2001-10-30",
+          "club": "West Ham United FC (ENG)",
+          "height_cm": 172,
+          "image": "https://ui-avatars.com/api/?name=Crysencio+Summerville&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 25,
+          "pos": "DF",
+          "name": "Jorrel Hato",
+          "dob": "2006-03-07",
+          "club": "Chelsea FC (ENG)",
+          "height_cm": 182,
+          "image": "https://ui-avatars.com/api/?name=Jorrel+Hato&background=FF6600&color=fff&size=200"
+        },
+        {
+          "number": 26,
+          "pos": "MF",
+          "name": "Quinten Timber",
+          "dob": "2001-06-17",
+          "club": "Olympique Marseille (FRA)",
+          "height_cm": 176,
+          "image": "https://ui-avatars.com/api/?name=Quinten+Timber&background=FF6600&color=fff&size=200"
+        }
+      ]
     }
   ]
 }
