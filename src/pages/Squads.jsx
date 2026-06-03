@@ -7,6 +7,13 @@ import {
   ArrowLeft,
   Search,
   X,
+  Cake,
+  Hash,
+  MapPin,
+  Flag,
+  ChevronDown,
+  ChevronUp,
+  Star,
 } from "lucide-react";
 import squadsData from "../data/fifa_wc2026_squads.json";
 import FlagIcon from "../components/FlagIcon";
@@ -18,27 +25,40 @@ const POSITION_COLORS = {
     bg: "rgba(234,179,8,0.14)",
     border: "rgba(234,179,8,0.38)",
     text: "#EAB308",
+    glow: "rgba(234,179,8,0.25)",
     label: "Goalkeeper",
+    gradient:
+      "linear-gradient(135deg, rgba(234,179,8,0.18) 0%, rgba(234,179,8,0.04) 100%)",
   },
   DF: {
     bg: "rgba(59,130,246,0.14)",
     border: "rgba(59,130,246,0.38)",
     text: "#60A5FA",
+    glow: "rgba(59,130,246,0.25)",
     label: "Defender",
+    gradient:
+      "linear-gradient(135deg, rgba(59,130,246,0.18) 0%, rgba(59,130,246,0.04) 100%)",
   },
   MF: {
     bg: "rgba(22,163,74,0.14)",
     border: "rgba(22,163,74,0.38)",
     text: "#22C55E",
+    glow: "rgba(22,163,74,0.25)",
     label: "Midfielder",
+    gradient:
+      "linear-gradient(135deg, rgba(22,163,74,0.18) 0%, rgba(22,163,74,0.04) 100%)",
   },
   FW: {
     bg: "rgba(239,68,68,0.14)",
     border: "rgba(239,68,68,0.38)",
     text: "#F87171",
+    glow: "rgba(239,68,68,0.25)",
     label: "Forward",
+    gradient:
+      "linear-gradient(135deg, rgba(239,68,68,0.18) 0%, rgba(239,68,68,0.04) 100%)",
   },
 };
+
 const POS_ORDER = { GK: 0, DF: 1, MF: 2, FW: 3 };
 
 const GROUP_MAP = {
@@ -135,162 +155,479 @@ function calcAge(dob) {
   return a;
 }
 
-/* ── Player Card ── */
-function PlayerCard({ player }) {
-  const [imgErr, setImgErr] = useState(false);
-  const pos = POSITION_COLORS[player.pos] || POSITION_COLORS.MF;
-  const age = calcAge(player.dob);
+function formatDOB(dob) {
+  if (!dob || dob.startsWith("1000")) return null;
+  const d = new Date(dob);
+  return d.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+}
 
+/* ── Stat Pill ── */
+function StatPill({ icon: Icon, label, value, color }) {
+  if (!value && value !== 0) return null;
   return (
     <div
       style={{
-        background: "rgba(7,36,58,0.9)",
-        borderRadius: 14,
-        border: "1px solid rgba(255,255,255,0.06)",
-        padding: "14px 14px 12px",
         display: "flex",
-        flexDirection: "column",
-        gap: 10,
-        transition: "border-color .2s, transform .2s, box-shadow .2s",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = pos.border;
-        e.currentTarget.style.transform = "translateY(-2px)";
-        e.currentTarget.style.boxShadow = "0 8px 28px rgba(0,0,0,.35)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)";
-        e.currentTarget.style.transform = "translateY(0)";
-        e.currentTarget.style.boxShadow = "none";
+        alignItems: "center",
+        gap: 5,
+        background: "rgba(255,255,255,0.04)",
+        border: "1px solid rgba(255,255,255,0.07)",
+        borderRadius: 8,
+        padding: "5px 9px",
       }}
     >
-      <div style={{ display: "flex", alignItems: "flex-start", gap: 11 }}>
-        <div style={{ position: "relative", flexShrink: 0 }}>
-          {!imgErr ? (
-            <img
-              src={player.image}
-              alt={player.name}
-              onError={() => setImgErr(true)}
+      <Icon size={11} style={{ color: color || "#64748B", flexShrink: 0 }} />
+      <div
+        style={{ display: "flex", flexDirection: "column", lineHeight: 1.2 }}
+      >
+        <span
+          style={{
+            fontSize: 9,
+            color: "#475569",
+            letterSpacing: "0.5px",
+            textTransform: "uppercase",
+          }}
+        >
+          {label}
+        </span>
+        <span style={{ fontSize: 12, color: "#CBD5E1", fontWeight: 600 }}>
+          {value}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+/* ── Player Card ── */
+function PlayerCard({ player, index }) {
+  const [imgErr, setImgErr] = useState(false);
+  const [flipped, setFlipped] = useState(false);
+  const pos = POSITION_COLORS[player.pos] || POSITION_COLORS.MF;
+  const age = calcAge(player.dob);
+  const dob = formatDOB(player.dob);
+
+  // Extract club country from parentheses e.g. "FC Barcelona (ESP)"
+  const clubMatch = player.club
+    ? player.club.match(/^(.+?)\s*\(([A-Z]{2,3})\)$/)
+    : null;
+  const clubName = clubMatch ? clubMatch[1] : player.club;
+  const clubCountry = clubMatch ? clubMatch[2] : null;
+
+  return (
+    <div
+      onClick={() => setFlipped((f) => !f)}
+      style={{
+        perspective: "1000px",
+        cursor: "pointer",
+        animation: `cardSlideIn 0.4s ease both`,
+        animationDelay: `${(index % 12) * 45}ms`,
+      }}
+    >
+      <style>{`
+        @keyframes cardSlideIn {
+          from { opacity: 0; transform: translateY(18px) scale(0.96); }
+          to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes shimmer {
+          0%   { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+        .player-card-inner {
+          position: relative;
+          width: 100%;
+          height: 210px;
+          transform-style: preserve-3d;
+          transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .player-card-inner.flipped {
+          transform: rotateY(180deg);
+        }
+        .card-face {
+          position: absolute;
+          inset: 0;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          border-radius: 14px;
+          overflow: hidden;
+        }
+        .card-back {
+          transform: rotateY(180deg);
+        }
+      `}</style>
+
+      <div className={`player-card-inner${flipped ? " flipped" : ""}`}>
+        {/* FRONT */}
+        <div
+          className="card-face"
+          style={{
+            background: pos.gradient,
+            border: `1px solid ${pos.border}`,
+            boxShadow: flipped
+              ? "none"
+              : `0 4px 20px rgba(0,0,0,0.3), 0 0 0 0 ${pos.glow}`,
+            padding: "14px",
+            display: "flex",
+            flexDirection: "column",
+            gap: 10,
+          }}
+        >
+          {/* Top: avatar + name */}
+          <div style={{ display: "flex", alignItems: "flex-start", gap: 11 }}>
+            <div style={{ position: "relative", flexShrink: 0 }}>
+              {!imgErr ? (
+                <img
+                  src={player.image}
+                  alt={player.name}
+                  onError={() => setImgErr(true)}
+                  style={{
+                    width: 56,
+                    height: 56,
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    border: `2.5px solid ${pos.border}`,
+                    boxShadow: `0 0 12px ${pos.glow}`,
+                  }}
+                />
+              ) : (
+                <div
+                  style={{
+                    width: 56,
+                    height: 56,
+                    borderRadius: "50%",
+                    background: pos.bg,
+                    border: `2.5px solid ${pos.border}`,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    boxShadow: `0 0 12px ${pos.glow}`,
+                  }}
+                >
+                  <User size={22} style={{ color: pos.text }} />
+                </div>
+              )}
+              {/* Jersey number badge */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: -4,
+                  right: -5,
+                  background: pos.bg,
+                  border: `1.5px solid ${pos.border}`,
+                  borderRadius: 7,
+                  padding: "1px 6px",
+                  fontSize: 11,
+                  fontWeight: 800,
+                  color: pos.text,
+                  lineHeight: 1.4,
+                  boxShadow: `0 2px 6px rgba(0,0,0,0.4)`,
+                }}
+              >
+                #{player.number}
+              </div>
+            </div>
+
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div
+                style={{
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "1rem",
+                  fontWeight: 800,
+                  color: "#fff",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  letterSpacing: "0.02em",
+                }}
+                title={player.name}
+              >
+                {player.name}
+              </div>
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  marginTop: 5,
+                  padding: "2px 9px",
+                  borderRadius: 100,
+                  background: pos.bg,
+                  border: `1px solid ${pos.border}`,
+                  fontSize: 10,
+                  fontWeight: 700,
+                  color: pos.text,
+                  letterSpacing: "0.5px",
+                  textTransform: "uppercase",
+                }}
+              >
+                {pos.label}
+              </div>
+            </div>
+          </div>
+
+          {/* Stats grid */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 5,
+              paddingTop: 8,
+              borderTop: "1px solid rgba(255,255,255,0.07)",
+            }}
+          >
+            {age !== null && (
+              <StatPill icon={User} label="Age" value={age} color={pos.text} />
+            )}
+            {player.height_cm && (
+              <StatPill
+                icon={Ruler}
+                label="Height"
+                value={`${player.height_cm} cm`}
+                color={pos.text}
+              />
+            )}
+          </div>
+
+          {/* Club */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 6,
+              background: "rgba(0,0,0,0.2)",
+              borderRadius: 8,
+              padding: "6px 9px",
+            }}
+          >
+            <Building2 size={11} style={{ color: "#64748B", flexShrink: 0 }} />
+            <span
               style={{
-                width: 50,
-                height: 50,
-                borderRadius: "50%",
-                objectFit: "cover",
-                border: `2px solid ${pos.border}`,
+                fontSize: 11,
+                color: "#94A3B8",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                flex: 1,
               }}
-            />
-          ) : (
+              title={player.club}
+            >
+              {clubName}
+              {clubCountry && (
+                <span style={{ color: "#475569", marginLeft: 4 }}>
+                  · {clubCountry}
+                </span>
+              )}
+            </span>
+          </div>
+
+          {/* Flip hint */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 4,
+              fontSize: 9,
+              color: "#334155",
+              letterSpacing: "0.5px",
+            }}
+          >
+            <span>TAP FOR DETAILS</span>
+          </div>
+        </div>
+
+        {/* BACK */}
+        <div
+          className="card-face card-back"
+          style={{
+            background: "rgba(7,24,44,0.97)",
+            border: `1px solid ${pos.border}`,
+            padding: "14px",
+            display: "flex",
+            flexDirection: "column",
+            gap: 8,
+          }}
+        >
+          {/* Header */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              marginBottom: 2,
+            }}
+          >
             <div
               style={{
-                width: 50,
-                height: 50,
+                width: 32,
+                height: 32,
                 borderRadius: "50%",
                 background: pos.bg,
                 border: `2px solid ${pos.border}`,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                flexShrink: 0,
               }}
             >
-              <User size={20} style={{ color: pos.text }} />
+              <span style={{ fontSize: 13, fontWeight: 800, color: pos.text }}>
+                {player.number}
+              </span>
             </div>
-          )}
-          <div
-            style={{
-              position: "absolute",
-              bottom: -4,
-              right: -4,
-              background: pos.bg,
-              border: `1px solid ${pos.border}`,
-              borderRadius: 6,
-              padding: "1px 5px",
-              fontSize: 10,
-              fontWeight: 700,
-              color: pos.text,
-              lineHeight: 1.4,
-            }}
-          >
-            {player.number}
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div
+                style={{
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "0.9rem",
+                  fontWeight: 800,
+                  color: "#fff",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                {player.name}
+              </div>
+              <div
+                style={{
+                  fontSize: 10,
+                  color: pos.text,
+                  fontWeight: 600,
+                  letterSpacing: "0.5px",
+                }}
+              >
+                {pos.label}
+              </div>
+            </div>
           </div>
-        </div>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div
-            style={{
-              fontFamily: "'Barlow Condensed', 'Hind Siliguri', sans-serif",
-              fontSize: "0.95rem",
-              fontWeight: 700,
-              color: "#fff",
-              whiteSpace: "nowrap",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-            }}
-            title={player.name}
-          >
-            {player.name}
-          </div>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              marginTop: 4,
-              padding: "2px 8px",
-              borderRadius: 100,
-              background: pos.bg,
-              border: `1px solid ${pos.border}`,
-              fontSize: 10,
-              fontWeight: 600,
-              color: pos.text,
-            }}
-          >
-            {pos.label}
-          </div>
-        </div>
-      </div>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 6,
-          paddingTop: 8,
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-        }}
-      >
-        {age !== null && (
-          <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
-            <User size={10} style={{ color: "#64748B", flexShrink: 0 }} />
-            <span style={{ fontSize: 11, color: "#94A3B8" }}>Age {age}</span>
-          </div>
-        )}
-        {player.height_cm && (
-          <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
-            <Ruler size={10} style={{ color: "#64748B", flexShrink: 0 }} />
-            <span style={{ fontSize: 11, color: "#94A3B8" }}>
-              {player.height_cm} cm
-            </span>
-          </div>
-        )}
-        <div
-          style={{
-            gridColumn: "1/-1",
-            display: "flex",
-            alignItems: "center",
-            gap: 5,
-          }}
-        >
-          <Building2 size={10} style={{ color: "#64748B", flexShrink: 0 }} />
-          <span
+          <div
             style={{
-              fontSize: 10,
-              color: "#64748B",
-              whiteSpace: "nowrap",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
+              borderTop: `1px solid ${pos.border}`,
+              paddingTop: 8,
+              display: "flex",
+              flexDirection: "column",
+              gap: 6,
             }}
-            title={player.club}
           >
-            {player.club}
-          </span>
+            {/* DOB */}
+            {dob && (
+              <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+                <Cake size={12} style={{ color: pos.text, flexShrink: 0 }} />
+                <span style={{ fontSize: 11, color: "#94A3B8" }}>Born:</span>
+                <span
+                  style={{
+                    fontSize: 11,
+                    color: "#fff",
+                    fontWeight: 600,
+                    marginLeft: "auto",
+                  }}
+                >
+                  {dob}
+                </span>
+              </div>
+            )}
+            {/* Age */}
+            {age !== null && (
+              <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+                <User size={12} style={{ color: pos.text, flexShrink: 0 }} />
+                <span style={{ fontSize: 11, color: "#94A3B8" }}>Age:</span>
+                <span
+                  style={{
+                    fontSize: 11,
+                    color: "#fff",
+                    fontWeight: 600,
+                    marginLeft: "auto",
+                  }}
+                >
+                  {age} years
+                </span>
+              </div>
+            )}
+            {/* Height */}
+            {player.height_cm && (
+              <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+                <Ruler size={12} style={{ color: pos.text, flexShrink: 0 }} />
+                <span style={{ fontSize: 11, color: "#94A3B8" }}>Height:</span>
+                <span
+                  style={{
+                    fontSize: 11,
+                    color: "#fff",
+                    fontWeight: 600,
+                    marginLeft: "auto",
+                  }}
+                >
+                  {player.height_cm} cm
+                </span>
+              </div>
+            )}
+            {/* Club */}
+            {player.club && (
+              <div
+                style={{ display: "flex", alignItems: "flex-start", gap: 7 }}
+              >
+                <Building2
+                  size={12}
+                  style={{ color: pos.text, flexShrink: 0, marginTop: 1 }}
+                />
+                <span style={{ fontSize: 11, color: "#94A3B8", flexShrink: 0 }}>
+                  Club:
+                </span>
+                <span
+                  style={{
+                    fontSize: 11,
+                    color: "#fff",
+                    fontWeight: 600,
+                    textAlign: "right",
+                    marginLeft: "auto",
+                    wordBreak: "break-word",
+                    maxWidth: "65%",
+                  }}
+                >
+                  {clubName}
+                  {clubCountry && (
+                    <span
+                      style={{
+                        color: pos.text,
+                        display: "block",
+                        fontSize: 10,
+                        fontWeight: 500,
+                      }}
+                    >
+                      {clubCountry}
+                    </span>
+                  )}
+                </span>
+              </div>
+            )}
+            {/* Jersey */}
+            <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+              <Hash size={12} style={{ color: pos.text, flexShrink: 0 }} />
+              <span style={{ fontSize: 11, color: "#94A3B8" }}>Jersey:</span>
+              <span
+                style={{
+                  fontSize: 11,
+                  color: "#fff",
+                  fontWeight: 600,
+                  marginLeft: "auto",
+                }}
+              >
+                #{player.number}
+              </span>
+            </div>
+          </div>
+
+          {/* Position indicator bar */}
+          <div
+            style={{
+              marginTop: "auto",
+              height: 3,
+              borderRadius: 2,
+              background: `linear-gradient(90deg, ${pos.text}88, ${pos.text}22)`,
+            }}
+          />
         </div>
       </div>
     </div>
@@ -300,30 +637,39 @@ function PlayerCard({ player }) {
 /* ── Position Section ── */
 function PositionSection({ pos, players }) {
   const c = POSITION_COLORS[pos];
+  const [collapsed, setCollapsed] = useState(false);
+
   return (
-    <div style={{ marginBottom: 28 }}>
-      <div
+    <div style={{ marginBottom: 32 }}>
+      <button
+        onClick={() => setCollapsed((v) => !v)}
         style={{
           display: "flex",
           alignItems: "center",
-          gap: 8,
-          marginBottom: 14,
+          gap: 10,
+          marginBottom: collapsed ? 0 : 16,
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+          padding: 0,
+          width: "100%",
         }}
       >
         <div
           style={{
-            width: 7,
-            height: 7,
+            width: 8,
+            height: 8,
             borderRadius: "50%",
             background: c.text,
-            boxShadow: `0 0 7px ${c.text}`,
+            boxShadow: `0 0 10px ${c.text}`,
+            flexShrink: 0,
           }}
         />
         <span
           style={{
-            fontFamily: "'Barlow Condensed', 'Hind Siliguri', sans-serif",
-            fontSize: "0.82rem",
-            fontWeight: 700,
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontSize: "0.85rem",
+            fontWeight: 800,
             letterSpacing: "3px",
             textTransform: "uppercase",
             color: c.text,
@@ -335,7 +681,7 @@ function PositionSection({ pos, players }) {
           style={{
             fontSize: 11,
             color: "#475569",
-            padding: "1px 7px",
+            padding: "1px 8px",
             borderRadius: 100,
             background: "rgba(255,255,255,0.04)",
             border: "1px solid rgba(255,255,255,0.08)",
@@ -343,18 +689,24 @@ function PositionSection({ pos, players }) {
         >
           {players.length}
         </span>
-      </div>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))",
-          gap: 10,
-        }}
-      >
-        {players.map((p) => (
-          <PlayerCard key={p.number} player={p} />
-        ))}
-      </div>
+        <div style={{ marginLeft: "auto", color: "#475569" }}>
+          {collapsed ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
+        </div>
+      </button>
+
+      {!collapsed && (
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+            gap: 12,
+          }}
+        >
+          {players.map((p, i) => (
+            <PlayerCard key={p.number} player={p} index={i} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -395,7 +747,6 @@ function TeamTile({ teamName, hasSquad, onSelect }) {
         opacity: hasSquad ? 1 : 0.6,
       }}
     >
-      {/* Group badge */}
       <div
         style={{
           position: "absolute",
@@ -406,13 +757,12 @@ function TeamTile({ teamName, hasSquad, onSelect }) {
           letterSpacing: 1,
           color: grpColor,
           opacity: 0.9,
-          fontFamily: "'Barlow Condensed', 'Hind Siliguri', sans-serif",
+          fontFamily: "'Barlow Condensed', sans-serif",
         }}
       >
         GRP {grp}
       </div>
 
-      {/* Flag */}
       <div
         style={{
           width: 50,
@@ -427,10 +777,9 @@ function TeamTile({ teamName, hasSquad, onSelect }) {
         <FlagIcon teamName={teamName} size={50} />
       </div>
 
-      {/* Name */}
       <div
         style={{
-          fontFamily: "'Barlow Condensed', 'Hind Siliguri', sans-serif",
+          fontFamily: "'Barlow Condensed', sans-serif",
           fontSize: "0.85rem",
           fontWeight: 700,
           color: hov && hasSquad ? "#fff" : "#CBD5E1",
@@ -444,7 +793,6 @@ function TeamTile({ teamName, hasSquad, onSelect }) {
         {teamName}
       </div>
 
-      {/* Status badge */}
       {hasSquad ? (
         <div
           style={{
@@ -508,8 +856,27 @@ function SquadDetail({ teamData, onBack }) {
     (a, b) => (POS_ORDER[a] ?? 99) - (POS_ORDER[b] ?? 99),
   );
 
+  // Compute avg age
+  const ages = teamData.players.map((p) => calcAge(p.dob)).filter(Boolean);
+  const avgAge = ages.length
+    ? (ages.reduce((a, b) => a + b, 0) / ages.length).toFixed(1)
+    : null;
+
+  // Unique clubs
+  const uniqueClubs = new Set(teamData.players.map((p) => p.club)).size;
+
   return (
     <div className="fade-in">
+      <style>{`
+        @keyframes fadeSlideDown {
+          from { opacity: 0; transform: translateY(-12px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .squad-detail-header {
+          animation: fadeSlideDown 0.4s ease both;
+        }
+      `}</style>
+
       {/* Back button */}
       <button
         onClick={onBack}
@@ -541,7 +908,7 @@ function SquadDetail({ teamData, onBack }) {
       </button>
 
       {/* Team header */}
-      <div style={{ marginBottom: 28 }}>
+      <div className="squad-detail-header" style={{ marginBottom: 24 }}>
         <div
           style={{
             display: "flex",
@@ -552,20 +919,21 @@ function SquadDetail({ teamData, onBack }) {
         >
           <div
             style={{
-              width: 64,
-              height: 64,
+              width: 70,
+              height: 70,
               borderRadius: "50%",
               border: "2px solid rgba(22,163,74,0.45)",
               overflow: "hidden",
               flexShrink: 0,
+              boxShadow: "0 0 20px rgba(22,163,74,0.2)",
             }}
           >
-            <FlagIcon teamName={teamData.team} size={64} />
+            <FlagIcon teamName={teamData.team} size={70} />
           </div>
           <div style={{ flex: 1 }}>
             <h2
               style={{
-                fontFamily: "'Barlow Condensed', 'Hind Siliguri', sans-serif",
+                fontFamily: "'Barlow Condensed', sans-serif",
                 fontSize: "clamp(1.6rem,4vw,2.2rem)",
                 fontWeight: 800,
                 color: "#fff",
@@ -579,34 +947,98 @@ function SquadDetail({ teamData, onBack }) {
               style={{
                 display: "flex",
                 flexWrap: "wrap",
-                gap: "6px 16px",
+                gap: "5px 14px",
                 marginTop: 5,
               }}
             >
               <span style={{ fontSize: 12, color: "#64748B" }}>
-                <span style={{ color: "#22C55E", fontWeight: 600 }}>
+                <span style={{ color: "#22C55E", fontWeight: 700 }}>
                   {teamData.players.length}
                 </span>{" "}
                 Players
               </span>
-              <span style={{ fontSize: 12, color: "#475569" }}>·</span>
+              <span style={{ fontSize: 12, color: "#334155" }}>·</span>
               <span style={{ fontSize: 12, color: "#64748B" }}>
                 Coach:{" "}
-                <span style={{ color: "#94A3B8", fontWeight: 500 }}>
+                <span style={{ color: "#94A3B8", fontWeight: 600 }}>
                   {teamData.head_coach.name}
                 </span>
-              </span>
-              <span style={{ fontSize: 12, color: "#475569" }}>·</span>
-              <span style={{ fontSize: 12, color: "#64748B" }}>
-                {teamData.head_coach.nationality}
+                {teamData.head_coach.nationality && (
+                  <span style={{ color: "#475569" }}>
+                    {" "}
+                    ({teamData.head_coach.nationality})
+                  </span>
+                )}
               </span>
             </div>
           </div>
         </div>
+
+        {/* Stats bar */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 10,
+            padding: "12px 16px",
+            background: "rgba(7,36,58,0.6)",
+            border: "1px solid rgba(255,255,255,0.06)",
+            borderRadius: 12,
+            marginBottom: 16,
+          }}
+        >
+          {avgAge && (
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <Star size={12} style={{ color: "#F59E0B" }} />
+              <span style={{ fontSize: 11, color: "#64748B" }}>Avg Age:</span>
+              <span style={{ fontSize: 12, color: "#fff", fontWeight: 700 }}>
+                {avgAge}
+              </span>
+            </div>
+          )}
+          <span style={{ color: "#1E293B", fontSize: 11 }}>·</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <Building2 size={12} style={{ color: "#60A5FA" }} />
+            <span style={{ fontSize: 11, color: "#64748B" }}>Clubs:</span>
+            <span style={{ fontSize: 12, color: "#fff", fontWeight: 700 }}>
+              {uniqueClubs}
+            </span>
+          </div>
+          <span style={{ color: "#1E293B", fontSize: 11 }}>·</span>
+          {["GK", "DF", "MF", "FW"].map((pos) => {
+            const count = teamData.players.filter((p) => p.pos === pos).length;
+            const c = POSITION_COLORS[pos];
+            return (
+              <div
+                key={pos}
+                style={{ display: "flex", alignItems: "center", gap: 5 }}
+              >
+                <span style={{ fontSize: 10, color: c.text, fontWeight: 700 }}>
+                  {pos}
+                </span>
+                <span style={{ fontSize: 12, color: "#fff", fontWeight: 700 }}>
+                  {count}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+
+        <div
+          style={{
+            fontSize: 11,
+            color: "#475569",
+            fontStyle: "italic",
+            marginBottom: 6,
+          }}
+        >
+          Click any card to flip and see full details
+        </div>
+
         <hr
           style={{
             border: "none",
-            borderTop: "1px solid rgba(244,197,66,0.22)",
+            borderTop: "1px solid rgba(244,197,66,0.18)",
           }}
         />
       </div>
@@ -635,7 +1067,7 @@ function SquadDetail({ teamData, onBack }) {
                 key={f}
                 onClick={() => setPosFilter(f)}
                 style={{
-                  padding: "6px 13px",
+                  padding: "6px 14px",
                   borderRadius: 100,
                   cursor: "pointer",
                   border: active
@@ -648,11 +1080,12 @@ function SquadDetail({ teamData, onBack }) {
                     : "rgba(255,255,255,0.03)",
                   color: active ? (c ? c.text : "#22C55E") : "#64748B",
                   fontSize: 11,
-                  fontWeight: 600,
+                  fontWeight: 700,
                   transition: "all .2s",
+                  letterSpacing: "0.3px",
                 }}
               >
-                {f === "ALL" ? "All Players" : POSITION_COLORS[f].label + "s"}
+                {f === "ALL" ? "All" : POSITION_COLORS[f].label + "s"}
                 <span style={{ marginLeft: 5, fontSize: 10, opacity: 0.7 }}>
                   {count}
                 </span>
@@ -774,7 +1207,7 @@ export default function Squads() {
             </div>
             <h1
               style={{
-                fontFamily: "'Barlow Condensed', 'Hind Siliguri', sans-serif",
+                fontFamily: "'Barlow Condensed', sans-serif",
                 fontSize: "clamp(2rem,5vw,3rem)",
                 fontWeight: 800,
                 color: "#fff",
@@ -853,8 +1286,7 @@ export default function Squads() {
                         color: active ? gc : "#64748B",
                         fontSize: 11,
                         fontWeight: 700,
-                        fontFamily:
-                          "'Barlow Condensed', 'Hind Siliguri', sans-serif",
+                        fontFamily: "'Barlow Condensed', sans-serif",
                         letterSpacing: 1,
                         transition: "all .18s",
                       }}
