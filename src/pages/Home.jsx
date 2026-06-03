@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import fixtures from "../data/fixtures.json";
 import { getAllTeams } from "../utils/countryUtils";
+import FlagIcon from "../components/FlagIcon";
 
 const GROUP_STAGE = fixtures.filter(
   (f) =>
@@ -33,6 +34,69 @@ const GROUPS = [...new Set(GROUP_STAGE.map((f) => f.group))].sort();
 // Upcoming group stage matches (first 6)
 const FEATURED = GROUP_STAGE.slice(0, 6);
 
+// Build group → teams map from fixtures
+const GROUP_TEAMS = {};
+GROUP_STAGE.forEach((f) => {
+  if (!GROUP_TEAMS[f.group]) GROUP_TEAMS[f.group] = new Set();
+  if (f.team1 && f.team1 !== "TBD") GROUP_TEAMS[f.group].add(f.team1);
+  if (f.team2 && f.team2 !== "TBD") GROUP_TEAMS[f.group].add(f.team2);
+});
+
+function GroupsSection({ navigate }) {
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+      {GROUPS.map((g) => {
+        const teams = Array.from(GROUP_TEAMS[g] || []).sort();
+        return (
+          <div
+            key={g}
+            className="rounded-xl overflow-hidden"
+            style={{
+              background: "rgba(15,22,40,0.85)",
+              border: "1px solid rgba(201,168,76,0.25)",
+            }}
+          >
+            {/* Group header */}
+            <div
+              className="px-4 py-3 text-sm font-bold"
+              style={{
+                color: "#F0C040",
+                borderBottom: "1px solid rgba(201,168,76,0.15)",
+              }}
+            >
+              Group {g}
+            </div>
+
+            {/* Teams list — always visible */}
+            <div className="px-2 py-2">
+              {teams.map((team) => (
+                <button
+                  key={team}
+                  type="button"
+                  onClick={() =>
+                    navigate("/by-team", { state: { selectedTeam: team } })
+                  }
+                  className="w-full flex items-center gap-2 px-2 py-2 rounded-lg text-xs text-left transition-colors"
+                  style={{ color: "#e2e8f0" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.background = "rgba(201,168,76,0.1)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.background = "transparent")
+                  }
+                >
+                  <FlagIcon teamName={team} size={18} />
+                  <span className="font-medium truncate">{team}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 /**
  * Home – landing page with hero, stats, and quick nav cards.
  */
@@ -43,7 +107,7 @@ export default function Home() {
   const handleSearch = (e) => {
     e.preventDefault();
     if (search.trim()) {
-      navigate(`/by-team`);
+      navigate(`/by-team`, { state: { searchQuery: search.trim() } });
     }
   };
 
@@ -251,21 +315,7 @@ export default function Home() {
       {/* ── GROUPS ── */}
       <section className="max-w-6xl mx-auto px-4 pb-16">
         <h3 className="text-lg font-bold text-white mb-4">Tournament Groups</h3>
-        <div className="flex flex-wrap gap-2">
-          {GROUPS.map((g) => (
-            <span
-              key={g}
-              className="px-4 py-2 rounded-xl text-sm font-semibold"
-              style={{
-                background: "rgba(15,22,40,0.85)",
-                border: "1px solid rgba(201,168,76,0.2)",
-                color: "#e2e8f0",
-              }}
-            >
-              Group {g}
-            </span>
-          ))}
-        </div>
+        <GroupsSection navigate={navigate} />
         <p className="mt-4 text-sm text-gray-500">
           12 groups · 4 teams per group · 48 group stage matches total
         </p>

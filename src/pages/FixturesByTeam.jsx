@@ -1,16 +1,33 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Users, Info } from "lucide-react";
 import fixtures from "../data/fixtures.json";
 import MatchCard from "../components/MatchCard";
 import TeamSelector from "../components/TeamSelector";
 import FlagIcon from "../components/FlagIcon";
 import { sortByDateTime } from "../utils/dateUtils";
+import { getAllTeams } from "../utils/countryUtils";
 
 /**
  * FixturesByTeam – lets users pick a team and see all their fixtures.
  */
 export default function FixturesByTeam() {
+  const location = useLocation();
   const [selectedTeam, setSelectedTeam] = useState(null);
+
+  // Pre-select team or apply search query passed from Home
+  useEffect(() => {
+    const state = location.state;
+    if (!state) return;
+    if (state.selectedTeam) {
+      setSelectedTeam(state.selectedTeam);
+    } else if (state.searchQuery) {
+      const query = state.searchQuery.toLowerCase();
+      const teams = getAllTeams();
+      const match = teams.find((t) => t.toLowerCase().includes(query));
+      if (match) setSelectedTeam(match);
+    }
+  }, [location.state]);
 
   // Filter fixtures for the selected team
   const teamFixtures = useMemo(() => {
@@ -59,7 +76,13 @@ export default function FixturesByTeam() {
         </div>
 
         {/* Team selector */}
-        <div className="glass-card p-5 mb-8">
+        <div
+          className="p-5 mb-8 rounded-2xl"
+          style={{
+            background: "linear-gradient(135deg, rgba(15,22,40,0.92), rgba(20,28,53,0.88))",
+            border: "1px solid rgba(201,168,76,0.18)",
+          }}
+        >
           <label className="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">
             Select Team
           </label>

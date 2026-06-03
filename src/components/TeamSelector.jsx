@@ -1,10 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
-import { ChevronDown, X } from "lucide-react";
+import React, { useState, useRef } from "react";
+import { ChevronDown, X, Search } from "lucide-react";
 import FlagIcon from "./FlagIcon";
 import { getAllTeams } from "../utils/countryUtils";
 
 /**
  * TeamSelector – searchable dropdown for picking a national team.
+ * Uses onBlur/tabIndex pattern — no document event listeners needed.
  * Props:
  *   selectedTeam: string | null
  *   onSelect: (team: string | null) => void
@@ -12,27 +13,25 @@ import { getAllTeams } from "../utils/countryUtils";
 export default function TeamSelector({ selectedTeam, onSelect }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const ref = useRef(null);
+  const containerRef = useRef(null);
 
   const teams = getAllTeams().sort();
-
   const filtered = query
     ? teams.filter((t) => t.toLowerCase().includes(query.toLowerCase()))
     : teams;
 
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handler = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
-    };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
+  const openDropdown = () => {
+    setOpen(true);
+  };
+
+  const closeDropdown = () => {
+    setOpen(false);
+    setQuery("");
+  };
 
   const handleSelect = (team) => {
     onSelect(team);
-    setOpen(false);
-    setQuery("");
+    closeDropdown();
   };
 
   const handleClear = (e) => {
@@ -41,13 +40,35 @@ export default function TeamSelector({ selectedTeam, onSelect }) {
     setQuery("");
   };
 
+  // Close when focus leaves the entire container
+  const handleBlur = (e) => {
+    // relatedTarget is the element receiving focus
+    // If it's still inside our container, don't close
+    if (containerRef.current && containerRef.current.contains(e.relatedTarget)) {
+      return;
+    }
+    closeDropdown();
+  };
+
   return (
-    <div className="relative w-full" ref={ref}>
-      {/* Trigger button */}
-      <button
-        className="field-input w-full flex items-center justify-between gap-3 px-4 py-3 text-sm cursor-pointer"
-        onClick={() => setOpen(!open)}
-        type="button"
+    <div
+      ref={containerRef}
+      className="relative w-full"
+      onBlur={handleBlur}
+    >
+      {/* ── Trigger ── */}
+      <div
+        role="button"
+        tabIndex={0}
+        className="field-input w-full flex items-center justify-between gap-3 px-4 py-3 text-sm cursor-pointer select-none"
+        onClick={() => (open ? closeDropdown() : openDropdown())}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            open ? closeDropdown() : openDropdown();
+          }
+          if (e.key === "Escape") closeDropdown();
+        }}
       >
         <div className="flex items-center gap-3 min-w-0">
           {selectedTeam ? (
@@ -58,84 +79,124 @@ export default function TeamSelector({ selectedTeam, onSelect }) {
               </span>
             </>
           ) : (
-            <span className="text-gray-400">Select a team...</span>
+            <span className="text-gray-400">Select a team…</span>
           )}
         </div>
-        <div className="flex items-center gap-1 flex-shrink-0">
+
+        <div className="flex items-center gap-2 flex-shrink-0">
           {selectedTeam && (
-            <button
+            <span
+              role="button"
+              tabIndex={0}
               onClick={handleClear}
-              className="p-0.5 rounded text-gray-400 hover:text-white transition-colors"
+              onKeyDown={(e) => e.key === "Enter" && handleClear(e)}
+              className="p-1 rounded hover:bg-white/10 text-gray-400 hover:text-white transition-colors cursor-pointer"
+              title="Clear selection"
             >
               <X size={14} />
-            </button>
+            </span>
           )}
           <ChevronDown
             size={16}
             className="text-gray-400 transition-transform duration-200"
-            style={{ transform: open ? "rotate(180deg)" : "rotate(0)" }}
+            style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
           />
         </div>
-      </button>
+      </div>
 
-      {/* Dropdown */}
+      {/* ── Dropdown panel ── */}
       {open && (
         <div
-          className="absolute z-50 w-full mt-1 rounded-xl overflow-hidden shadow-2xl fade-in"
+          className="absolute left-0 right-0 mt-1 rounded-xl shadow-2xl"
           style={{
-            background: "#0A0E1A",
-            border: "1px solid rgba(201,168,76,0.25)",
+            background: "#0d1424",
+            border: "1px solid rgba(201,168,76,0.3)",
+            zIndex: 9999,
           }}
         >
-          {/* Search inside dropdown */}
+          {/* Search input */}
           <div
-            className="p-2 border-b"
-            style={{ borderColor: "rgba(201,168,76,0.15)" }}
+            className="p-2"
+            style={{ borderBottom: "1px solid rgba(201,168,76,0.15)" }}
           >
-            <input
-              autoFocus
-              type="text"
-              className="field-input w-full px-3 py-2 text-sm"
-              placeholder="Search team..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-            />
+            <div className="relative">
+              <Search
+                size={14}
+                className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
+                style={{ color: "#C9A84C" }}
+              />
+              <input
+                type="text"
+                className="field-input w-full pl-9 pr-3 py-2 text-sm"
+                placeholder="Search team…"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => e.key === "Escape" && closeDropdown()}
+                autoFocus
+              />
+            </div>
           </div>
 
           {/* Team list */}
-          <div className="overflow-y-auto" style={{ maxHeight: "260px" }}>
+          <div
+            className="overflow-y-auto"
+            style={{ maxHeight: "280px" }}
+          >
             {filtered.length === 0 ? (
-              <div className="px-4 py-6 text-center text-gray-500 text-sm">
-                No teams found
+              <div className="px-4 py-8 text-center text-gray-500 text-sm">
+                No teams found for "{query}"
               </div>
             ) : (
-              filtered.map((team) => (
-                <button
-                  key={team}
-                  type="button"
-                  onClick={() => handleSelect(team)}
-                  className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-left transition-colors"
-                  style={{
-                    background:
-                      selectedTeam === team
-                        ? "rgba(201,168,76,0.12)"
+              filtered.map((team) => {
+                const isSelected = selectedTeam === team;
+                return (
+                  <div
+                    key={team}
+                    role="option"
+                    aria-selected={isSelected}
+                    tabIndex={0}
+                    onMouseDown={(e) => {
+                      // Use onMouseDown + preventDefault so the container's
+                      // onBlur does NOT fire before we can call handleSelect
+                      e.preventDefault();
+                      handleSelect(team);
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        handleSelect(team);
+                      }
+                    }}
+                    className="flex items-center gap-3 px-4 py-2.5 text-sm cursor-pointer transition-colors"
+                    style={{
+                      background: isSelected
+                        ? "rgba(201,168,76,0.15)"
                         : "transparent",
-                    color: selectedTeam === team ? "#F0C040" : "#e2e8f0",
-                  }}
-                  onMouseEnter={(e) => {
-                    if (selectedTeam !== team)
-                      e.currentTarget.style.background =
-                        "rgba(255,255,255,0.04)";
-                  }}
-                  onMouseLeave={(e) => {
-                    if (selectedTeam !== team)
-                      e.currentTarget.style.background = "transparent";
-                  }}
-                >
-                  <FlagIcon teamName={team} size={24} />
-                  <span className="font-medium">{team}</span>
-                </button>
-              ))
+                      color: isSelected ? "#F0C040" : "#e2e8f0",
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isSelected)
+                        e.currentTarget.style.background =
+                          "rgba(255,255,255,0.06)";
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isSelected)
+                        e.currentTarget.style.background = "transparent";
+                    }}
+                  >
+                    <FlagIcon teamName={team} size={24} />
+                    <span className="font-medium">{team}</span>
+                    {isSelected && (
+                      <span
+                        className="ml-auto text-xs font-bold"
+                        style={{ color: "#C9A84C" }}
+                      >
+                        ✓
+                      </span>
+                    )}
+                  </div>
+                );
+              })
             )}
           </div>
         </div>
