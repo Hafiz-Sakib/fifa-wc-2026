@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Menu, X, Trophy, Users, CalendarDays, Zap } from "lucide-react";
+import { Menu, X, Trophy, Users, CalendarDays, Zap, Shirt } from "lucide-react";
 
 const NAV_LINKS = [
   { to: "/",        label: "Home",    icon: Trophy       },
   { to: "/by-team", label: "By Team", icon: Users        },
   { to: "/by-date", label: "By Date", icon: CalendarDays },
+  { to: "/squads",  label: "Squads",  icon: Shirt        },
 ];
 
 export default function Navbar() {

@@ -14,6 +14,7 @@ import {
   Star,
   ArrowRight,
   Shield,
+  Shirt,
 } from "lucide-react";
 import fixtures from "../data/fixtures.json";
 import MatchCard from "../components/MatchCard";
@@ -704,6 +705,16 @@ export default function Home() {
               iconBorder: "rgba(22,163,74,0.2)",
               iconColor: "#4ADE80",
               badge: "Jun–Jul",
+            },
+            {
+              path: "/squads",
+              icon: Shirt,
+              title: "Team Squads",
+              desc: "Explore full 26-man squads — players, positions, clubs & more",
+              iconBg: "rgba(244,197,66,0.1)",
+              iconBorder: "rgba(244,197,66,0.25)",
+              iconColor: "#F4C542",
+              badge: "9 Teams",
             },
           ].map((item) => (
             <button

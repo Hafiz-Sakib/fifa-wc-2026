@@ -6,6 +6,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import Home from "../pages/Home";
 import FixturesByTeam from "../pages/FixturesByTeam";
 import FixturesByDate from "../pages/FixturesByDate";
+import Squads from "../pages/Squads";
 
 export default function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function AppRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/by-team" element={<FixturesByTeam />} />
           <Route path="/by-date" element={<FixturesByDate />} />
+          <Route path="/squads"  element={<Squads />} />
           {/* Fallback */}
           <Route path="*" element={<Home />} />
         </Routes>
