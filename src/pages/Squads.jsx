@@ -336,7 +336,7 @@ function PlayerCard({ player, index }) {
                   fontFamily: "'Barlow Condensed', sans-serif",
                   fontSize: "1rem",
                   fontWeight: 800,
-                  color: "#fff",
+                  color: "#ffffff",
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
@@ -405,7 +405,7 @@ function PlayerCard({ player, index }) {
             <span
               style={{
                 fontSize: 11,
-                color: "#94A3B8",
+                color: "#ffffff",
                 whiteSpace: "nowrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
@@ -430,7 +430,7 @@ function PlayerCard({ player, index }) {
               justifyContent: "center",
               gap: 4,
               fontSize: 9,
-              color: "#334155",
+              color: "#ffffff",
               letterSpacing: "0.5px",
             }}
           >
@@ -516,7 +516,7 @@ function PlayerCard({ player, index }) {
             {dob && (
               <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
                 <Cake size={12} style={{ color: pos.text, flexShrink: 0 }} />
-                <span style={{ fontSize: 11, color: "#94A3B8" }}>Born:</span>
+                <span style={{ fontSize: 11, color: "#ffffff" }}>Born:</span>
                 <span
                   style={{
                     fontSize: 11,
@@ -533,7 +533,7 @@ function PlayerCard({ player, index }) {
             {age !== null && (
               <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
                 <User size={12} style={{ color: pos.text, flexShrink: 0 }} />
-                <span style={{ fontSize: 11, color: "#94A3B8" }}>Age:</span>
+                <span style={{ fontSize: 11, color: "#ffffff" }}>Age:</span>
                 <span
                   style={{
                     fontSize: 11,
@@ -550,11 +550,11 @@ function PlayerCard({ player, index }) {
             {player.height_cm && (
               <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
                 <Ruler size={12} style={{ color: pos.text, flexShrink: 0 }} />
-                <span style={{ fontSize: 11, color: "#94A3B8" }}>Height:</span>
+                <span style={{ fontSize: 11, color: "#ffffff" }}>Height:</span>
                 <span
                   style={{
                     fontSize: 11,
-                    color: "#fff",
+                    color: "#ffffff",
                     fontWeight: 600,
                     marginLeft: "auto",
                   }}
@@ -572,13 +572,13 @@ function PlayerCard({ player, index }) {
                   size={12}
                   style={{ color: pos.text, flexShrink: 0, marginTop: 1 }}
                 />
-                <span style={{ fontSize: 11, color: "#94A3B8", flexShrink: 0 }}>
+                <span style={{ fontSize: 11, color: "#ffffff", flexShrink: 0 }}>
                   Club:
                 </span>
                 <span
                   style={{
                     fontSize: 11,
-                    color: "#fff",
+                    color: "#ffffff",
                     fontWeight: 600,
                     textAlign: "right",
                     marginLeft: "auto",
@@ -605,7 +605,7 @@ function PlayerCard({ player, index }) {
             {/* Jersey */}
             <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
               <Hash size={12} style={{ color: pos.text, flexShrink: 0 }} />
-              <span style={{ fontSize: 11, color: "#94A3B8" }}>Jersey:</span>
+              <span style={{ fontSize: 11, color: "#ffffff" }}>Jersey:</span>
               <span
                 style={{
                   fontSize: 11,
