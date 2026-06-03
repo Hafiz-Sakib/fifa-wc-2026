@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+} from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Trophy,
@@ -446,6 +452,646 @@ function TrophyGraphic() {
         }}
       >
         <Star size={9} fill="#F4C542" /> Finals 2026
+      </div>
+    </div>
+  );
+}
+
+/* ── Three.js Footballer Kick Animation ── */
+function FootballerScene() {
+  const mountRef = useRef(null);
+  const sceneRef = useRef(null);
+  const rendererRef = useRef(null);
+  const animRef = useRef(null);
+  const stateRef = useRef({
+    kickPhase: 0,
+    ballInFlight: false,
+    ballVx: 0,
+    ballVy: 0,
+    ballVz: 0,
+    ballX: 0,
+    ballY: 0,
+    ballZ: 0,
+    ballSpin: 0,
+    trail: [],
+    autoKickTimer: 0,
+    mouseX: 0,
+    mouseY: 0,
+    hovered: false,
+  });
+  const [label, setLabel] = useState("CLICK TO KICK!");
+
+  const handleClick = useCallback(() => {
+    const s = stateRef.current;
+    if (!s.ballInFlight) {
+      s.kickPhase = 1;
+      setLabel("⚽ GOLAZO!");
+      setTimeout(() => setLabel("CLICK TO KICK!"), 2200);
+    }
+  }, []);
+
+  useEffect(() => {
+    const mount = mountRef.current;
+    if (!mount) return;
+
+    // Dynamic THREE import
+    const script = document.createElement("script");
+    script.src =
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
+    script.onload = () => initScene();
+    document.head.appendChild(script);
+
+    function initScene() {
+      const THREE = window.THREE;
+      const W = mount.clientWidth || 420;
+      const H = mount.clientHeight || 380;
+
+      const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+      });
+      renderer.setSize(W, H);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      mount.appendChild(renderer.domElement);
+      rendererRef.current = renderer;
+
+      const scene = new THREE.Scene();
+      sceneRef.current = scene;
+
+      const camera = new THREE.PerspectiveCamera(55, W / H, 0.1, 100);
+      camera.position.set(0, 2.2, 7);
+      camera.lookAt(0, 1, 0);
+
+      // Lighting
+      const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+      scene.add(ambient);
+      const sun = new THREE.DirectionalLight(0xffffff, 1.2);
+      sun.position.set(5, 10, 5);
+      sun.castShadow = true;
+      sun.shadow.mapSize.width = 1024;
+      sun.shadow.mapSize.height = 1024;
+      scene.add(sun);
+      const fill = new THREE.PointLight(0x22c55e, 0.8, 20);
+      fill.position.set(-4, 4, 2);
+      scene.add(fill);
+      const rimLight = new THREE.PointLight(0x3b82f6, 0.5, 15);
+      rimLight.position.set(4, 3, -3);
+      scene.add(rimLight);
+
+      // Ground plane (grass)
+      const groundGeo = new THREE.PlaneGeometry(20, 20);
+      const groundMat = new THREE.MeshLambertMaterial({ color: 0x166534 });
+      const ground = new THREE.Mesh(groundGeo, groundMat);
+      ground.rotation.x = -Math.PI / 2;
+      ground.receiveShadow = true;
+      scene.add(ground);
+
+      // Pitch lines
+      const lineMat = new THREE.LineBasicMaterial({
+        color: 0xffffff,
+        transparent: true,
+        opacity: 0.25,
+      });
+      const mkLine = (pts) => {
+        const g = new THREE.BufferGeometry().setFromPoints(
+          pts.map(([x, y, z]) => new THREE.Vector3(x, y, z)),
+        );
+        scene.add(new THREE.Line(g, lineMat));
+      };
+      mkLine([
+        [-4, 0.01, -3],
+        [4, 0.01, -3],
+        [4, 0.01, 3],
+        [-4, 0.01, 3],
+        [-4, 0.01, -3],
+      ]);
+      mkLine([
+        [0, 0.01, -3],
+        [0, 0.01, 3],
+      ]);
+      // Center circle
+      const circPts = [];
+      for (let i = 0; i <= 64; i++) {
+        const a = (i / 64) * Math.PI * 2;
+        circPts.push(
+          new THREE.Vector3(Math.cos(a) * 1.2, 0.01, Math.sin(a) * 1.2),
+        );
+      }
+      const circGeo = new THREE.BufferGeometry().setFromPoints(circPts);
+      scene.add(new THREE.Line(circGeo, lineMat));
+
+      // Goal posts (behind camera target)
+      const postMat = new THREE.MeshStandardMaterial({
+        color: 0xffffff,
+        metalness: 0.4,
+        roughness: 0.3,
+      });
+      const postGeo = new THREE.CylinderGeometry(0.05, 0.05, 2.2, 8);
+      const crossGeo = new THREE.CylinderGeometry(0.04, 0.04, 2.4, 8);
+      const lPost = new THREE.Mesh(postGeo, postMat);
+      lPost.position.set(-1.2, 1.1, -5.5);
+      scene.add(lPost);
+      const rPost = new THREE.Mesh(postGeo, postMat);
+      rPost.position.set(1.2, 1.1, -5.5);
+      scene.add(rPost);
+      const cross = new THREE.Mesh(crossGeo, postMat);
+      cross.rotation.z = Math.PI / 2;
+      cross.position.set(0, 2.2, -5.5);
+      scene.add(cross);
+
+      // Netting (simple grid lines)
+      const netMat = new THREE.LineBasicMaterial({
+        color: 0xffffff,
+        transparent: true,
+        opacity: 0.12,
+      });
+      for (let i = 0; i <= 6; i++) {
+        const x = -1.2 + (i / 6) * 2.4;
+        const pts = [
+          [x, 0.01, -5.5],
+          [x, 2.2, -5.5],
+          [x, 2.2, -4.8],
+        ];
+        mkLine(pts);
+      }
+      for (let j = 0; j <= 5; j++) {
+        const y = (j / 5) * 2.2;
+        mkLine([
+          [-1.2, y + 0.01, -5.5],
+          [1.2, y + 0.01, -5.5],
+        ]);
+      }
+
+      // ── Footballer body parts ──
+      const skinMat = new THREE.MeshToonMaterial({ color: 0xf5cba7 });
+      const jerseyMat = new THREE.MeshToonMaterial({ color: 0x1e3a8a });
+      const shortsMat = new THREE.MeshToonMaterial({ color: 0x1e3a8a });
+      const bootMat = new THREE.MeshToonMaterial({ color: 0x000000 });
+      const sockMat = new THREE.MeshToonMaterial({ color: 0xffffff });
+      const hairMat = new THREE.MeshToonMaterial({ color: 0x1a0a00 });
+
+      const playerGroup = new THREE.Group();
+      playerGroup.position.set(0, 0, 1.5);
+      scene.add(playerGroup);
+
+      // Torso
+      const torsoGeo = new THREE.CylinderGeometry(0.22, 0.18, 0.7, 10);
+      const torso = new THREE.Mesh(torsoGeo, jerseyMat);
+      torso.position.set(0, 1.35, 0);
+      torso.castShadow = true;
+      playerGroup.add(torso);
+
+      // Head
+      const headGeo = new THREE.SphereGeometry(0.18, 12, 10);
+      const head = new THREE.Mesh(headGeo, skinMat);
+      head.position.set(0, 1.9, 0);
+      head.castShadow = true;
+      playerGroup.add(head);
+
+      // Hair
+      const hairGeo = new THREE.SphereGeometry(
+        0.185,
+        12,
+        8,
+        0,
+        Math.PI * 2,
+        0,
+        Math.PI * 0.55,
+      );
+      const hair = new THREE.Mesh(hairGeo, hairMat);
+      hair.position.set(0, 1.9, 0);
+      playerGroup.add(hair);
+
+      // Left upper arm
+      const uArmGeo = new THREE.CylinderGeometry(0.065, 0.055, 0.34, 8);
+      const lUArm = new THREE.Mesh(uArmGeo, jerseyMat);
+      lUArm.position.set(-0.3, 1.42, 0);
+      lUArm.rotation.z = 0.4;
+      lUArm.castShadow = true;
+      playerGroup.add(lUArm);
+
+      // Right upper arm
+      const rUArm = new THREE.Mesh(uArmGeo, jerseyMat);
+      rUArm.position.set(0.3, 1.42, 0);
+      rUArm.rotation.z = -0.4;
+      rUArm.castShadow = true;
+      playerGroup.add(rUArm);
+
+      // Forearms
+      const fArmGeo = new THREE.CylinderGeometry(0.055, 0.045, 0.3, 8);
+      const lFArm = new THREE.Mesh(fArmGeo, skinMat);
+      lFArm.position.set(-0.42, 1.2, 0);
+      lFArm.rotation.z = 0.6;
+      playerGroup.add(lFArm);
+      const rFArm = new THREE.Mesh(fArmGeo, skinMat);
+      rFArm.position.set(0.42, 1.2, 0);
+      rFArm.rotation.z = -0.6;
+      playerGroup.add(rFArm);
+
+      // Hips
+      const hipGeo = new THREE.CylinderGeometry(0.2, 0.16, 0.22, 10);
+      const hips = new THREE.Mesh(hipGeo, shortsMat);
+      hips.position.set(0, 0.95, 0);
+      playerGroup.add(hips);
+
+      // Standing leg (right) — thigh + shin + boot
+      const thighGeo = new THREE.CylinderGeometry(0.1, 0.08, 0.44, 8);
+      const shinGeo = new THREE.CylinderGeometry(0.075, 0.055, 0.4, 8);
+      const bootGeo = new THREE.BoxGeometry(0.12, 0.1, 0.28);
+
+      const rThigh = new THREE.Mesh(thighGeo, shortsMat);
+      rThigh.position.set(0.14, 0.64, 0);
+      playerGroup.add(rThigh);
+      const rShin = new THREE.Mesh(shinGeo, sockMat);
+      rShin.position.set(0.14, 0.26, 0);
+      playerGroup.add(rShin);
+      const rBoot = new THREE.Mesh(bootGeo, bootMat);
+      rBoot.position.set(0.14, 0.04, 0.06);
+      playerGroup.add(rBoot);
+
+      // Kicking leg group (left) — will animate
+      const kickLegGroup = new THREE.Group();
+      kickLegGroup.position.set(-0.14, 0.84, 0);
+      playerGroup.add(kickLegGroup);
+
+      const lThigh = new THREE.Mesh(thighGeo, shortsMat);
+      lThigh.position.set(0, -0.22, 0);
+      kickLegGroup.add(lThigh);
+
+      // Lower kicking leg group (pivots at knee)
+      const lowerKickGroup = new THREE.Group();
+      lowerKickGroup.position.set(0, -0.44, 0);
+      kickLegGroup.add(lowerKickGroup);
+
+      const lShin = new THREE.Mesh(shinGeo, sockMat);
+      lShin.position.set(0, -0.2, 0);
+      lowerKickGroup.add(lShin);
+      const lBoot = new THREE.Mesh(bootGeo, bootMat);
+      lBoot.position.set(0, -0.42, 0.06);
+      lowerKickGroup.add(lBoot);
+
+      // Ball
+      const ballGeo = new THREE.SphereGeometry(0.16, 16, 16);
+      const ballMat = new THREE.MeshStandardMaterial({
+        color: 0xffffff,
+        roughness: 0.4,
+        metalness: 0.05,
+      });
+      const ball = new THREE.Mesh(ballGeo, ballMat);
+      ball.castShadow = true;
+
+      // Pentagon patches on ball
+      const patchMat = new THREE.MeshStandardMaterial({ color: 0x111111 });
+      const patchPositions = [
+        [0, 1, 0],
+        [0, -1, 0],
+        [1, 0, 0],
+        [-1, 0, 0],
+        [0, 0, 1],
+        [0, 0, -1],
+        [0.7, 0.7, 0],
+        [-0.7, 0.7, 0],
+        [0.7, -0.7, 0],
+        [-0.7, -0.7, 0],
+        [0, 0.7, 0.7],
+        [0, -0.7, 0.7],
+      ];
+      patchPositions.forEach(([px, py, pz]) => {
+        const len = Math.sqrt(px * px + py * py + pz * pz);
+        const pg = new THREE.CircleGeometry(0.045, 5);
+        const pm = new THREE.Mesh(pg, patchMat);
+        pm.position.set(
+          (px / len) * 0.162,
+          (py / len) * 0.162,
+          (pz / len) * 0.162,
+        );
+        pm.lookAt(px * 2, py * 2, pz * 2);
+        ball.add(pm);
+      });
+
+      scene.add(ball);
+
+      // Ball shadow
+      const shadowGeo = new THREE.CircleGeometry(0.18, 16);
+      const shadowMat = new THREE.MeshBasicMaterial({
+        color: 0x000000,
+        transparent: true,
+        opacity: 0.35,
+        depthWrite: false,
+      });
+      const ballShadow = new THREE.Mesh(shadowGeo, shadowMat);
+      ballShadow.rotation.x = -Math.PI / 2;
+      ballShadow.position.y = 0.01;
+      scene.add(ballShadow);
+
+      // Trail particles
+      const trailGeo = new THREE.SphereGeometry(0.04, 6, 6);
+      const trailMat = new THREE.MeshBasicMaterial({
+        color: 0x22c55e,
+        transparent: true,
+        opacity: 0.6,
+      });
+      const trailMeshes = Array.from({ length: 12 }, () => {
+        const m = new THREE.Mesh(trailGeo, trailMat.clone());
+        m.visible = false;
+        scene.add(m);
+        return m;
+      });
+
+      // Stars/sparkles on goal
+      const starGeo = new THREE.SphereGeometry(0.06, 6, 6);
+      const starMats = [0xffd700, 0xff6b35, 0x22c55e, 0x3b82f6].map(
+        (c) =>
+          new THREE.MeshBasicMaterial({
+            color: c,
+            transparent: true,
+            opacity: 0,
+          }),
+      );
+      const stars = starMats.map((mat, i) => {
+        const m = new THREE.Mesh(starGeo, mat);
+        m.position.set((i - 1.5) * 0.5, 1.5, -5.3);
+        scene.add(m);
+        return m;
+      });
+
+      // Reset ball to kick position
+      const resetBall = () => {
+        const s = stateRef.current;
+        s.ballInFlight = false;
+        s.ballX = -0.14;
+        s.ballY = 0.16;
+        s.ballZ = 1.2;
+        s.trail = [];
+        ball.position.set(s.ballX, s.ballY, s.ballZ);
+        ballShadow.position.set(s.ballX, 0.01, s.ballZ);
+        trailMeshes.forEach((m) => (m.visible = false));
+        stars.forEach((m) => {
+          m.material.opacity = 0;
+        });
+      };
+      resetBall();
+
+      // Mouse interaction
+      const onMouseMove = (e) => {
+        const rect = mount.getBoundingClientRect();
+        stateRef.current.mouseX =
+          ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        stateRef.current.mouseY =
+          -((e.clientY - rect.top) / rect.height - 0.5) * 2;
+        stateRef.current.hovered = true;
+      };
+      const onMouseLeave = () => {
+        stateRef.current.hovered = false;
+      };
+      mount.addEventListener("mousemove", onMouseMove);
+      mount.addEventListener("mouseleave", onMouseLeave);
+
+      let t = 0;
+      let goalFlash = 0;
+      let autoKickCd = 180;
+
+      const animate = () => {
+        animRef.current = requestAnimationFrame(animate);
+        t++;
+        const s = stateRef.current;
+
+        // Auto kick
+        autoKickCd--;
+        if (autoKickCd <= 0 && !s.ballInFlight && s.kickPhase === 0) {
+          s.kickPhase = 1;
+          autoKickCd = 220;
+        }
+
+        // Camera subtle parallax on hover
+        if (s.hovered) {
+          camera.position.x += (s.mouseX * 0.5 - camera.position.x) * 0.05;
+          camera.position.y +=
+            (2.2 + s.mouseY * 0.3 - camera.position.y) * 0.05;
+        } else {
+          camera.position.x += (0 - camera.position.x) * 0.03;
+          camera.position.y += (2.2 - camera.position.y) * 0.03;
+        }
+        camera.lookAt(0, 1.2, 0);
+
+        // Idle body sway
+        if (!s.ballInFlight && s.kickPhase === 0) {
+          playerGroup.rotation.y = Math.sin(t * 0.018) * 0.08;
+          torso.rotation.z = Math.sin(t * 0.022) * 0.04;
+          head.rotation.y = Math.sin(t * 0.015) * 0.15;
+          kickLegGroup.rotation.x = Math.sin(t * 0.025) * 0.08;
+          lowerKickGroup.rotation.x = 0.05;
+          rThigh.rotation.x = Math.sin(t * 0.025 + Math.PI) * 0.05;
+          lUArm.rotation.z = 0.4 + Math.sin(t * 0.025 + Math.PI) * 0.1;
+          rUArm.rotation.z = -0.4 + Math.sin(t * 0.025) * 0.1;
+        }
+
+        // Kick animation phases
+        if (s.kickPhase === 1) {
+          // Wind up
+          kickLegGroup.rotation.x += (-0.9 - kickLegGroup.rotation.x) * 0.18;
+          lowerKickGroup.rotation.x +=
+            (-1.2 - lowerKickGroup.rotation.x) * 0.18;
+          torso.rotation.x += (0.15 - torso.rotation.x) * 0.12;
+          if (kickLegGroup.rotation.x < -0.75) s.kickPhase = 2;
+        } else if (s.kickPhase === 2) {
+          // Swing forward
+          kickLegGroup.rotation.x += (0.7 - kickLegGroup.rotation.x) * 0.28;
+          lowerKickGroup.rotation.x += (0.1 - lowerKickGroup.rotation.x) * 0.28;
+          torso.rotation.x += (-0.2 - torso.rotation.x) * 0.15;
+          rFArm.rotation.z += (-0.9 - rFArm.rotation.z) * 0.15;
+          if (kickLegGroup.rotation.x > 0.45) {
+            // Launch ball!
+            s.kickPhase = 3;
+            s.ballInFlight = true;
+            // Aim slightly random but toward goal
+            const spread = (Math.random() - 0.5) * 0.4;
+            s.ballVx = spread * 0.12;
+            s.ballVy = 0.095 + Math.random() * 0.03;
+            s.ballVz = -0.32;
+            s.ballSpin = 0.18 + Math.random() * 0.1;
+            s.trail = [];
+          }
+        } else if (s.kickPhase === 3) {
+          // Follow through then recover
+          kickLegGroup.rotation.x += (0.2 - kickLegGroup.rotation.x) * 0.1;
+          lowerKickGroup.rotation.x += (0 - lowerKickGroup.rotation.x) * 0.1;
+          torso.rotation.x += (0 - torso.rotation.x) * 0.08;
+          rFArm.rotation.z += (-0.6 - rFArm.rotation.z) * 0.08;
+          if (Math.abs(kickLegGroup.rotation.x - 0.2) < 0.02) {
+            s.kickPhase = 0;
+          }
+        }
+
+        // Ball physics
+        if (s.ballInFlight) {
+          s.ballVy -= 0.005; // gravity
+          s.ballX += s.ballVx;
+          s.ballY += s.ballVy;
+          s.ballZ += s.ballVz;
+          s.ballSpin *= 0.98;
+          ball.rotation.x += s.ballSpin;
+          ball.rotation.z += s.ballSpin * 0.3;
+
+          // Trail
+          s.trail.unshift({ x: s.ballX, y: s.ballY, z: s.ballZ });
+          if (s.trail.length > 12) s.trail.pop();
+          s.trail.forEach((pt, i) => {
+            const m = trailMeshes[i];
+            if (pt) {
+              m.visible = true;
+              m.position.set(pt.x, pt.y, pt.z);
+              m.material.opacity = (1 - i / 12) * 0.5;
+              const sc = 1 - i / 14;
+              m.scale.setScalar(sc);
+            }
+          });
+
+          ball.position.set(s.ballX, s.ballY, s.ballZ);
+          // Shadow scales with height
+          const sh = Math.max(0, 1 - s.ballY * 0.5);
+          ballShadow.position.set(s.ballX, 0.01, s.ballZ);
+          ballShadow.scale.setScalar(sh);
+          ballShadow.material.opacity = 0.35 * sh;
+
+          // Check goal
+          const inGoal =
+            s.ballZ < -5.3 &&
+            Math.abs(s.ballX) < 1.1 &&
+            s.ballY > 0.1 &&
+            s.ballY < 2.2;
+          const missed = s.ballZ < -5.8 || s.ballY < 0 || s.ballZ > 2;
+
+          if (inGoal) {
+            goalFlash = 40;
+            stars.forEach((m, i) => {
+              m.position.set(
+                (Math.random() - 0.5) * 2.4,
+                0.5 + Math.random() * 2,
+                -5.2,
+              );
+              m.material.opacity = 1;
+            });
+            resetBall();
+            autoKickCd = 160;
+          } else if (missed) {
+            resetBall();
+            autoKickCd = 100;
+          }
+        } else {
+          trailMeshes.forEach((m) => (m.visible = false));
+        }
+
+        // Goal flash
+        if (goalFlash > 0) {
+          goalFlash--;
+          fill.intensity = 0.8 + Math.sin(goalFlash * 0.5) * 2;
+          stars.forEach((m, i) => {
+            m.material.opacity = Math.max(0, goalFlash / 40);
+            m.position.y += 0.02;
+            m.rotation.y += 0.1;
+          });
+        } else {
+          fill.intensity = 0.8;
+        }
+
+        renderer.render(scene, camera);
+      };
+      animate();
+
+      // Resize
+      const onResize = () => {
+        if (!mount) return;
+        const w = mount.clientWidth;
+        const h = mount.clientHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      };
+      window.addEventListener("resize", onResize);
+
+      return () => {
+        window.removeEventListener("resize", onResize);
+        mount.removeEventListener("mousemove", onMouseMove);
+        mount.removeEventListener("mouseleave", onMouseLeave);
+      };
+    }
+
+    return () => {
+      if (animRef.current) cancelAnimationFrame(animRef.current);
+      if (rendererRef.current) {
+        rendererRef.current.dispose();
+        const canvas = rendererRef.current.domElement;
+        if (canvas && canvas.parentNode) canvas.parentNode.removeChild(canvas);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        maxWidth: 420,
+        height: 380,
+      }}
+      onClick={handleClick}
+      className="cursor-pointer"
+    >
+      <div
+        ref={mountRef}
+        style={{
+          width: "100%",
+          height: "100%",
+          borderRadius: 16,
+          overflow: "hidden",
+        }}
+      />
+      {/* Overlay label */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 14,
+          left: "50%",
+          transform: "translateX(-50%)",
+          background: "rgba(22,163,74,0.18)",
+          border: "1px solid rgba(22,163,74,0.4)",
+          borderRadius: 20,
+          padding: "5px 16px",
+          color: "#4ADE80",
+          fontSize: "0.7rem",
+          fontWeight: 800,
+          letterSpacing: "0.1em",
+          fontFamily: "'Barlow Condensed','Hind Siliguri',sans-serif",
+          textTransform: "uppercase",
+          backdropFilter: "blur(6px)",
+          pointerEvents: "none",
+          whiteSpace: "nowrap",
+        }}
+      >
+        {label}
+      </div>
+      {/* Interactive hint */}
+      <div
+        style={{
+          position: "absolute",
+          top: 12,
+          right: 12,
+          background: "rgba(0,0,0,0.4)",
+          borderRadius: 8,
+          padding: "3px 10px",
+          color: "#64748B",
+          fontSize: "0.6rem",
+          fontWeight: 600,
+          letterSpacing: "0.08em",
+          fontFamily: "'Barlow Condensed',sans-serif",
+          textTransform: "uppercase",
+          backdropFilter: "blur(4px)",
+        }}
+      >
+        3D Interactive
       </div>
     </div>
   );
@@ -1463,12 +2109,12 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            {/* Right */}
+            {/* Right — 3D Footballer */}
             <div
               className="flex-1 flex items-center justify-center animate-fade-up"
-              style={{ animationDelay: "0.2s", minHeight: "320px" }}
+              style={{ animationDelay: "0.2s", minHeight: "380px" }}
             >
-              <TrophyGraphic />
+              <FootballerScene />
             </div>
           </div>
         </div>
