@@ -464,6 +464,153 @@ const PREDICT_MATCHES = [
   { id: 3, team1: "England", flag1: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", team2: "Spain", flag2: "🇪🇸" },
 ];
 
+/* ── Animated Football between scores ── */
+function FootballAnimator({ kickSide, kickCount }) {
+  const ballRef = useRef(null);
+  const [ballState, setBallState] = useState({
+    x: 50,
+    rotate: 0,
+    scale: 1,
+    shadow: 0.3,
+  });
+  const animRef = useRef(null);
+  const prevKickRef = useRef({ side: null, count: 0 });
+
+  useEffect(() => {
+    if (kickSide === null) return;
+    if (
+      prevKickRef.current.side === kickSide &&
+      prevKickRef.current.count === kickCount
+    )
+      return;
+    prevKickRef.current = { side: kickSide, count: kickCount };
+
+    if (animRef.current) cancelAnimationFrame(animRef.current);
+
+    const toX = kickSide === "left" ? 20 : 80;
+    const fromX = kickSide === "left" ? 80 : 20;
+    const startTime = performance.now();
+    const duration = 480;
+
+    const animate = (now) => {
+      const p = Math.min((now - startTime) / duration, 1);
+      const ease = p < 0.5 ? 2 * p * p : -1 + (4 - 2 * p) * p;
+      const x = fromX + (toX - fromX) * ease;
+      // arc: peak at midpoint
+      const arc = Math.sin(p * Math.PI);
+      const scale = 1 + arc * 0.35;
+      const shadow = 0.3 - arc * 0.2;
+      const rotDir = kickSide === "left" ? 1 : -1;
+      const rotate = rotDir * p * 360;
+      setBallState({ x, rotate, scale, shadow });
+      if (p < 1) animRef.current = requestAnimationFrame(animate);
+      else
+        setBallState({ x: toX, rotate: rotDir * 360, scale: 1, shadow: 0.3 });
+    };
+    animRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animRef.current);
+  }, [kickSide, kickCount]);
+
+  // Idle gentle bob when nothing happening
+  const [idlePhase, setIdlePhase] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIdlePhase((p) => p + 0.06), 50);
+    return () => clearInterval(id);
+  }, []);
+
+  const idleBob = kickSide === null ? Math.sin(idlePhase) * 3 : 0;
+  const idleRotate = kickSide === null ? idlePhase * 12 : ballState.rotate;
+
+  return (
+    <div
+      style={{
+        position: "relative",
+        height: 60,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {/* pitch line */}
+      <div
+        style={{
+          position: "absolute",
+          left: "10%",
+          right: "10%",
+          top: "50%",
+          height: 1,
+          background: "rgba(34,197,94,0.12)",
+          borderRadius: 1,
+        }}
+      />
+      {/* goal posts left */}
+      <div
+        style={{
+          position: "absolute",
+          left: "8%",
+          top: "20%",
+          width: 3,
+          height: "60%",
+          background: "rgba(34,197,94,0.25)",
+          borderRadius: 2,
+        }}
+      />
+      {/* goal posts right */}
+      <div
+        style={{
+          position: "absolute",
+          right: "8%",
+          top: "20%",
+          width: 3,
+          height: "60%",
+          background: "rgba(34,197,94,0.25)",
+          borderRadius: 2,
+        }}
+      />
+
+      {/* shadow */}
+      <div
+        style={{
+          position: "absolute",
+          left: `calc(${kickSide === null ? 50 : ballState.x}% - 14px)`,
+          bottom: 4,
+          width: 28,
+          height: 7,
+          borderRadius: "50%",
+          background: `rgba(0,0,0,${kickSide === null ? 0.3 : ballState.shadow})`,
+          filter: "blur(3px)",
+          transition: kickSide === null ? "none" : undefined,
+          transform: `scaleX(${kickSide === null ? 1 : ballState.scale * 0.8})`,
+        }}
+      />
+
+      {/* ball */}
+      <div
+        ref={ballRef}
+        style={{
+          position: "absolute",
+          left: `calc(${kickSide === null ? 50 : ballState.x}% - 16px)`,
+          top:
+            kickSide === null
+              ? `calc(50% - 16px + ${idleBob}px)`
+              : `calc(50% - ${16 * (kickSide === null ? 1 : ballState.scale)}px)`,
+          fontSize: 32,
+          lineHeight: 1,
+          transform: `rotate(${kickSide === null ? idleRotate : ballState.rotate}deg) scale(${kickSide === null ? 1 : ballState.scale})`,
+          filter:
+            kickSide !== null && ballState.scale > 1.1
+              ? "drop-shadow(0 0 10px rgba(34,197,94,0.7))"
+              : "drop-shadow(0 4px 8px rgba(0,0,0,0.4))",
+          userSelect: "none",
+          willChange: "transform, left, top",
+        }}
+      >
+        ⚽
+      </div>
+    </div>
+  );
+}
+
 function ScorePredictorWidget() {
   const [scores, setScores] = useState({
     1: { s1: 0, s2: 0 },
@@ -472,6 +619,9 @@ function ScorePredictorWidget() {
   });
   const [active, setActive] = useState(1);
   const [pulse, setPulse] = useState(null);
+  const [kickSide, setKickSide] = useState(null);
+  const [kickCount, setKickCount] = useState(0);
+  const kickResetRef = useRef(null);
 
   const bump = (id, side, delta) => {
     setScores((prev) => {
@@ -481,6 +631,15 @@ function ScorePredictorWidget() {
     });
     setPulse(`${id}-${side}`);
     setTimeout(() => setPulse(null), 350);
+
+    if (delta > 0) {
+      // kick towards scoring team's side
+      const dir = side === "s1" ? "left" : "right";
+      setKickSide(dir);
+      setKickCount((c) => c + 1);
+      if (kickResetRef.current) clearTimeout(kickResetRef.current);
+      kickResetRef.current = setTimeout(() => setKickSide(null), 600);
+    }
   };
 
   const standings = useMemo(() => {
@@ -622,7 +781,7 @@ function ScorePredictorWidget() {
       </div>
 
       {/* Score input */}
-      <div style={{ padding: "20px 18px 16px" }}>
+      <div style={{ padding: "16px 18px 0" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           {/* Team 1 */}
           <div style={{ flex: 1, textAlign: "center" }}>
@@ -676,15 +835,17 @@ function ScorePredictorWidget() {
             </div>
           </div>
 
-          {/* VS */}
-          <div style={{ textAlign: "center", minWidth: 32 }}>
+          {/* Animated Football + VS */}
+          <div style={{ flex: 1.2, textAlign: "center" }}>
+            <FootballAnimator kickSide={kickSide} kickCount={kickCount} />
             <div
               style={{
                 fontFamily: "'Barlow Condensed',sans-serif",
-                fontSize: "0.9rem",
+                fontSize: "0.75rem",
                 fontWeight: 800,
                 color: "#334155",
-                letterSpacing: "1px",
+                letterSpacing: "2px",
+                marginTop: 2,
               }}
             >
               VS
@@ -750,6 +911,7 @@ function ScorePredictorWidget() {
         style={{
           borderTop: "1px solid rgba(255,255,255,0.05)",
           padding: "12px 18px 16px",
+          marginTop: 14,
         }}
       >
         <div
