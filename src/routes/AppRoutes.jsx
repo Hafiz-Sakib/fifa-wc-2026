@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import FixturesByTeam from "../pages/FixturesByTeam";
 import FixturesByDate from "../pages/FixturesByDate";
 import Squads from "../pages/Squads";
+import NotFound from "../pages/NotFound";
 
 export default function AppRoutes() {
   return (
@@ -22,7 +23,7 @@ export default function AppRoutes() {
           <Route path="/by-date" element={<FixturesByDate />} />
           <Route path="/squads"  element={<Squads />} />
           {/* Fallback */}
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
