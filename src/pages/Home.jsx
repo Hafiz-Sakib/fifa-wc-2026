@@ -463,12 +463,33 @@ function TrophyGraphic() {
 
 /* ── Interactive Score Predictor Widget ── */
 const PREDICT_MATCHES = [
-  { id: 1, team1: "Brazil", flag1: "🇧🇷", team2: "Germany", flag2: "🇩🇪",
-    t1Star: { name: "Vinicius Jr", club: "Real Madrid C.F." }, t2Star: { name: "Kai Havertz", club: "Arsenal FC" } },
-  { id: 2, team1: "Argentina", flag1: "🇦🇷", team2: "France", flag2: "🇫🇷",
-    t1Star: { name: "L. Messi", club: "Inter Miami CF" }, t2Star: { name: "K. Mbappé", club: "Real Madrid C.F." } },
-  { id: 3, team1: "England", flag1: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", team2: "Spain", flag2: "🇪🇸",
-    t1Star: { name: "H. Kane", club: "FC Bayern München" }, t2Star: { name: "Dani Olmo", club: "FC Barcelona" } },
+  {
+    id: 1,
+    team1: "Brazil",
+    flag1: "🇧🇷",
+    team2: "Germany",
+    flag2: "🇩🇪",
+    t1Star: { name: "Vinicius Jr", club: "Real Madrid C.F." },
+    t2Star: { name: "Kai Havertz", club: "Arsenal FC" },
+  },
+  {
+    id: 2,
+    team1: "Argentina",
+    flag1: "🇦🇷",
+    team2: "France",
+    flag2: "🇫🇷",
+    t1Star: { name: "L. Messi", club: "Inter Miami CF" },
+    t2Star: { name: "K. Mbappé", club: "Real Madrid C.F." },
+  },
+  {
+    id: 3,
+    team1: "England",
+    flag1: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    team2: "Spain",
+    flag2: "🇪🇸",
+    t1Star: { name: "H. Kane", club: "FC Bayern München" },
+    t2Star: { name: "Dani Olmo", club: "FC Barcelona" },
+  },
 ];
 
 /* ── Animated Football between scores ── */
@@ -1203,12 +1224,47 @@ function ScorePredictorWidget() {
               {cur.team1}
             </div>
             {/* Club logo for star player team1 */}
-            {cur.t1Star && (() => { const logo = getClubLogo(cur.t1Star.club); return (
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 5, marginBottom: 8 }}>
-                {logo && <img src={logo} alt={cur.t1Star.club} style={{ width: 16, height: 16, objectFit: "contain", borderRadius: 3 }} />}
-                <span style={{ fontSize: "0.6rem", color: "#475569", fontWeight: 600, maxWidth: 70, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{cur.t1Star.name}</span>
-              </div>
-            ); })()}
+            {cur.t1Star &&
+              (() => {
+                const logo = getClubLogo(cur.t1Star.club);
+                return (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 5,
+                      marginBottom: 8,
+                    }}
+                  >
+                    {logo && (
+                      <img
+                        src={logo}
+                        alt={cur.t1Star.club}
+                        style={{
+                          width: 16,
+                          height: 16,
+                          objectFit: "contain",
+                          borderRadius: 3,
+                        }}
+                      />
+                    )}
+                    <span
+                      style={{
+                        fontSize: "0.6rem",
+                        color: "#475569",
+                        fontWeight: 600,
+                        maxWidth: 70,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {cur.t1Star.name}
+                    </span>
+                  </div>
+                );
+              })()}
             <div
               style={{
                 display: "flex",
@@ -1286,12 +1342,47 @@ function ScorePredictorWidget() {
               {cur.team2}
             </div>
             {/* Club logo for star player team2 */}
-            {cur.t2Star && (() => { const logo = getClubLogo(cur.t2Star.club); return (
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 5, marginBottom: 8 }}>
-                {logo && <img src={logo} alt={cur.t2Star.club} style={{ width: 16, height: 16, objectFit: "contain", borderRadius: 3 }} />}
-                <span style={{ fontSize: "0.6rem", color: "#475569", fontWeight: 600, maxWidth: 70, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{cur.t2Star.name}</span>
-              </div>
-            ); })()}
+            {cur.t2Star &&
+              (() => {
+                const logo = getClubLogo(cur.t2Star.club);
+                return (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 5,
+                      marginBottom: 8,
+                    }}
+                  >
+                    {logo && (
+                      <img
+                        src={logo}
+                        alt={cur.t2Star.club}
+                        style={{
+                          width: 16,
+                          height: 16,
+                          objectFit: "contain",
+                          borderRadius: 3,
+                        }}
+                      />
+                    )}
+                    <span
+                      style={{
+                        fontSize: "0.6rem",
+                        color: "#475569",
+                        fontWeight: 600,
+                        maxWidth: 70,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {cur.t2Star.name}
+                    </span>
+                  </div>
+                );
+              })()}
             <div
               style={{
                 display: "flex",
@@ -2599,29 +2690,183 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { emoji: "🌍", title: "48 Nations", sub: "The biggest World Cup ever", desc: "For the first time, 48 nations will compete on the world stage — representing every confederation and footballing culture on the planet." },
-              { emoji: "🏟️", title: "16 Venues", sub: "Across 3 countries", desc: "Iconic stadiums from New York to Mexico City to Vancouver will host matches, creating a truly North American football fiesta." },
-              { emoji: "⚽", title: "104 Matches", sub: "More football than ever", desc: "More group games, more drama, and more chances for upsets. Every match counts in the expanded 2026 tournament format." },
+              {
+                emoji: "🌍",
+                title: "48 Nations",
+                sub: "The biggest World Cup ever",
+                desc: "For the first time, 48 nations will compete on the world stage — representing every confederation and footballing culture on the planet.",
+              },
+              {
+                emoji: "🏟️",
+                title: "16 Venues",
+                sub: "Across 3 countries",
+                desc: "Iconic stadiums from New York to Mexico City to Vancouver will host matches, creating a truly North American football fiesta.",
+              },
+              {
+                emoji: "⚽",
+                title: "104 Matches",
+                sub: "More football than ever",
+                desc: "More group games, more drama, and more chances for upsets. Every match counts in the expanded 2026 tournament format.",
+              },
             ].map((card) => (
-              <div key={card.title} style={{ background: "var(--card)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 18, padding: "24px 20px", display: "flex", flexDirection: "column", gap: 10 }}>
+              <div
+                key={card.title}
+                style={{
+                  background: "var(--card)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  borderRadius: 18,
+                  padding: "24px 20px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 10,
+                }}
+              >
                 <div style={{ fontSize: "2.2rem" }}>{card.emoji}</div>
                 <div>
-                  <div style={{ fontFamily: "'Barlow Condensed','Hind Siliguri',sans-serif", fontSize: "1.3rem", fontWeight: 800, color: "#fff", letterSpacing: "0.02em" }}>{card.title}</div>
-                  <div style={{ fontSize: "0.72rem", color: "#22C55E", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px", marginBottom: 6 }}>{card.sub}</div>
-                  <div style={{ fontSize: "0.82rem", color: "#64748B", lineHeight: 1.6 }}>{card.desc}</div>
+                  <div
+                    style={{
+                      fontFamily:
+                        "'Barlow Condensed','Hind Siliguri',sans-serif",
+                      fontSize: "1.3rem",
+                      fontWeight: 800,
+                      color: "#fff",
+                      letterSpacing: "0.02em",
+                    }}
+                  >
+                    {card.title}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.72rem",
+                      color: "#22C55E",
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "1px",
+                      marginBottom: 6,
+                    }}
+                  >
+                    {card.sub}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.82rem",
+                      color: "#64748B",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    {card.desc}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
           {/* Fan chants / atmosphere */}
-          <div style={{ marginTop: 20, background: "linear-gradient(135deg,rgba(22,163,74,0.07),rgba(6,22,38,0.9))", border: "1px solid rgba(22,163,74,0.15)", borderRadius: 18, padding: "24px 24px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 20 }}>
+          <div
+            style={{
+              marginTop: 20,
+              background:
+                "linear-gradient(135deg,rgba(22,163,74,0.07),rgba(6,22,38,0.9))",
+              border: "1px solid rgba(22,163,74,0.15)",
+              borderRadius: 18,
+              padding: "24px 24px",
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              gap: 20,
+            }}
+          >
             <div style={{ flex: "1 1 280px" }}>
-              <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "1.2rem", fontWeight: 800, color: "#fff", marginBottom: 6 }}>Who Are You Supporting?</div>
-              <div style={{ fontSize: "0.82rem", color: "#64748B", lineHeight: 1.6 }}>The World Cup brings billions of fans together. With 48 teams from every corner of the globe, there has never been a better chance for your nation to go all the way. Pick your team and follow their journey.</div>
+              <div
+                style={{
+                  fontFamily: "'Barlow Condensed',sans-serif",
+                  fontSize: "1.2rem",
+                  fontWeight: 800,
+                  color: "#fff",
+                  marginBottom: 6,
+                }}
+              >
+                Who Are You Supporting?
+              </div>
+              <div
+                style={{
+                  fontSize: "0.82rem",
+                  color: "#64748B",
+                  lineHeight: 1.6,
+                }}
+              >
+                The World Cup brings billions of fans together. With 48 teams
+                from every corner of the globe, there has never been a better
+                chance for your nation to go all the way. Pick your team and
+                follow their journey.
+              </div>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-              {["🇧🇷 Brazil","🇦🇷 Argentina","🇫🇷 France","🏴󠁧󠁢󠁥󠁮󠁧󠁿 England","🇩🇪 Germany","🇪🇸 Spain","🇵🇹 Portugal","🇧🇩 Bangladesh"].map((t) => (
-                <div key={t} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 30, padding: "6px 14px", fontSize: "0.78rem", fontWeight: 600, color: "#CBD5E1" }}>{t}</div>
+              {[
+                "Brazil",
+                "Argentina",
+                "France",
+                "England",
+                "Germany",
+                "Spain",
+                "Portugal",
+                "Netherlands",
+                "Belgium",
+                "Italy",
+                "Croatia",
+                "Denmark",
+                "Switzerland",
+                "Serbia",
+                "Poland",
+                "Ukraine",
+                "Turkey",
+                "Norway",
+                "USA",
+                "Mexico",
+                "Canada",
+                "Japan",
+                "South Korea",
+                "Australia",
+                "Morocco",
+                "Senegal",
+                "Nigeria",
+                "Egypt",
+                "Algeria",
+                "Cameroon",
+                "Ivory Coast",
+                "Ghana",
+                "Tunisia",
+                "Ecuador",
+                "Colombia",
+                "Uruguay",
+                "Chile",
+                "Paraguay",
+                "Peru",
+                "Venezuela",
+                "Iran",
+                "Saudi Arabia",
+                "Qatar",
+                "Jordan",
+                "Uzbekistan",
+                "New Zealand",
+              ].map((team) => (
+                <div
+                  key={team}
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    borderRadius: 30,
+                    padding: "6px 14px",
+                    fontSize: "0.78rem",
+                    fontWeight: 600,
+                    color: "#CBD5E1",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                  }}
+                >
+                  <FlagIcon teamName={team} size={18} />
+                  {team}
+                </div>
               ))}
             </div>
           </div>
@@ -2632,22 +2877,99 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 md:px-6 pb-16 animate-section">
         <AnimSection>
           <div
-            style={{ background: "linear-gradient(135deg,rgba(22,163,74,0.12) 0%,rgba(6,22,38,0.95) 100%)", border: "1px solid rgba(22,163,74,0.22)", borderRadius: 20, padding: "32px 28px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24, position: "relative", overflow: "hidden" }}
+            style={{
+              background:
+                "linear-gradient(135deg,rgba(22,163,74,0.12) 0%,rgba(6,22,38,0.95) 100%)",
+              border: "1px solid rgba(22,163,74,0.22)",
+              borderRadius: 20,
+              padding: "32px 28px",
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              gap: 24,
+              position: "relative",
+              overflow: "hidden",
+            }}
           >
-            <div style={{ position: "absolute", right: -30, top: -30, width: 180, height: 180, borderRadius: "50%", background: "rgba(22,163,74,0.05)", pointerEvents: "none" }} />
-            <div style={{ width: 64, height: 64, borderRadius: 18, background: "rgba(22,163,74,0.15)", border: "1px solid rgba(22,163,74,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <div
+              style={{
+                position: "absolute",
+                right: -30,
+                top: -30,
+                width: 180,
+                height: 180,
+                borderRadius: "50%",
+                background: "rgba(22,163,74,0.05)",
+                pointerEvents: "none",
+              }}
+            />
+            <div
+              style={{
+                width: 64,
+                height: 64,
+                borderRadius: 18,
+                background: "rgba(22,163,74,0.15)",
+                border: "1px solid rgba(22,163,74,0.3)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
               <Brain size={28} color="#22C55E" />
             </div>
             <div style={{ flex: "1 1 260px" }}>
-              <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "1.5rem", fontWeight: 900, color: "#fff", letterSpacing: "0.02em", marginBottom: 4 }}>Test Your World Cup Knowledge!</div>
-              <div style={{ fontSize: "0.82rem", color: "#64748B", lineHeight: 1.6 }}>20 questions on history, records & the 2026 edition. With timers, streaks & explanations — how many can you get right?</div>
+              <div
+                style={{
+                  fontFamily: "'Barlow Condensed',sans-serif",
+                  fontSize: "1.5rem",
+                  fontWeight: 900,
+                  color: "#fff",
+                  letterSpacing: "0.02em",
+                  marginBottom: 4,
+                }}
+              >
+                Test Your World Cup Knowledge!
+              </div>
+              <div
+                style={{
+                  fontSize: "0.82rem",
+                  color: "#64748B",
+                  lineHeight: 1.6,
+                }}
+              >
+                20 questions on history, records & the 2026 edition. With
+                timers, streaks & explanations — how many can you get right?
+              </div>
             </div>
             <button
               type="button"
               onClick={() => navigate("/quiz")}
-              style={{ padding: "13px 28px", borderRadius: 12, border: "none", background: "linear-gradient(135deg,#15803D,#16A34A)", color: "#fff", fontSize: "0.9rem", fontWeight: 700, fontFamily: "'Barlow Condensed',sans-serif", letterSpacing: "0.5px", textTransform: "uppercase", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, boxShadow: "0 6px 24px rgba(22,163,74,0.3)", flexShrink: 0, whiteSpace: "nowrap" }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+              style={{
+                padding: "13px 28px",
+                borderRadius: 12,
+                border: "none",
+                background: "linear-gradient(135deg,#15803D,#16A34A)",
+                color: "#fff",
+                fontSize: "0.9rem",
+                fontWeight: 700,
+                fontFamily: "'Barlow Condensed',sans-serif",
+                letterSpacing: "0.5px",
+                textTransform: "uppercase",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                boxShadow: "0 6px 24px rgba(22,163,74,0.3)",
+                flexShrink: 0,
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = "translateY(-2px)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.transform = "translateY(0)")
+              }
             >
               <Brain size={16} /> Take the Quiz
             </button>
@@ -2675,11 +2997,56 @@ export default function Home() {
               { year: 1998, team: "France", flag: "🇫🇷", host: "France" },
               { year: 1994, team: "Brazil", flag: "🇧🇷", host: "USA" },
             ].map((c, i) => (
-              <div key={c.year} className="card-stagger" style={{ animationDelay: `${i*40}ms`, background: "var(--card)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 14, padding: "16px 14px", textAlign: "center" }}>
-                <div style={{ fontSize: "1.8rem", marginBottom: 4 }}>{c.flag}</div>
-                <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "1.1rem", fontWeight: 800, color: "#fff" }}>{c.team}</div>
-                <div style={{ fontSize: "0.7rem", color: "#22C55E", fontWeight: 700, marginBottom: 2 }}>{c.year}</div>
-                <div style={{ fontSize: "0.65rem", color: "#475569", fontWeight: 500 }}>{c.host}</div>
+              <div
+                key={c.year}
+                className="card-stagger"
+                style={{
+                  animationDelay: `${i * 40}ms`,
+                  background: "var(--card)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  borderRadius: 14,
+                  padding: "16px 14px",
+                  textAlign: "center",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: 8,
+                  }}
+                >
+                  <FlagIcon teamName={c.team} size={48} />
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Barlow Condensed',sans-serif",
+                    fontSize: "1.1rem",
+                    fontWeight: 800,
+                    color: "#fff",
+                  }}
+                >
+                  {c.team}
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.7rem",
+                    color: "#22C55E",
+                    fontWeight: 700,
+                    marginBottom: 2,
+                  }}
+                >
+                  {c.year}
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.65rem",
+                    color: "#475569",
+                    fontWeight: 500,
+                  }}
+                >
+                  {c.host}
+                </div>
               </div>
             ))}
           </div>
@@ -2697,18 +3064,76 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              { icon: "🏆", fact: "Brazil hold the record for most World Cup wins with 5 titles, the last in 2002.", label: "Most Titles" },
-              { icon: "⚽", fact: "Miroslav Klose of Germany is the all-time top scorer with 16 World Cup goals.", label: "Top Scorer" },
-              { icon: "⚡", fact: "Hakan Şükür scored the fastest ever World Cup goal in just 11 seconds for Turkey in 2002.", label: "Fastest Goal" },
-              { icon: "🌍", fact: "The 2026 World Cup will be the first co-hosted by three nations across two CONCACAF federations.", label: "Historic First" },
-              { icon: "📅", fact: "The tournament runs from June 12 to July 19, 2026 — 38 days of football.", label: "Tournament Span" },
-              { icon: "🏟️", fact: "MetLife Stadium in New York/NJ will host the 2026 World Cup Final, with a capacity of over 82,000.", label: "Final Venue" },
+              {
+                icon: "🏆",
+                fact: "Brazil hold the record for most World Cup wins with 5 titles, the last in 2002.",
+                label: "Most Titles",
+              },
+              {
+                icon: "⚽",
+                fact: "Miroslav Klose of Germany is the all-time top scorer with 16 World Cup goals.",
+                label: "Top Scorer",
+              },
+              {
+                icon: "⚡",
+                fact: "Hakan Şükür scored the fastest ever World Cup goal in just 11 seconds for Turkey in 2002.",
+                label: "Fastest Goal",
+              },
+              {
+                icon: "🌍",
+                fact: "The 2026 World Cup will be the first co-hosted by three nations across two CONCACAF federations.",
+                label: "Historic First",
+              },
+              {
+                icon: "📅",
+                fact: "The tournament runs from June 12 to July 19, 2026 — 38 days of football.",
+                label: "Tournament Span",
+              },
+              {
+                icon: "🏟️",
+                fact: "MetLife Stadium in New York/NJ will host the 2026 World Cup Final, with a capacity of over 82,000.",
+                label: "Final Venue",
+              },
             ].map((item, i) => (
-              <div key={i} style={{ background: "var(--card)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 14, padding: "16px 18px", display: "flex", gap: 14, alignItems: "flex-start" }}>
-                <div style={{ fontSize: "1.6rem", flexShrink: 0, lineHeight: 1 }}>{item.icon}</div>
+              <div
+                key={i}
+                style={{
+                  background: "var(--card)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  borderRadius: 14,
+                  padding: "16px 18px",
+                  display: "flex",
+                  gap: 14,
+                  alignItems: "flex-start",
+                }}
+              >
+                <div
+                  style={{ fontSize: "1.6rem", flexShrink: 0, lineHeight: 1 }}
+                >
+                  {item.icon}
+                </div>
                 <div>
-                  <div style={{ fontSize: "0.65rem", fontWeight: 700, color: "#22C55E", textTransform: "uppercase", letterSpacing: "1px", marginBottom: 4 }}>{item.label}</div>
-                  <div style={{ fontSize: "0.85rem", color: "#94A3B8", lineHeight: 1.55 }}>{item.fact}</div>
+                  <div
+                    style={{
+                      fontSize: "0.65rem",
+                      fontWeight: 700,
+                      color: "#22C55E",
+                      textTransform: "uppercase",
+                      letterSpacing: "1px",
+                      marginBottom: 4,
+                    }}
+                  >
+                    {item.label}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.85rem",
+                      color: "#94A3B8",
+                      lineHeight: 1.55,
+                    }}
+                  >
+                    {item.fact}
+                  </div>
                 </div>
               </div>
             ))}
