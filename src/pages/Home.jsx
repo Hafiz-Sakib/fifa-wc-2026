@@ -478,7 +478,7 @@ const PREDICT_MATCHES = [
     flag1: "🇦🇷",
     team2: "France",
     flag2: "🇫🇷",
-    t1Star: { name: "L. Messi", club: "Inter Miami CF" },
+    t1Star: { name: "L. Martinez", club: "Manchester United FC (ENG)" },
     t2Star: { name: "K. Mbappé", club: "Real Madrid C.F." },
   },
   {
@@ -487,7 +487,7 @@ const PREDICT_MATCHES = [
     flag1: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
     team2: "Spain",
     flag2: "🇪🇸",
-    t1Star: { name: "H. Kane", club: "FC Bayern München" },
+    t1Star: { name: "Declan Rice", club: "Arsenal FC" },
     t2Star: { name: "Dani Olmo", club: "FC Barcelona" },
   },
 ];
