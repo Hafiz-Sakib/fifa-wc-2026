@@ -2979,7 +2979,7 @@ export default function Home() {
                   <input
                     type="text"
                     className="field-input search-input"
-                    placeholder="দল খুঁজুন (যেমন Brazil, Germany…)"
+                    placeholder="কোন দলের শিডিউল দেখতে চান? (যেমন Brazil...)"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                   />
