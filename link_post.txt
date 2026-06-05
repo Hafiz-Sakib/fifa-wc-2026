@@ -1,0 +1,24 @@
+⚽ Built something fun this weekend — FIFA World Cup 2026 Fixture Tracker 🏆
+
+A side project I put together for myself (and fellow Bangladeshi football fans) to track all 104 matches of the 2026 World Cup in Bangladesh Standard Time (UTC+6).
+
+🌐 Live: https://fifa26bd.vercel.app/
+💻 GitHub: https://github.com/Hafiz-Sakib/fifa-wc-2026
+
+✨ What's inside:
+
+→ Full fixture browser — by team or by date
+→ Interactive Score Predictor with animated football pitch
+→ World Cup Winner Predictor (pick your champion from all 48 teams)
+→ Team Squads — full 26-man rosters with clubs & positions
+→ Countdown timer to kick-off
+→ World Cup Quiz — 20 questions with streaks & timers
+→ PDF fixture sheet download (BST times)
+→ Upcoming match ticker, marquee, past champions & more
+
+🛠 Stack: React 18 · Vite · Tailwind CSS · React Router · Lucide Icons
+
+Nothing commercial — just a passion-driven build I enjoyed making.
+If you're a football fan, give it a spin and let me know what you think! 🇧🇩⚽
+
+#FIFA2026 #WorldCup2026 #ReactJS #FrontendDevelopment #WebDev #Football #SideProject #Bangladesh
