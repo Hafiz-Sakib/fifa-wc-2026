@@ -463,12 +463,33 @@ function TrophyGraphic() {
 
 /* ── Interactive Score Predictor Widget ── */
 const PREDICT_MATCHES = [
-  { id: 1, team1: "Brazil", flag1: "🇧🇷", team2: "Germany", flag2: "🇩🇪",
-    t1Star: { name: "Vinicius Jr", club: "Real Madrid C.F." }, t2Star: { name: "Kai Havertz", club: "Arsenal FC" } },
-  { id: 2, team1: "Argentina", flag1: "🇦🇷", team2: "France", flag2: "🇫🇷",
-    t1Star: { name: "L. Messi", club: "Inter Miami CF" }, t2Star: { name: "K. Mbappé", club: "Real Madrid C.F." } },
-  { id: 3, team1: "England", flag1: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", team2: "Spain", flag2: "🇪🇸",
-    t1Star: { name: "H. Kane", club: "FC Bayern München" }, t2Star: { name: "Dani Olmo", club: "FC Barcelona" } },
+  {
+    id: 1,
+    team1: "Brazil",
+    flag1: "🇧🇷",
+    team2: "Germany",
+    flag2: "🇩🇪",
+    t1Star: { name: "Vinicius Jr", club: "Real Madrid C.F." },
+    t2Star: { name: "Kai Havertz", club: "Arsenal FC" },
+  },
+  {
+    id: 2,
+    team1: "Argentina",
+    flag1: "🇦🇷",
+    team2: "France",
+    flag2: "🇫🇷",
+    t1Star: { name: "L. Messi", club: "Inter Miami CF" },
+    t2Star: { name: "K. Mbappé", club: "Real Madrid C.F." },
+  },
+  {
+    id: 3,
+    team1: "England",
+    flag1: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    team2: "Spain",
+    flag2: "🇪🇸",
+    t1Star: { name: "H. Kane", club: "FC Bayern München" },
+    t2Star: { name: "Dani Olmo", club: "FC Barcelona" },
+  },
 ];
 
 /* ── Animated Football between scores ── */
@@ -1203,12 +1224,47 @@ function ScorePredictorWidget() {
               {cur.team1}
             </div>
             {/* Club logo for star player team1 */}
-            {cur.t1Star && (() => { const logo = getClubLogo(cur.t1Star.club); return (
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 5, marginBottom: 8 }}>
-                {logo && <img src={logo} alt={cur.t1Star.club} style={{ width: 16, height: 16, objectFit: "contain", borderRadius: 3 }} />}
-                <span style={{ fontSize: "0.6rem", color: "#475569", fontWeight: 600, maxWidth: 70, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{cur.t1Star.name}</span>
-              </div>
-            ); })()}
+            {cur.t1Star &&
+              (() => {
+                const logo = getClubLogo(cur.t1Star.club);
+                return (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 5,
+                      marginBottom: 8,
+                    }}
+                  >
+                    {logo && (
+                      <img
+                        src={logo}
+                        alt={cur.t1Star.club}
+                        style={{
+                          width: 16,
+                          height: 16,
+                          objectFit: "contain",
+                          borderRadius: 3,
+                        }}
+                      />
+                    )}
+                    <span
+                      style={{
+                        fontSize: "0.6rem",
+                        color: "#475569",
+                        fontWeight: 600,
+                        maxWidth: 70,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {cur.t1Star.name}
+                    </span>
+                  </div>
+                );
+              })()}
             <div
               style={{
                 display: "flex",
@@ -1286,12 +1342,47 @@ function ScorePredictorWidget() {
               {cur.team2}
             </div>
             {/* Club logo for star player team2 */}
-            {cur.t2Star && (() => { const logo = getClubLogo(cur.t2Star.club); return (
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 5, marginBottom: 8 }}>
-                {logo && <img src={logo} alt={cur.t2Star.club} style={{ width: 16, height: 16, objectFit: "contain", borderRadius: 3 }} />}
-                <span style={{ fontSize: "0.6rem", color: "#475569", fontWeight: 600, maxWidth: 70, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{cur.t2Star.name}</span>
-              </div>
-            ); })()}
+            {cur.t2Star &&
+              (() => {
+                const logo = getClubLogo(cur.t2Star.club);
+                return (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 5,
+                      marginBottom: 8,
+                    }}
+                  >
+                    {logo && (
+                      <img
+                        src={logo}
+                        alt={cur.t2Star.club}
+                        style={{
+                          width: 16,
+                          height: 16,
+                          objectFit: "contain",
+                          borderRadius: 3,
+                        }}
+                      />
+                    )}
+                    <span
+                      style={{
+                        fontSize: "0.6rem",
+                        color: "#475569",
+                        fontWeight: 600,
+                        maxWidth: 70,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {cur.t2Star.name}
+                    </span>
+                  </div>
+                );
+              })()}
             <div
               style={{
                 display: "flex",
@@ -2193,26 +2284,71 @@ function HighlightBanner({ navigate }) {
    WORLD CUP WINNER PREDICTOR
    ══════════════════════════════════════════════════════════ */
 const FIFA_48 = [
-  "Brazil","Argentina","France","England","Germany","Spain","Portugal","Netherlands","Belgium",
-  "Croatia","Switzerland","Turkey","Norway","USA","Mexico","Canada","Japan","South Korea",
-  "Australia","Morocco","Senegal","Egypt","Algeria","Ivory Coast","Ghana","Tunisia","Ecuador",
-  "Colombia","Uruguay","Chile","Paraguay","Peru","Venezuela","Iran","Saudi Arabia","Qatar",
-  "Jordan","Uzbekistan","New Zealand","Scotland","Panama","Austria","Bosnia-Herzegovina",
-  "Cape Verde","Congo","Curacao","Czechia","Haiti","Iraq","Sweden","South Africa",
+  "Brazil",
+  "Argentina",
+  "France",
+  "England",
+  "Germany",
+  "Spain",
+  "Portugal",
+  "Netherlands",
+  "Belgium",
+  "Croatia",
+  "Switzerland",
+  "Turkey",
+  "Norway",
+  "USA",
+  "Mexico",
+  "Canada",
+  "Japan",
+  "South Korea",
+  "Australia",
+  "Morocco",
+  "Senegal",
+  "Egypt",
+  "Algeria",
+  "Ivory Coast",
+  "Ghana",
+  "Tunisia",
+  "Ecuador",
+  "Colombia",
+  "Uruguay",
+  "Chile",
+  "Paraguay",
+  "Peru",
+  "Venezuela",
+  "Iran",
+  "Saudi Arabia",
+  "Qatar",
+  "Jordan",
+  "Uzbekistan",
+  "New Zealand",
+  "Scotland",
+  "Panama",
+  "Austria",
+  "Bosnia-Herzegovina",
+  "Cape Verde",
+  "Congo",
+  "Curacao",
+  "Czechia",
+  "Haiti",
+  "Iraq",
+  "Sweden",
+  "South Africa",
 ];
 
 // Keep only real 48 — deduplicated
 const WINNER_TEAMS = [...new Set(FIFA_48)].slice(0, 48);
 
 function WinnerPredictorSection() {
-  const [picked, setPicked]     = useState(null);
+  const [picked, setPicked] = useState(null);
   const [confirmed, setConfirmed] = useState(false);
-  const [burst, setBurst]        = useState(false);
+  const [burst, setBurst] = useState(false);
+  const [hovering, setHovering] = useState(null);
 
   const pick = (team) => {
     if (confirmed) return;
     setPicked(team);
-    setConfirmed(false);
     setBurst(false);
   };
 
@@ -2220,149 +2356,477 @@ function WinnerPredictorSection() {
     if (!picked) return;
     setConfirmed(true);
     setBurst(true);
-    setTimeout(() => setBurst(false), 1200);
+    setTimeout(() => setBurst(false), 1400);
   };
 
-  const reset = () => { setPicked(null); setConfirmed(false); setBurst(false); };
+  const reset = () => {
+    setPicked(null);
+    setConfirmed(false);
+    setBurst(false);
+  };
 
   return (
     <section className="max-w-6xl mx-auto px-4 md:px-6 pb-16 animate-section">
       <AnimSection>
-        {/* Header */}
-        <div className="flex items-center gap-4 mb-6">
+        {/* Section header */}
+        <div className="flex items-center gap-4 mb-8">
           <h3 className="section-title">
-            <Trophy size={15} style={{ color: "#22C55E" }} /> Who Will Win the World Cup?
+            <Trophy size={15} style={{ color: "#22C55E" }} /> Who Will Win the
+            World Cup?
           </h3>
           <div className="section-line" />
         </div>
 
-        {/* Confirmed banner */}
-        {confirmed && picked && (
+        <div
+          style={{ display: "grid", gridTemplateColumns: "1fr", gap: 20 }}
+          className="lg:grid-cols-[1fr_320px]"
+        >
+          {/* LEFT: Team list */}
           <div
             style={{
-              position: "relative", overflow: "hidden", marginBottom: 24,
-              background: "linear-gradient(135deg,rgba(22,163,74,0.18),rgba(6,22,38,0.95))",
-              border: "1px solid rgba(22,163,74,0.45)", borderRadius: 18,
-              padding: "22px 24px", display: "flex", alignItems: "center", gap: 18,
-              animation: burst ? "winner-pop 0.6s cubic-bezier(.36,2,.5,1) forwards" : "none",
+              background: "var(--card)",
+              border: "1px solid rgba(255,255,255,0.06)",
+              borderRadius: 20,
+              padding: "20px 18px",
             }}
           >
-            {/* Confetti dots */}
-            {burst && Array.from({length: 18}).map((_,i) => (
-              <div key={i} style={{
-                position:"absolute",
-                width: 7, height: 7, borderRadius:"50%",
-                background: ["#22C55E","#4ADE80","#FCD34D","#60A5FA","#F87171"][i%5],
-                top: `${10+Math.random()*80}%`,
-                left: `${Math.random()*100}%`,
-                animation: `confetti-fly ${0.6+Math.random()*0.6}s ease-out forwards`,
-                animationDelay: `${Math.random()*0.3}s`,
-              }}/>
-            ))}
-            <div style={{ flexShrink:0 }}>
-              <FlagIcon teamName={picked} size={56} />
-            </div>
-            <div>
-              <div style={{ fontSize:"0.68rem", fontWeight:700, color:"#22C55E", textTransform:"uppercase", letterSpacing:"1.5px", marginBottom:4 }}>
-                Your Pick 🏆
-              </div>
-              <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontSize:"clamp(1.6rem,4vw,2.2rem)", fontWeight:900, color:"#fff", letterSpacing:"0.02em" }}>
-                {picked}
-              </div>
-              <div style={{ fontSize:"0.78rem", color:"#64748B", marginTop:2 }}>
-                will win the FIFA World Cup 2026!
-              </div>
-            </div>
-            <button
-              onClick={reset}
-              style={{ marginLeft:"auto", flexShrink:0, background:"rgba(255,255,255,0.05)", border:"1px solid rgba(255,255,255,0.1)", borderRadius:10, color:"#64748B", fontSize:"0.75rem", fontWeight:600, cursor:"pointer", padding:"8px 16px" }}
+            <div
+              style={{
+                fontSize: "0.68rem",
+                fontWeight: 700,
+                color: "#334155",
+                textTransform: "uppercase",
+                letterSpacing: "1.5px",
+                marginBottom: 16,
+              }}
             >
-              Change
-            </button>
+              ⚽ Select the 2026 Champion
+            </div>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+                gap: "2px 4px",
+              }}
+            >
+              {WINNER_TEAMS.map((team, idx) => {
+                const isSelected = picked === team;
+                const isDimmed = confirmed && picked !== team;
+                return (
+                  <button
+                    key={team}
+                    onClick={() => pick(team)}
+                    onMouseEnter={() => setHovering(team)}
+                    onMouseLeave={() => setHovering(null)}
+                    disabled={confirmed}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                      padding: "9px 12px",
+                      borderRadius: 10,
+                      cursor: confirmed ? "default" : "pointer",
+                      border: "none",
+                      background: "transparent",
+                      textAlign: "left",
+                      width: "100%",
+                      transition: "all 0.2s ease",
+                      opacity: isDimmed ? 0.18 : 1,
+                      transform: isSelected
+                        ? "translateX(6px)"
+                        : hovering === team && !confirmed
+                          ? "translateX(3px)"
+                          : "translateX(0)",
+                      background: isSelected
+                        ? "linear-gradient(90deg, rgba(22,163,74,0.22), rgba(22,163,74,0.06))"
+                        : hovering === team && !confirmed
+                          ? "rgba(255,255,255,0.04)"
+                          : "transparent",
+                      borderLeft: isSelected
+                        ? "3px solid #22C55E"
+                        : "3px solid transparent",
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 20,
+                        flexShrink: 0,
+                        fontSize: "0.6rem",
+                        fontWeight: 700,
+                        color: isSelected ? "#22C55E" : "#1e293b",
+                        textAlign: "right",
+                        fontFamily: "'Barlow Condensed',sans-serif",
+                      }}
+                    >
+                      {idx + 1}
+                    </span>
+                    <FlagIcon teamName={team} size={26} />
+                    <span
+                      style={{
+                        fontSize: "0.82rem",
+                        fontWeight: isSelected ? 700 : 500,
+                        color: isSelected ? "#4ADE80" : "#94A3B8",
+                        flex: 1,
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {team}
+                    </span>
+                    {isSelected && (
+                      <span
+                        style={{
+                          flexShrink: 0,
+                          width: 20,
+                          height: 20,
+                          borderRadius: "50%",
+                          background: "rgba(22,163,74,0.2)",
+                          border: "1.5px solid #22C55E",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontSize: "0.65rem",
+                          color: "#22C55E",
+                          fontWeight: 800,
+                          animation: "check-pop 0.3s cubic-bezier(.36,2,.5,1)",
+                        }}
+                      >
+                        ✓
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        )}
 
-        {/* Team grid */}
-        <div style={{ background:"var(--card)", border:"1px solid rgba(255,255,255,0.06)", borderRadius:18, padding:"20px 18px", marginBottom: confirmed ? 0 : 16 }}>
-          <div style={{ fontSize:"0.72rem", fontWeight:700, color:"#475569", textTransform:"uppercase", letterSpacing:"1px", marginBottom:14 }}>
-            {confirmed ? "Your selection is locked in!" : "Select your winner — tap any team to pick"}
-          </div>
-          <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
-            {WINNER_TEAMS.map((team) => {
-              const isSelected = picked === team;
-              const isDimmed   = confirmed && picked !== team;
-              return (
-                <button
-                  key={team}
-                  onClick={() => pick(team)}
-                  disabled={confirmed}
+          {/* RIGHT: Selection panel */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {/* Current pick card */}
+            <div
+              style={{
+                background: picked
+                  ? "linear-gradient(160deg, rgba(22,163,74,0.15) 0%, rgba(6,22,38,0.9) 100%)"
+                  : "var(--card)",
+                border: picked
+                  ? "1px solid rgba(22,163,74,0.35)"
+                  : "1px solid rgba(255,255,255,0.06)",
+                borderRadius: 20,
+                padding: "28px 24px",
+                textAlign: "center",
+                transition: "all 0.4s ease",
+                position: "relative",
+                overflow: "hidden",
+                minHeight: 220,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {picked && (
+                <div
                   style={{
-                    display:"flex", alignItems:"center", gap:7,
-                    padding:"6px 13px", borderRadius:30, cursor: confirmed ? "default" : "pointer",
-                    fontWeight:600, fontSize:"0.75rem",
-                    transition:"all 0.25s cubic-bezier(.36,2,.5,1)",
-                    transform: isSelected ? "scale(1.12)" : "scale(1)",
-                    background: isSelected
-                      ? "linear-gradient(135deg,rgba(22,163,74,0.35),rgba(22,163,74,0.18))"
-                      : "rgba(255,255,255,0.03)",
-                    border: isSelected
-                      ? "1.5px solid rgba(22,163,74,0.7)"
-                      : "1px solid rgba(255,255,255,0.07)",
-                    color: isSelected ? "#4ADE80" : isDimmed ? "#1e293b" : "#CBD5E1",
-                    boxShadow: isSelected ? "0 0 18px rgba(22,163,74,0.3)" : "none",
-                    opacity: isDimmed ? 0.25 : 1,
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    width: 160,
+                    height: 160,
+                    borderRadius: "50%",
+                    background:
+                      "radial-gradient(circle, rgba(22,163,74,0.12) 0%, transparent 70%)",
+                    pointerEvents: "none",
+                  }}
+                />
+              )}
+              {picked ? (
+                <>
+                  <div
+                    style={{
+                      animation: "flag-enter 0.4s cubic-bezier(.36,2,.5,1)",
+                      marginBottom: 14,
+                    }}
+                  >
+                    <FlagIcon teamName={picked} size={72} />
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.62rem",
+                      fontWeight: 700,
+                      color: "#22C55E",
+                      textTransform: "uppercase",
+                      letterSpacing: "2px",
+                      marginBottom: 6,
+                    }}
+                  >
+                    Your Pick
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "'Barlow Condensed',sans-serif",
+                      fontSize: "clamp(1.4rem,3vw,1.9rem)",
+                      fontWeight: 900,
+                      color: "#fff",
+                      letterSpacing: "0.02em",
+                      marginBottom: 4,
+                      animation: "flag-enter 0.35s cubic-bezier(.36,2,.5,1)",
+                    }}
+                  >
+                    {picked}
+                  </div>
+                  {confirmed && (
+                    <div
+                      style={{
+                        fontSize: "0.72rem",
+                        color: "#4ADE80",
+                        fontWeight: 600,
+                        marginTop: 4,
+                      }}
+                    >
+                      🏆 Locked in as Champion!
+                    </div>
+                  )}
+                </>
+              ) : (
+                <>
+                  <div
+                    style={{
+                      fontSize: "2.5rem",
+                      marginBottom: 12,
+                      opacity: 0.3,
+                    }}
+                  >
+                    🏆
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.85rem",
+                      color: "#334155",
+                      fontWeight: 600,
+                    }}
+                  >
+                    Select a team from the list
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Confirm / Reset */}
+            {!confirmed ? (
+              <button
+                onClick={confirm}
+                disabled={!picked}
+                style={{
+                  padding: "14px 20px",
+                  borderRadius: 14,
+                  border: "none",
+                  background: picked
+                    ? "linear-gradient(135deg,#15803D,#16A34A)"
+                    : "rgba(255,255,255,0.04)",
+                  color: picked ? "#fff" : "#1e293b",
+                  fontSize: "0.9rem",
+                  fontWeight: 700,
+                  fontFamily: "'Barlow Condensed',sans-serif",
+                  letterSpacing: "0.5px",
+                  textTransform: "uppercase",
+                  cursor: picked ? "pointer" : "not-allowed",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 8,
+                  boxShadow: picked
+                    ? "0 6px 28px rgba(22,163,74,0.35)"
+                    : "none",
+                  transition: "all 0.25s",
+                  transform: picked ? "scale(1)" : "scale(0.97)",
+                }}
+                onMouseEnter={(e) => {
+                  if (picked)
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
+              >
+                <Trophy size={16} />
+                {picked ? `Lock in ${picked}!` : "Pick a team first"}
+              </button>
+            ) : (
+              <>
+                <div
+                  style={{
+                    background: "rgba(22,163,74,0.1)",
+                    border: "1px solid rgba(22,163,74,0.3)",
+                    borderRadius: 14,
+                    padding: "14px 16px",
+                    textAlign: "center",
+                    position: "relative",
+                    overflow: "hidden",
+                    animation: burst
+                      ? "winner-pop 0.6s cubic-bezier(.36,2,.5,1)"
+                      : "none",
                   }}
                 >
-                  <FlagIcon teamName={team} size={20} />
-                  {team}
-                  {isSelected && <span style={{fontSize:"0.9rem"}}>✓</span>}
+                  {burst &&
+                    Array.from({ length: 16 }).map((_, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          position: "absolute",
+                          width: 6,
+                          height: 6,
+                          borderRadius: "50%",
+                          background: [
+                            "#22C55E",
+                            "#4ADE80",
+                            "#FCD34D",
+                            "#60A5FA",
+                            "#F87171",
+                            "#FB923C",
+                          ][i % 6],
+                          top: `${5 + Math.random() * 90}%`,
+                          left: `${Math.random() * 100}%`,
+                          animation: `confetti-fly ${0.5 + Math.random() * 0.7}s ease-out forwards`,
+                          animationDelay: `${Math.random() * 0.25}s`,
+                        }}
+                      />
+                    ))}
+                  <div style={{ fontSize: "1.4rem", marginBottom: 6 }}>🎉</div>
+                  <div
+                    style={{
+                      fontSize: "0.72rem",
+                      color: "#4ADE80",
+                      fontWeight: 700,
+                    }}
+                  >
+                    Prediction submitted!
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.7rem",
+                      color: "#64748B",
+                      marginTop: 2,
+                    }}
+                  >
+                    Will you be right on July 19?
+                  </div>
+                </div>
+                <button
+                  onClick={reset}
+                  style={{
+                    padding: "11px 20px",
+                    borderRadius: 12,
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    background: "transparent",
+                    color: "#64748B",
+                    fontSize: "0.8rem",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 6,
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = "#CBD5E1";
+                    e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = "#64748B";
+                    e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
+                  }}
+                >
+                  ↩ Change my pick
                 </button>
-              );
-            })}
+              </>
+            )}
+
+            {/* Past winners */}
+            <div
+              style={{
+                background: "rgba(255,255,255,0.02)",
+                border: "1px solid rgba(255,255,255,0.05)",
+                borderRadius: 14,
+                padding: "14px 16px",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  color: "#334155",
+                  textTransform: "uppercase",
+                  letterSpacing: "1px",
+                  marginBottom: 10,
+                }}
+              >
+                Past Winners
+              </div>
+              {[
+                { team: "Argentina", year: "2022", flag: "🇦🇷" },
+                { team: "France", year: "2018", flag: "🇫🇷" },
+                { team: "Germany", year: "2014", flag: "🇩🇪" },
+                { team: "Spain", year: "2010", flag: "🇪🇸" },
+              ].map((w) => (
+                <div
+                  key={w.year}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    padding: "5px 0",
+                    borderBottom: "1px solid rgba(255,255,255,0.03)",
+                  }}
+                >
+                  <FlagIcon teamName={w.team} size={22} />
+                  <span
+                    style={{
+                      fontSize: "0.78rem",
+                      color: "#94A3B8",
+                      fontWeight: 600,
+                      flex: 1,
+                    }}
+                  >
+                    {w.team}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: "0.68rem",
+                      color: "#22C55E",
+                      fontWeight: 700,
+                    }}
+                  >
+                    {w.year}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
-        {/* Confirm button */}
-        {!confirmed && (
-          <div style={{ display:"flex", justifyContent:"center", marginTop:16 }}>
-            <button
-              onClick={confirm}
-              disabled={!picked}
-              style={{
-                padding:"13px 40px", borderRadius:14, border:"none",
-                background: picked
-                  ? "linear-gradient(135deg,#15803D,#16A34A)"
-                  : "rgba(255,255,255,0.05)",
-                color: picked ? "#fff" : "#334155",
-                fontSize:"0.95rem", fontWeight:700,
-                fontFamily:"'Barlow Condensed',sans-serif",
-                letterSpacing:"0.5px", textTransform:"uppercase",
-                cursor: picked ? "pointer" : "not-allowed",
-                display:"flex", alignItems:"center", gap:10,
-                boxShadow: picked ? "0 6px 28px rgba(22,163,74,0.35)" : "none",
-                transition:"all 0.2s",
-                transform: picked ? "scale(1)" : "scale(0.97)",
-              }}
-              onMouseEnter={(e) => { if(picked) e.currentTarget.style.transform="translateY(-2px) scale(1.02)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform="scale(1)"; }}
-            >
-              <Trophy size={17} />
-              {picked ? `Lock in ${picked}!` : "Pick a team first"}
-            </button>
-          </div>
-        )}
       </AnimSection>
 
-      {/* Keyframes injected once */}
       <style>{`
+        @keyframes flag-enter {
+          0%  { transform: scale(0.6) rotate(-8deg); opacity: 0; }
+          70% { transform: scale(1.08) rotate(2deg); }
+          100%{ transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        @keyframes check-pop {
+          0%  { transform: scale(0); }
+          70% { transform: scale(1.3); }
+          100%{ transform: scale(1); }
+        }
         @keyframes winner-pop {
-          0%  { transform: scale(0.92); opacity:0.6; }
-          60% { transform: scale(1.03); }
-          100%{ transform: scale(1);    opacity:1;   }
+          0%  { transform: scale(0.93); opacity: 0.5; }
+          60% { transform: scale(1.04); }
+          100%{ transform: scale(1);    opacity: 1;   }
         }
         @keyframes confetti-fly {
-          0%   { transform: translateY(0) scale(1); opacity:1; }
-          100% { transform: translateY(-60px) scale(0.4); opacity:0; }
+          0%   { transform: translateY(0) scale(1) rotate(0deg);   opacity: 1; }
+          100% { transform: translateY(-70px) scale(0.3) rotate(180deg); opacity: 0; }
         }
       `}</style>
     </section>
@@ -2779,36 +3243,182 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { emoji: "🌍", title: "48 Nations", sub: "The biggest World Cup ever", desc: "For the first time, 48 nations will compete on the world stage — representing every confederation and footballing culture on the planet." },
-              { emoji: "🏟️", title: "16 Venues", sub: "Across 3 countries", desc: "Iconic stadiums from New York to Mexico City to Vancouver will host matches, creating a truly North American football fiesta." },
-              { emoji: "⚽", title: "104 Matches", sub: "More football than ever", desc: "More group games, more drama, and more chances for upsets. Every match counts in the expanded 2026 tournament format." },
+              {
+                emoji: "🌍",
+                title: "48 Nations",
+                sub: "The biggest World Cup ever",
+                desc: "For the first time, 48 nations will compete on the world stage — representing every confederation and footballing culture on the planet.",
+              },
+              {
+                emoji: "🏟️",
+                title: "16 Venues",
+                sub: "Across 3 countries",
+                desc: "Iconic stadiums from New York to Mexico City to Vancouver will host matches, creating a truly North American football fiesta.",
+              },
+              {
+                emoji: "⚽",
+                title: "104 Matches",
+                sub: "More football than ever",
+                desc: "More group games, more drama, and more chances for upsets. Every match counts in the expanded 2026 tournament format.",
+              },
             ].map((card) => (
-              <div key={card.title} style={{ background: "var(--card)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 18, padding: "24px 20px", display: "flex", flexDirection: "column", gap: 10 }}>
+              <div
+                key={card.title}
+                style={{
+                  background: "var(--card)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  borderRadius: 18,
+                  padding: "24px 20px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 10,
+                }}
+              >
                 <div style={{ fontSize: "2.2rem" }}>{card.emoji}</div>
                 <div>
-                  <div style={{ fontFamily: "'Barlow Condensed','Hind Siliguri',sans-serif", fontSize: "1.3rem", fontWeight: 800, color: "#fff", letterSpacing: "0.02em" }}>{card.title}</div>
-                  <div style={{ fontSize: "0.72rem", color: "#22C55E", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px", marginBottom: 6 }}>{card.sub}</div>
-                  <div style={{ fontSize: "0.82rem", color: "#64748B", lineHeight: 1.6 }}>{card.desc}</div>
+                  <div
+                    style={{
+                      fontFamily:
+                        "'Barlow Condensed','Hind Siliguri',sans-serif",
+                      fontSize: "1.3rem",
+                      fontWeight: 800,
+                      color: "#fff",
+                      letterSpacing: "0.02em",
+                    }}
+                  >
+                    {card.title}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.72rem",
+                      color: "#22C55E",
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "1px",
+                      marginBottom: 6,
+                    }}
+                  >
+                    {card.sub}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.82rem",
+                      color: "#64748B",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    {card.desc}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
           {/* Fan chants / atmosphere */}
-          <div style={{ marginTop: 20, background: "linear-gradient(135deg,rgba(22,163,74,0.07),rgba(6,22,38,0.9))", border: "1px solid rgba(22,163,74,0.15)", borderRadius: 18, padding: "24px 24px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 20 }}>
+          <div
+            style={{
+              marginTop: 20,
+              background:
+                "linear-gradient(135deg,rgba(22,163,74,0.07),rgba(6,22,38,0.9))",
+              border: "1px solid rgba(22,163,74,0.15)",
+              borderRadius: 18,
+              padding: "24px 24px",
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              gap: 20,
+            }}
+          >
             <div style={{ flex: "1 1 280px" }}>
-              <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "1.2rem", fontWeight: 800, color: "#fff", marginBottom: 6 }}>Who Are You Supporting?</div>
-              <div style={{ fontSize: "0.82rem", color: "#64748B", lineHeight: 1.6 }}>The World Cup brings billions of fans together. With 48 teams from every corner of the globe, there has never been a better chance for your nation to go all the way. Pick your team and follow their journey.</div>
+              <div
+                style={{
+                  fontFamily: "'Barlow Condensed',sans-serif",
+                  fontSize: "1.2rem",
+                  fontWeight: 800,
+                  color: "#fff",
+                  marginBottom: 6,
+                }}
+              >
+                Who Are You Supporting?
+              </div>
+              <div
+                style={{
+                  fontSize: "0.82rem",
+                  color: "#64748B",
+                  lineHeight: 1.6,
+                }}
+              >
+                The World Cup brings billions of fans together. With 48 teams
+                from every corner of the globe, there has never been a better
+                chance for your nation to go all the way. Pick your team and
+                follow their journey.
+              </div>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
               {[
-                "Brazil","Argentina","France","England","Germany","Spain","Portugal","Netherlands","Belgium",
-                "Italy","Croatia","Denmark","Switzerland","Serbia","Poland","Ukraine","Turkey","Norway","USA",
-                "Mexico","Canada","Japan","South Korea","Australia","Morocco","Senegal","Nigeria","Egypt",
-                "Algeria","Cameroon","Ivory Coast","Ghana","Tunisia","Ecuador","Colombia","Uruguay","Chile",
-                "Paraguay","Peru","Venezuela","Iran","Saudi Arabia","Qatar","Jordan","Uzbekistan","New Zealand",
-                "Scotland","Panama"
+                "Brazil",
+                "Argentina",
+                "France",
+                "England",
+                "Germany",
+                "Spain",
+                "Portugal",
+                "Netherlands",
+                "Belgium",
+                "Italy",
+                "Croatia",
+                "Denmark",
+                "Switzerland",
+                "Serbia",
+                "Poland",
+                "Ukraine",
+                "Turkey",
+                "Norway",
+                "USA",
+                "Mexico",
+                "Canada",
+                "Japan",
+                "South Korea",
+                "Australia",
+                "Morocco",
+                "Senegal",
+                "Nigeria",
+                "Egypt",
+                "Algeria",
+                "Cameroon",
+                "Ivory Coast",
+                "Ghana",
+                "Tunisia",
+                "Ecuador",
+                "Colombia",
+                "Uruguay",
+                "Chile",
+                "Paraguay",
+                "Peru",
+                "Venezuela",
+                "Iran",
+                "Saudi Arabia",
+                "Qatar",
+                "Jordan",
+                "Uzbekistan",
+                "New Zealand",
+                "Scotland",
+                "Panama",
               ].map((team) => (
-                <div key={team} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 30, padding: "5px 12px", fontSize: "0.75rem", fontWeight: 600, color: "#CBD5E1", display: "flex", alignItems: "center", gap: 6 }}>
+                <div
+                  key={team}
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    borderRadius: 30,
+                    padding: "5px 12px",
+                    fontSize: "0.75rem",
+                    fontWeight: 600,
+                    color: "#CBD5E1",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                  }}
+                >
                   <FlagIcon teamName={team} size={18} />
                   {team}
                 </div>
@@ -2825,22 +3435,99 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 md:px-6 pb-16 animate-section">
         <AnimSection>
           <div
-            style={{ background: "linear-gradient(135deg,rgba(22,163,74,0.12) 0%,rgba(6,22,38,0.95) 100%)", border: "1px solid rgba(22,163,74,0.22)", borderRadius: 20, padding: "32px 28px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24, position: "relative", overflow: "hidden" }}
+            style={{
+              background:
+                "linear-gradient(135deg,rgba(22,163,74,0.12) 0%,rgba(6,22,38,0.95) 100%)",
+              border: "1px solid rgba(22,163,74,0.22)",
+              borderRadius: 20,
+              padding: "32px 28px",
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              gap: 24,
+              position: "relative",
+              overflow: "hidden",
+            }}
           >
-            <div style={{ position: "absolute", right: -30, top: -30, width: 180, height: 180, borderRadius: "50%", background: "rgba(22,163,74,0.05)", pointerEvents: "none" }} />
-            <div style={{ width: 64, height: 64, borderRadius: 18, background: "rgba(22,163,74,0.15)", border: "1px solid rgba(22,163,74,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <div
+              style={{
+                position: "absolute",
+                right: -30,
+                top: -30,
+                width: 180,
+                height: 180,
+                borderRadius: "50%",
+                background: "rgba(22,163,74,0.05)",
+                pointerEvents: "none",
+              }}
+            />
+            <div
+              style={{
+                width: 64,
+                height: 64,
+                borderRadius: 18,
+                background: "rgba(22,163,74,0.15)",
+                border: "1px solid rgba(22,163,74,0.3)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
               <Brain size={28} color="#22C55E" />
             </div>
             <div style={{ flex: "1 1 260px" }}>
-              <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "1.5rem", fontWeight: 900, color: "#fff", letterSpacing: "0.02em", marginBottom: 4 }}>Test Your World Cup Knowledge!</div>
-              <div style={{ fontSize: "0.82rem", color: "#64748B", lineHeight: 1.6 }}>20 questions on history, records & the 2026 edition. With timers, streaks & explanations — how many can you get right?</div>
+              <div
+                style={{
+                  fontFamily: "'Barlow Condensed',sans-serif",
+                  fontSize: "1.5rem",
+                  fontWeight: 900,
+                  color: "#fff",
+                  letterSpacing: "0.02em",
+                  marginBottom: 4,
+                }}
+              >
+                Test Your World Cup Knowledge!
+              </div>
+              <div
+                style={{
+                  fontSize: "0.82rem",
+                  color: "#64748B",
+                  lineHeight: 1.6,
+                }}
+              >
+                20 questions on history, records & the 2026 edition. With
+                timers, streaks & explanations — how many can you get right?
+              </div>
             </div>
             <button
               type="button"
               onClick={() => navigate("/quiz")}
-              style={{ padding: "13px 28px", borderRadius: 12, border: "none", background: "linear-gradient(135deg,#15803D,#16A34A)", color: "#fff", fontSize: "0.9rem", fontWeight: 700, fontFamily: "'Barlow Condensed',sans-serif", letterSpacing: "0.5px", textTransform: "uppercase", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, boxShadow: "0 6px 24px rgba(22,163,74,0.3)", flexShrink: 0, whiteSpace: "nowrap" }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+              style={{
+                padding: "13px 28px",
+                borderRadius: 12,
+                border: "none",
+                background: "linear-gradient(135deg,#15803D,#16A34A)",
+                color: "#fff",
+                fontSize: "0.9rem",
+                fontWeight: 700,
+                fontFamily: "'Barlow Condensed',sans-serif",
+                letterSpacing: "0.5px",
+                textTransform: "uppercase",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                boxShadow: "0 6px 24px rgba(22,163,74,0.3)",
+                flexShrink: 0,
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = "translateY(-2px)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.transform = "translateY(0)")
+              }
             >
               <Brain size={16} /> Take the Quiz
             </button>
@@ -2868,13 +3555,56 @@ export default function Home() {
               { year: 1998, team: "France", flag: "🇫🇷", host: "France" },
               { year: 1994, team: "Brazil", flag: "🇧🇷", host: "USA" },
             ].map((c, i) => (
-              <div key={c.year} className="card-stagger" style={{ animationDelay: `${i*40}ms`, background: "var(--card)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 14, padding: "16px 14px", textAlign: "center" }}>
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: 8 }}>
+              <div
+                key={c.year}
+                className="card-stagger"
+                style={{
+                  animationDelay: `${i * 40}ms`,
+                  background: "var(--card)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  borderRadius: 14,
+                  padding: "16px 14px",
+                  textAlign: "center",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: 8,
+                  }}
+                >
                   <FlagIcon teamName={c.team} size={48} />
                 </div>
-                <div style={{ fontFamily: "'Barlow Condensed',sans-serif", fontSize: "1.1rem", fontWeight: 800, color: "#fff" }}>{c.team}</div>
-                <div style={{ fontSize: "0.7rem", color: "#22C55E", fontWeight: 700, marginBottom: 2 }}>{c.year}</div>
-                <div style={{ fontSize: "0.65rem", color: "#475569", fontWeight: 500 }}>{c.host}</div>
+                <div
+                  style={{
+                    fontFamily: "'Barlow Condensed',sans-serif",
+                    fontSize: "1.1rem",
+                    fontWeight: 800,
+                    color: "#fff",
+                  }}
+                >
+                  {c.team}
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.7rem",
+                    color: "#22C55E",
+                    fontWeight: 700,
+                    marginBottom: 2,
+                  }}
+                >
+                  {c.year}
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.65rem",
+                    color: "#475569",
+                    fontWeight: 500,
+                  }}
+                >
+                  {c.host}
+                </div>
               </div>
             ))}
           </div>
@@ -2892,18 +3622,76 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              { icon: "🏆", fact: "Brazil hold the record for most World Cup wins with 5 titles, the last in 2002.", label: "Most Titles" },
-              { icon: "⚽", fact: "Miroslav Klose of Germany is the all-time top scorer with 16 World Cup goals.", label: "Top Scorer" },
-              { icon: "⚡", fact: "Hakan Şükür scored the fastest ever World Cup goal in just 11 seconds for Turkey in 2002.", label: "Fastest Goal" },
-              { icon: "🌍", fact: "The 2026 World Cup will be the first co-hosted by three nations across two CONCACAF federations.", label: "Historic First" },
-              { icon: "📅", fact: "The tournament runs from June 12 to July 19, 2026 — 38 days of football.", label: "Tournament Span" },
-              { icon: "🏟️", fact: "MetLife Stadium in New York/NJ will host the 2026 World Cup Final, with a capacity of over 82,000.", label: "Final Venue" },
+              {
+                icon: "🏆",
+                fact: "Brazil hold the record for most World Cup wins with 5 titles, the last in 2002.",
+                label: "Most Titles",
+              },
+              {
+                icon: "⚽",
+                fact: "Miroslav Klose of Germany is the all-time top scorer with 16 World Cup goals.",
+                label: "Top Scorer",
+              },
+              {
+                icon: "⚡",
+                fact: "Hakan Şükür scored the fastest ever World Cup goal in just 11 seconds for Turkey in 2002.",
+                label: "Fastest Goal",
+              },
+              {
+                icon: "🌍",
+                fact: "The 2026 World Cup will be the first co-hosted by three nations across two CONCACAF federations.",
+                label: "Historic First",
+              },
+              {
+                icon: "📅",
+                fact: "The tournament runs from June 12 to July 19, 2026 — 38 days of football.",
+                label: "Tournament Span",
+              },
+              {
+                icon: "🏟️",
+                fact: "MetLife Stadium in New York/NJ will host the 2026 World Cup Final, with a capacity of over 82,000.",
+                label: "Final Venue",
+              },
             ].map((item, i) => (
-              <div key={i} style={{ background: "var(--card)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 14, padding: "16px 18px", display: "flex", gap: 14, alignItems: "flex-start" }}>
-                <div style={{ fontSize: "1.6rem", flexShrink: 0, lineHeight: 1 }}>{item.icon}</div>
+              <div
+                key={i}
+                style={{
+                  background: "var(--card)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  borderRadius: 14,
+                  padding: "16px 18px",
+                  display: "flex",
+                  gap: 14,
+                  alignItems: "flex-start",
+                }}
+              >
+                <div
+                  style={{ fontSize: "1.6rem", flexShrink: 0, lineHeight: 1 }}
+                >
+                  {item.icon}
+                </div>
                 <div>
-                  <div style={{ fontSize: "0.65rem", fontWeight: 700, color: "#22C55E", textTransform: "uppercase", letterSpacing: "1px", marginBottom: 4 }}>{item.label}</div>
-                  <div style={{ fontSize: "0.85rem", color: "#94A3B8", lineHeight: 1.55 }}>{item.fact}</div>
+                  <div
+                    style={{
+                      fontSize: "0.65rem",
+                      fontWeight: 700,
+                      color: "#22C55E",
+                      textTransform: "uppercase",
+                      letterSpacing: "1px",
+                      marginBottom: 4,
+                    }}
+                  >
+                    {item.label}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.85rem",
+                      color: "#94A3B8",
+                      lineHeight: 1.55,
+                    }}
+                  >
+                    {item.fact}
+                  </div>
                 </div>
               </div>
             ))}
