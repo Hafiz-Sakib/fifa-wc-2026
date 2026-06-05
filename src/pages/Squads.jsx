@@ -136,7 +136,8 @@ const ALL_TEAMS = Object.keys(COUNTRY_CODES)
       !t.startsWith("Loser") &&
       !t.startsWith("1") &&
       !t.startsWith("2") &&
-      !t.startsWith("3rd"),
+      !t.startsWith("3rd") &&
+      GROUP_MAP[t] !== undefined, // only real 48 WC teams
   )
   .sort((a, b) => {
     const ga = GROUP_MAP[a] || "Z",
