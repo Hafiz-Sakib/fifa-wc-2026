@@ -1585,7 +1585,7 @@ export default function Tree() {
           )}
 
           {/* DESKTOP BRACKET (≥768px) — fluid scale, centered */}
-          <div className="hidden md:block pb-4" style={{ width: "100%" }}>
+          <div className="hidden md:block pb-4 px-8 pt-28">
             <div
               className="bracket-scale-wrap"
               style={{
@@ -1597,7 +1597,7 @@ export default function Tree() {
               }}
             >
               <div
-                className="flex items-start"
+                className="flex items-start justify-center"
                 style={{ minWidth: BRACKET_NATURAL_W, gap: 0 }}
               >
                 <RoundCol
