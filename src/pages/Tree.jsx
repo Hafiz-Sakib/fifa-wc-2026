@@ -120,6 +120,9 @@ const R32_SLOTS = knockoutByRound["Round of 32"].map((m, i) => {
     id: `R32_${i + 1}`,
     seed1,
     seed2,
+    // real qualified team names once the group stage is decided (null otherwise)
+    real1: m.seed1 ? m.team1 : null,
+    real2: m.seed2 ? m.team2 : null,
     // which index into the "8 best 3rd" array each slot uses
     thirdIdx1: s1Is3rd ? _thirdBestCounter++ : null,
     thirdIdx2: s2Is3rd ? _thirdBestCounter++ : null,
@@ -240,6 +243,147 @@ function buildInitialState() {
     thirdBestOrdered: tbo,
     bracket: buildBracketFromGroups(gs, tbo),
   };
+}
+
+/* ─────────────────────────────────────────────
+   DEFAULTS FROM REAL RESULTS
+   Pre-fill the bracket with whatever has actually
+   been decided so far (group standings, the eight
+   best third-placed teams, and any completed
+   knockout matches). Falls back gracefully while
+   results are still missing.
+───────────────────────────────────────────── */
+function computeGroupStandings() {
+  // group -> [ {team, pts, gd, gf} ] sorted best-first, only if group complete
+  const stats = {};
+  for (const g of GROUP_NAMES) stats[g] = {};
+
+  const ensure = (g, t) => {
+    if (!stats[g][t]) stats[g][t] = { team: t, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0 };
+    return stats[g][t];
+  };
+
+  const playedCount = {};
+  for (const g of GROUP_NAMES) playedCount[g] = 0;
+
+  for (const m of fixturesData) {
+    const g = m.group;
+    if (!GROUP_NAMES.includes(g)) continue;
+    if (m.status !== "completed" || m.score1 == null || m.score2 == null) continue;
+    playedCount[g] += 1;
+    const a = ensure(g, m.team1);
+    const b = ensure(g, m.team2);
+    a.p += 1; b.p += 1;
+    a.gf += m.score1; a.ga += m.score2;
+    b.gf += m.score2; b.ga += m.score1;
+    if (m.score1 > m.score2) { a.w += 1; b.l += 1; }
+    else if (m.score1 < m.score2) { b.w += 1; a.l += 1; }
+    else { a.d += 1; b.d += 1; }
+  }
+
+  const ranked = {};
+  for (const g of GROUP_NAMES) {
+    const teams = Object.values(stats[g]);
+    // a group is "decided" only when all 6 matches have been played
+    if (playedCount[g] < 6 || teams.length < 4) {
+      ranked[g] = null;
+      continue;
+    }
+    teams.forEach((t) => {
+      t.pts = t.w * 3 + t.d;
+      t.gd = t.gf - t.ga;
+    });
+    teams.sort((x, y) => y.pts - x.pts || y.gd - x.gd || y.gf - x.gf);
+    ranked[g] = teams;
+  }
+  return ranked;
+}
+
+function buildDefaultGroupState(ranked) {
+  const gs = buildInitialGroupState();
+  for (const g of GROUP_NAMES) {
+    const r = ranked[g];
+    if (!r) continue;
+    gs[g] = {
+      rank1: r[0]?.team || null,
+      rank2: r[1]?.team || null,
+      rank3: r[2]?.team || null,
+    };
+  }
+  return gs;
+}
+
+function buildDefaultThirdBest() {
+  // Each "3rd Best" R32 slot already carries the real qualified team
+  // (slot.real1 / slot.real2) once the group stage is complete. Map each
+  // slot's thirdIdx to that team so the bracket matches the official draw.
+  const tbo = new Array(8).fill(null);
+  for (const s of R32_SLOTS) {
+    if (s.thirdIdx1 != null && s.real1) tbo[s.thirdIdx1] = s.real1;
+    if (s.thirdIdx2 != null && s.real2) tbo[s.thirdIdx2] = s.real2;
+  }
+  return tbo;
+}
+
+function applyCompletedKnockouts(bracket) {
+  // Auto-pick winners for any knockout match that already has a final score.
+  // Returns a new bracket with winners set + downstream slots advanced.
+  const idByLabel = {
+    "Round of 32": "r32",
+    "Round of 16": "r16",
+    "Quarter-Final": "qf",
+    "Semi-Final": "sf",
+    Final: "final",
+  };
+
+  // Build a quick lookup of completed knockout results keyed by the match's
+  // ordered index within its round (matches fixtures order used to build slots).
+  const completedByRound = {};
+  for (const label of Object.keys(idByLabel)) completedByRound[label] = [];
+  for (const m of fixturesData) {
+    if (completedByRound[m.group] !== undefined) {
+      completedByRound[m.group].push(m);
+    }
+  }
+
+  let working = bracket;
+  const roundKeys = ["r32", "r16", "qf", "sf", "final"];
+  const labelByKey = {
+    r32: "Round of 32",
+    r16: "Round of 16",
+    qf: "Quarter-Final",
+    sf: "Semi-Final",
+    final: "Final",
+  };
+
+  for (const key of roundKeys) {
+    const fixturesForRound = completedByRound[labelByKey[key]] || [];
+    // snapshot the current round's matches (ids + resolved teams) before picking
+    const roundMatches = working[key].map((m) => ({
+      id: m.id,
+      t1: m.t1,
+      t2: m.t2,
+    }));
+    roundMatches.forEach((match, i) => {
+      const fx = fixturesForRound[i];
+      if (!fx || fx.status !== "completed" || fx.score1 == null) return;
+      const { t1, t2 } = match;
+      if (!t1 || !t2) return;
+      const w = fx.score1 > fx.score2 ? t1 : fx.score2 > fx.score1 ? t2 : null;
+      if (!w) return;
+      working = pickWinner(working, match.id, w);
+    });
+  }
+  return working;
+}
+
+function buildDefaultState() {
+  const ranked = computeGroupStandings();
+  const gs = buildDefaultGroupState(ranked);
+  const tbo = buildDefaultThirdBest();
+  let bracket = buildBracketFromGroups(gs, tbo);
+  bracket = applyCompletedKnockouts(bracket);
+  return { groupState: gs, thirdBestOrdered: tbo, bracket };
 }
 
 /* ─────────────────────────────────────────────
@@ -1306,7 +1450,9 @@ function pickWinner(prevBracket, matchId, winner) {
    MAIN TREE PAGE
 ───────────────────────────────────────────── */
 export default function Tree() {
-  const [appState, setAppState] = useState(buildInitialState);
+  // Default to the actual results so far (group standings, best third-placed
+  // teams, and any decided knockout matches). Users can still edit or reset.
+  const [appState, setAppState] = useState(buildDefaultState);
   const [showGroupPicker, setShowGroupPicker] = useState(true);
   const [openRound, setOpenRound] = useState("r32");
   const [justPickedId, setJustPickedId] = useState(null);
@@ -1391,6 +1537,10 @@ export default function Tree() {
 
   const handleReset = useCallback(() => {
     setAppState(buildInitialState());
+  }, []);
+
+  const handleLoadResults = useCallback(() => {
+    setAppState(buildDefaultState());
   }, []);
 
   const { w: winW } = useWindowSize();
@@ -1537,6 +1687,13 @@ export default function Tree() {
                 className="flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-semibold transition-all btn-share"
               >
                 <Share2 size={13} /> Share
+              </button>
+              <button
+                onClick={handleLoadResults}
+                className="flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-semibold transition-all btn-results"
+                title="Fill the bracket with the actual results so far"
+              >
+                <Zap size={13} /> Results
               </button>
               <button
                 onClick={handleReset}
@@ -1973,6 +2130,12 @@ function TreeStyles() {
         color: #f87171;
       }
       .btn-reset:hover { background: rgba(239,68,68,0.2); transform: translateY(-1px); }
+      .btn-results {
+        background: rgba(244,197,66,0.12);
+        border: 1px solid rgba(244,197,66,0.3);
+        color: #F4C542;
+      }
+      .btn-results:hover { background: rgba(244,197,66,0.22); transform: translateY(-1px); }
       .match-card:hover { transform: translateY(-1px); }
     `}</style>
   );
