@@ -34,10 +34,8 @@ function getFlagUrl(team) {
   if (!team || team === "TBD") return null;
   const code = getCountryCode(team);
   if (!code) return null;
-  if (code === "GB-ENG")
-    return "https://purecatamphetamine.github.io/country-flag-icons/3x2/GB-ENG.svg";
-  if (code === "GB-SCT")
-    return "https://purecatamphetamine.github.io/country-flag-icons/3x2/GB-SCT.svg";
+  if (code.startsWith("GB-"))
+    return `https://purecatamphetamine.github.io/country-flag-icons/3x2/${code}.svg`;
   return `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
 }
 

@@ -50,8 +50,28 @@ export const COUNTRY_CODES = {
   "South Africa": "ZA",
 };
 
+// Historical / non-2026 teams referenced in UI sections (past champions,
+// "who are you supporting", trivia). Kept separate so getAllTeams() still
+// returns exactly the 48 participants.
+export const EXTRA_COUNTRY_CODES = {
+  Italy: "IT",
+  Denmark: "DK",
+  Serbia: "RS",
+  Poland: "PL",
+  Ukraine: "UA",
+  Chile: "CL",
+  Peru: "PE",
+  Venezuela: "VE",
+  Wales: "GB-WLS",
+  "Northern Ireland": "GB-NIR",
+  "Republic of Ireland": "IE",
+  Nigeria: "NG",
+  Cameroon: "CM",
+  Russia: "RU",
+};
+
 export function getCountryCode(teamName) {
-  return COUNTRY_CODES[teamName] || null;
+  return COUNTRY_CODES[teamName] || EXTRA_COUNTRY_CODES[teamName] || null;
 }
 
 export function getAllTeams() {

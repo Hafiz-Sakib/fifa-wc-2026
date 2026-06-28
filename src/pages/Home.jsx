@@ -2328,7 +2328,222 @@ function TournamentTimeline() {
   );
 }
 
-/* ── Highlight Matches Banner ── */
+/* ── World Cup Timeline (chronological journey) ── */
+const TIMELINE_EVENTS = [
+  {
+    date: "2026-06-11",
+    dateLabel: "11 Jun 2026",
+    title: "Opening Match",
+    desc: "Mexico kick off the tournament against South Africa at the iconic Estadio Azteca in Mexico City.",
+    icon: "🎉",
+    accent: "#22C55E",
+  },
+  {
+    date: "2026-06-11",
+    dateLabel: "11 Jun – 27 Jun",
+    title: "Group Stage",
+    desc: "48 teams in 12 groups play 72 matches. Top two of each group plus the eight best third-placed teams advance.",
+    icon: "⚽",
+    accent: "#4ADE80",
+  },
+  {
+    date: "2026-06-28",
+    dateLabel: "28 Jun – 3 Jul",
+    title: "Round of 32",
+    desc: "The expanded knockout stage begins. 16 single-elimination ties — win or go home.",
+    icon: "🔥",
+    accent: "#2DD4BF",
+  },
+  {
+    date: "2026-07-04",
+    dateLabel: "4 Jul – 7 Jul",
+    title: "Round of 16",
+    desc: "The field narrows to the last 16 as the drama intensifies across all three host nations.",
+    icon: "⚡",
+    accent: "#38BDF8",
+  },
+  {
+    date: "2026-07-09",
+    dateLabel: "9 Jul – 11 Jul",
+    title: "Quarter-Finals",
+    desc: "Eight teams remain, four tickets to the semi-finals on the line.",
+    icon: "🏅",
+    accent: "#60A5FA",
+  },
+  {
+    date: "2026-07-14",
+    dateLabel: "14 Jul – 15 Jul",
+    title: "Semi-Finals",
+    desc: "The final four battle for a place in the showpiece final.",
+    icon: "🥈",
+    accent: "#A78BFA",
+  },
+  {
+    date: "2026-07-18",
+    dateLabel: "18 Jul 2026",
+    title: "Third-Place Play-off",
+    desc: "The two beaten semi-finalists meet to decide the bronze medal.",
+    icon: "🥉",
+    accent: "#F59E0B",
+  },
+  {
+    date: "2026-07-19",
+    dateLabel: "19 Jul 2026",
+    title: "The Final",
+    desc: "The 2026 World Cup champion is crowned at MetLife Stadium, New York/New Jersey.",
+    icon: "🏆",
+    accent: "#F4C542",
+  },
+];
+
+function WorldCupTimeline() {
+  const today = getTodayBDT();
+  const [ref, inView] = useInView();
+
+  // Determine status of each milestone relative to today.
+  const statusOf = (ev, i) => {
+    const next = TIMELINE_EVENTS[i + 1];
+    const start = ev.date;
+    const end = next ? next.date : ev.date;
+    if (today >= end && next) return "done";
+    if (today < start) return "upcoming";
+    return "now"; // currently in this phase (or final reached)
+  };
+
+  return (
+    <div ref={ref} style={{ position: "relative", paddingLeft: 8 }}>
+      {/* vertical line */}
+      <div
+        style={{
+          position: "absolute",
+          left: 26,
+          top: 8,
+          bottom: 8,
+          width: 2,
+          background:
+            "linear-gradient(180deg, rgba(34,197,94,0.5), rgba(244,197,66,0.5))",
+          opacity: 0.5,
+        }}
+      />
+      {TIMELINE_EVENTS.map((ev, i) => {
+        const status = statusOf(ev, i);
+        const dim = status === "upcoming";
+        const isNow = status === "now";
+        return (
+          <div
+            key={ev.title}
+            style={{
+              display: "flex",
+              gap: 16,
+              alignItems: "flex-start",
+              paddingBottom: i < TIMELINE_EVENTS.length - 1 ? 22 : 0,
+              opacity: inView ? (dim ? 0.55 : 1) : 0,
+              transform: inView ? "translateX(0)" : "translateX(-20px)",
+              transition: `opacity 0.5s ease ${i * 70}ms, transform 0.5s ease ${i * 70}ms`,
+            }}
+          >
+            {/* node */}
+            <div
+              style={{
+                position: "relative",
+                zIndex: 1,
+                width: 38,
+                height: 38,
+                flexShrink: 0,
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "1rem",
+                background: dim
+                  ? "rgba(15,32,52,0.95)"
+                  : `${ev.accent}1f`,
+                border: `2px solid ${dim ? "rgba(255,255,255,0.12)" : ev.accent}`,
+                boxShadow: isNow ? `0 0 0 4px ${ev.accent}22` : "none",
+                animation: isNow ? "timelinePulse 1.8s ease-in-out infinite" : "none",
+              }}
+            >
+              {ev.icon}
+            </div>
+            {/* content */}
+            <div style={{ flex: 1, paddingTop: 1 }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                  flexWrap: "wrap",
+                  marginBottom: 2,
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'Barlow Condensed','Hind Siliguri',sans-serif",
+                    fontSize: "1.05rem",
+                    fontWeight: 800,
+                    color: "#fff",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.03em",
+                  }}
+                >
+                  {ev.title}
+                </span>
+                {status === "done" && (
+                  <span style={statusChip("#22C55E")}>✓ Done</span>
+                )}
+                {status === "now" && (
+                  <span style={statusChip(ev.accent)}>● Live</span>
+                )}
+                {status === "upcoming" && (
+                  <span style={statusChip("#64748B")}>Upcoming</span>
+                )}
+              </div>
+              <div
+                style={{
+                  fontSize: "0.72rem",
+                  fontWeight: 700,
+                  color: ev.accent,
+                  marginBottom: 4,
+                }}
+              >
+                {ev.dateLabel}
+              </div>
+              <div
+                style={{
+                  fontSize: "0.82rem",
+                  color: "#94A3B8",
+                  lineHeight: 1.55,
+                }}
+              >
+                {ev.desc}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+      <style>{`
+        @keyframes timelinePulse {
+          0%,100% { box-shadow: 0 0 0 4px rgba(244,197,66,0.10); }
+          50% { box-shadow: 0 0 0 7px rgba(244,197,66,0.04); }
+        }
+      `}</style>
+    </div>
+  );
+}
+
+function statusChip(color) {
+  return {
+    fontSize: "0.58rem",
+    fontWeight: 700,
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    color,
+    background: `${color}1a`,
+    border: `1px solid ${color}40`,
+    borderRadius: 100,
+    padding: "2px 8px",
+  };
+}
 function HighlightBanner({ navigate }) {
   const today = getTodayBDT();
   const bigMatches = useMemo(() => {
@@ -2446,59 +2661,8 @@ function HighlightBanner({ navigate }) {
 /* ══════════════════════════════════════════════════════════
    WORLD CUP WINNER PREDICTOR
    ══════════════════════════════════════════════════════════ */
-const FIFA_48 = [
-  "Brazil",
-  "Argentina",
-  "France",
-  "England",
-  "Germany",
-  "Spain",
-  "Portugal",
-  "Netherlands",
-  "Belgium",
-  "Croatia",
-  "Switzerland",
-  "Turkey",
-  "Norway",
-  "USA",
-  "Mexico",
-  "Canada",
-  "Japan",
-  "South Korea",
-  "Australia",
-  "Morocco",
-  "Senegal",
-  "Egypt",
-  "Algeria",
-  "Ivory Coast",
-  "Ghana",
-  "Tunisia",
-  "Ecuador",
-  "Colombia",
-  "Uruguay",
-  "Chile",
-  "Paraguay",
-  "Peru",
-  "Venezuela",
-  "Iran",
-  "Saudi Arabia",
-  "Qatar",
-  "Jordan",
-  "Uzbekistan",
-  "New Zealand",
-  "Scotland",
-  "Panama",
-  "Austria",
-  "Bosnia-Herzegovina",
-  "Cape Verde",
-  "Congo",
-  "Curacao",
-  "Czechia",
-  "Haiti",
-  "Iraq",
-  "Sweden",
-  "South Africa",
-];
+// Real 2026 participants come from the shared country map so flags always resolve.
+const FIFA_48 = getAllTeams();
 
 // Keep only real 48 — deduplicated
 const WINNER_TEAMS = [...new Set(FIFA_48)].slice(0, 48);
@@ -3469,6 +3633,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── WORLD CUP TIMELINE ─── */}
+      <section className="max-w-6xl mx-auto px-4 md:px-6 pb-16 animate-section">
+        <AnimSection>
+          <div className="flex items-center gap-4 mb-6">
+            <h3 className="section-title">
+              <CalendarDays size={15} style={{ color: "#22C55E" }} /> Timeline
+            </h3>
+            <div className="section-line" />
+          </div>
+          <div
+            style={{
+              background: "var(--card)",
+              border: "1px solid rgba(255,255,255,0.06)",
+              borderRadius: 18,
+              padding: "26px 22px",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "0.82rem",
+                color: "#64748B",
+                lineHeight: 1.6,
+                marginBottom: 22,
+                maxWidth: 640,
+              }}
+            >
+              Follow the journey of the 2026 FIFA World Cup from the opening
+              whistle in Mexico City to the final in New York/New Jersey — each
+              stage updates automatically as the tournament unfolds.
+            </div>
+            <WorldCupTimeline />
+          </div>
+        </AnimSection>
+      </section>
+
       {/* ─── FAN ZONE ─── */}
       <section className="max-w-6xl mx-auto px-4 md:px-6 pb-16 animate-section">
         <AnimSection>
@@ -3591,56 +3790,7 @@ export default function Home() {
               </div>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-              {[
-                "Brazil",
-                "Argentina",
-                "France",
-                "England",
-                "Germany",
-                "Spain",
-                "Portugal",
-                "Netherlands",
-                "Belgium",
-                "Italy",
-                "Croatia",
-                "Denmark",
-                "Switzerland",
-                "Serbia",
-                "Poland",
-                "Ukraine",
-                "Turkey",
-                "Norway",
-                "USA",
-                "Mexico",
-                "Canada",
-                "Japan",
-                "South Korea",
-                "Australia",
-                "Morocco",
-                "Senegal",
-                "Nigeria",
-                "Egypt",
-                "Algeria",
-                "Cameroon",
-                "Ivory Coast",
-                "Ghana",
-                "Tunisia",
-                "Ecuador",
-                "Colombia",
-                "Uruguay",
-                "Chile",
-                "Paraguay",
-                "Peru",
-                "Venezuela",
-                "Iran",
-                "Saudi Arabia",
-                "Qatar",
-                "Jordan",
-                "Uzbekistan",
-                "New Zealand",
-                "Scotland",
-                "Panama",
-              ].map((team) => (
+              {getAllTeams().map((team) => (
                 <div
                   key={team}
                   style={{

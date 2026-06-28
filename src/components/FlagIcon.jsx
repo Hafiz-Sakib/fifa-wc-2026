@@ -36,10 +36,8 @@ export default function FlagIcon({ teamName, size = 32, className = "" }) {
   // For England (GB-ENG) and Scotland (GB-SCT), use country-flag-icons CDN
   // which hosts subdivision flags as SVGs
   let flagUrl;
-  if (code === "GB-ENG") {
-    flagUrl = "https://purecatamphetamine.github.io/country-flag-icons/3x2/GB-ENG.svg";
-  } else if (code === "GB-SCT") {
-    flagUrl = "https://purecatamphetamine.github.io/country-flag-icons/3x2/GB-SCT.svg";
+  if (code.startsWith("GB-")) {
+    flagUrl = `https://purecatamphetamine.github.io/country-flag-icons/3x2/${code}.svg`;
   } else {
     flagUrl = `https://flagcdn.com/w80/${code.toLowerCase()}.png`;
   }
