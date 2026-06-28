@@ -9,7 +9,10 @@
     "city": "Mexico City",
     "country": "Mexico",
     "matchDay": 1,
-    "id": 1
+    "id": 1,
+    "score1": 2,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-12",
@@ -21,7 +24,10 @@
     "city": "Guadalajara",
     "country": "Mexico",
     "matchDay": 1,
-    "id": 2
+    "id": 2,
+    "score1": 2,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-13",
@@ -33,7 +39,10 @@
     "city": "Toronto",
     "country": "Canada",
     "matchDay": 1,
-    "id": 3
+    "id": 3,
+    "score1": 1,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-14",
@@ -45,7 +54,10 @@
     "city": "San Francisco",
     "country": "USA",
     "matchDay": 1,
-    "id": 4
+    "id": 4,
+    "score1": 1,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-14",
@@ -57,7 +69,10 @@
     "city": "New York/New Jersey",
     "country": "USA",
     "matchDay": 1,
-    "id": 5
+    "id": 5,
+    "score1": 1,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-14",
@@ -69,7 +84,10 @@
     "city": "Boston",
     "country": "USA",
     "matchDay": 1,
-    "id": 6
+    "id": 6,
+    "score1": 0,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-13",
@@ -81,7 +99,10 @@
     "city": "Los Angeles",
     "country": "USA",
     "matchDay": 1,
-    "id": 7
+    "id": 7,
+    "score1": 4,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-14",
@@ -93,7 +114,10 @@
     "city": "Vancouver",
     "country": "Canada",
     "matchDay": 1,
-    "id": 8
+    "id": 8,
+    "score1": 2,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-14",
@@ -105,7 +129,10 @@
     "city": "Houston",
     "country": "USA",
     "matchDay": 1,
-    "id": 9
+    "id": 9,
+    "score1": 7,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-15",
@@ -117,7 +144,10 @@
     "city": "Philadelphia",
     "country": "USA",
     "matchDay": 1,
-    "id": 10
+    "id": 10,
+    "score1": 1,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-15",
@@ -129,7 +159,10 @@
     "city": "Dallas",
     "country": "USA",
     "matchDay": 1,
-    "id": 11
+    "id": 11,
+    "score1": 2,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-15",
@@ -141,7 +174,10 @@
     "city": "Monterrey",
     "country": "Mexico",
     "matchDay": 1,
-    "id": 12
+    "id": 12,
+    "score1": 5,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-16",
@@ -153,7 +189,10 @@
     "city": "Seattle",
     "country": "USA",
     "matchDay": 1,
-    "id": 13
+    "id": 13,
+    "score1": 1,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-16",
@@ -165,7 +204,10 @@
     "city": "Los Angeles",
     "country": "USA",
     "matchDay": 1,
-    "id": 14
+    "id": 14,
+    "score1": 2,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-15",
@@ -177,7 +219,10 @@
     "city": "Atlanta",
     "country": "USA",
     "matchDay": 1,
-    "id": 15
+    "id": 15,
+    "score1": 0,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-16",
@@ -189,7 +234,10 @@
     "city": "Miami",
     "country": "USA",
     "matchDay": 1,
-    "id": 16
+    "id": 16,
+    "score1": 1,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-17",
@@ -201,7 +249,10 @@
     "city": "New York/New Jersey",
     "country": "USA",
     "matchDay": 1,
-    "id": 17
+    "id": 17,
+    "score1": 3,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-17",
@@ -213,7 +264,10 @@
     "city": "Boston",
     "country": "USA",
     "matchDay": 1,
-    "id": 18
+    "id": 18,
+    "score1": 1,
+    "score2": 4,
+    "status": "completed"
   },
   {
     "date": "2026-06-17",
@@ -225,7 +279,10 @@
     "city": "Kansas City",
     "country": "USA",
     "matchDay": 1,
-    "id": 19
+    "id": 19,
+    "score1": 3,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-17",
@@ -237,7 +294,10 @@
     "city": "San Francisco",
     "country": "USA",
     "matchDay": 1,
-    "id": 20
+    "id": 20,
+    "score1": 3,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-17",
@@ -249,7 +309,10 @@
     "city": "Houston",
     "country": "USA",
     "matchDay": 1,
-    "id": 21
+    "id": 21,
+    "score1": 1,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-18",
@@ -261,7 +324,10 @@
     "city": "Mexico City",
     "country": "Mexico",
     "matchDay": 1,
-    "id": 22
+    "id": 22,
+    "score1": 1,
+    "score2": 3,
+    "status": "completed"
   },
   {
     "date": "2026-06-18",
@@ -273,7 +339,10 @@
     "city": "Dallas",
     "country": "USA",
     "matchDay": 1,
-    "id": 23
+    "id": 23,
+    "score1": 4,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-18",
@@ -285,7 +354,10 @@
     "city": "Toronto",
     "country": "Canada",
     "matchDay": 1,
-    "id": 24
+    "id": 24,
+    "score1": 1,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-18",
@@ -297,7 +369,10 @@
     "city": "Atlanta",
     "country": "USA",
     "matchDay": 2,
-    "id": 25
+    "id": 25,
+    "score1": 1,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-19",
@@ -309,7 +384,10 @@
     "city": "Guadalajara",
     "country": "Mexico",
     "matchDay": 2,
-    "id": 26
+    "id": 26,
+    "score1": 1,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-19",
@@ -321,7 +399,10 @@
     "city": "Los Angeles",
     "country": "USA",
     "matchDay": 2,
-    "id": 27
+    "id": 27,
+    "score1": 4,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-19",
@@ -333,7 +414,10 @@
     "city": "Vancouver",
     "country": "Canada",
     "matchDay": 2,
-    "id": 28
+    "id": 28,
+    "score1": 6,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-20",
@@ -345,7 +429,10 @@
     "city": "Boston",
     "country": "USA",
     "matchDay": 2,
-    "id": 29
+    "id": 29,
+    "score1": 0,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-20",
@@ -357,7 +444,10 @@
     "city": "Philadelphia",
     "country": "USA",
     "matchDay": 2,
-    "id": 30
+    "id": 30,
+    "score1": 3,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-20",
@@ -369,7 +459,10 @@
     "city": "San Francisco",
     "country": "USA",
     "matchDay": 2,
-    "id": 31
+    "id": 31,
+    "score1": 0,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-20",
@@ -381,7 +474,10 @@
     "city": "Seattle",
     "country": "USA",
     "matchDay": 2,
-    "id": 32
+    "id": 32,
+    "score1": 0,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-21",
@@ -393,7 +489,10 @@
     "city": "Toronto",
     "country": "Canada",
     "matchDay": 2,
-    "id": 33
+    "id": 33,
+    "score1": 2,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-20",
@@ -405,7 +504,10 @@
     "city": "Kansas City",
     "country": "USA",
     "matchDay": 2,
-    "id": 34
+    "id": 34,
+    "score1": 0,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-20",
@@ -417,7 +519,10 @@
     "city": "Houston",
     "country": "USA",
     "matchDay": 2,
-    "id": 35
+    "id": 35,
+    "score1": 5,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-21",
@@ -429,7 +534,10 @@
     "city": "Monterrey",
     "country": "Mexico",
     "matchDay": 2,
-    "id": 36
+    "id": 36,
+    "score1": 0,
+    "score2": 4,
+    "status": "completed"
   },
   {
     "date": "2026-06-22",
@@ -441,7 +549,10 @@
     "city": "Los Angeles",
     "country": "USA",
     "matchDay": 2,
-    "id": 37
+    "id": 37,
+    "score1": 0,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-22",
@@ -453,7 +564,10 @@
     "city": "Vancouver",
     "country": "Canada",
     "matchDay": 2,
-    "id": 38
+    "id": 38,
+    "score1": 1,
+    "score2": 3,
+    "status": "completed"
   },
   {
     "date": "2026-06-21",
@@ -465,7 +579,10 @@
     "city": "Atlanta",
     "country": "USA",
     "matchDay": 2,
-    "id": 39
+    "id": 39,
+    "score1": 4,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-22",
@@ -477,7 +594,10 @@
     "city": "Miami",
     "country": "USA",
     "matchDay": 2,
-    "id": 40
+    "id": 40,
+    "score1": 2,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-23",
@@ -489,7 +609,10 @@
     "city": "Philadelphia",
     "country": "USA",
     "matchDay": 2,
-    "id": 41
+    "id": 41,
+    "score1": 3,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-23",
@@ -501,7 +624,10 @@
     "city": "New York/New Jersey",
     "country": "USA",
     "matchDay": 2,
-    "id": 42
+    "id": 42,
+    "score1": 3,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-22",
@@ -513,7 +639,10 @@
     "city": "Dallas",
     "country": "USA",
     "matchDay": 2,
-    "id": 43
+    "id": 43,
+    "score1": 2,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-23",
@@ -525,7 +654,10 @@
     "city": "San Francisco",
     "country": "USA",
     "matchDay": 2,
-    "id": 44
+    "id": 44,
+    "score1": 1,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-23",
@@ -537,7 +669,10 @@
     "city": "Houston",
     "country": "USA",
     "matchDay": 2,
-    "id": 45
+    "id": 45,
+    "score1": 5,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-24",
@@ -549,7 +684,10 @@
     "city": "Guadalajara",
     "country": "Mexico",
     "matchDay": 2,
-    "id": 46
+    "id": 46,
+    "score1": 1,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-24",
@@ -561,7 +699,10 @@
     "city": "Boston",
     "country": "USA",
     "matchDay": 2,
-    "id": 47
+    "id": 47,
+    "score1": 0,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-24",
@@ -573,7 +714,10 @@
     "city": "Toronto",
     "country": "Canada",
     "matchDay": 2,
-    "id": 48
+    "id": 48,
+    "score1": 0,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-25",
@@ -585,7 +729,10 @@
     "city": "Mexico City",
     "country": "Mexico",
     "matchDay": 3,
-    "id": 49
+    "id": 49,
+    "score1": 0,
+    "score2": 3,
+    "status": "completed"
   },
   {
     "date": "2026-06-25",
@@ -597,31 +744,40 @@
     "city": "Monterrey",
     "country": "Mexico",
     "matchDay": 3,
-    "id": 50
+    "id": 50,
+    "score1": 1,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-25",
     "time": "01:00",
-    "team1": "Canada",
-    "team2": "Bosnia-Herzegovina",
+    "team1": "Switzerland",
+    "team2": "Canada",
     "group": "B",
     "venue": "BC Place",
     "city": "Vancouver",
     "country": "Canada",
     "matchDay": 3,
-    "id": 51
+    "id": 51,
+    "score1": 2,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-25",
     "time": "01:00",
-    "team1": "Qatar",
-    "team2": "Switzerland",
+    "team1": "Bosnia-Herzegovina",
+    "team2": "Qatar",
     "group": "B",
     "venue": "Lumen Field",
     "city": "Seattle",
     "country": "USA",
     "matchDay": 3,
-    "id": 52
+    "id": 52,
+    "score1": 3,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-25",
@@ -633,7 +789,10 @@
     "city": "Miami",
     "country": "USA",
     "matchDay": 3,
-    "id": 53
+    "id": 53,
+    "score1": 0,
+    "score2": 3,
+    "status": "completed"
   },
   {
     "date": "2026-06-25",
@@ -645,7 +804,10 @@
     "city": "Atlanta",
     "country": "USA",
     "matchDay": 3,
-    "id": 54
+    "id": 54,
+    "score1": 4,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-26",
@@ -657,7 +819,10 @@
     "city": "Los Angeles",
     "country": "USA",
     "matchDay": 3,
-    "id": 55
+    "id": 55,
+    "score1": 3,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-26",
@@ -669,7 +834,10 @@
     "city": "San Francisco",
     "country": "USA",
     "matchDay": 3,
-    "id": 56
+    "id": 56,
+    "score1": 0,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-26",
@@ -681,7 +849,10 @@
     "city": "New York/New Jersey",
     "country": "USA",
     "matchDay": 3,
-    "id": 57
+    "id": 57,
+    "score1": 2,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-26",
@@ -693,7 +864,10 @@
     "city": "Atlanta",
     "country": "USA",
     "matchDay": 3,
-    "id": 58
+    "id": 58,
+    "score1": 0,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-26",
@@ -705,7 +879,10 @@
     "city": "Dallas",
     "country": "USA",
     "matchDay": 3,
-    "id": 59
+    "id": 59,
+    "score1": 1,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-26",
@@ -717,7 +894,10 @@
     "city": "Kansas City",
     "country": "USA",
     "matchDay": 3,
-    "id": 60
+    "id": 60,
+    "score1": 1,
+    "score2": 3,
+    "status": "completed"
   },
   {
     "date": "2026-06-27",
@@ -729,7 +909,10 @@
     "city": "Seattle",
     "country": "USA",
     "matchDay": 3,
-    "id": 61
+    "id": 61,
+    "score1": 1,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-27",
@@ -741,7 +924,10 @@
     "city": "Vancouver",
     "country": "Canada",
     "matchDay": 3,
-    "id": 62
+    "id": 62,
+    "score1": 1,
+    "score2": 5,
+    "status": "completed"
   },
   {
     "date": "2026-06-27",
@@ -753,7 +939,10 @@
     "city": "Guadalajara",
     "country": "Mexico",
     "matchDay": 3,
-    "id": 63
+    "id": 63,
+    "score1": 0,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-27",
@@ -765,7 +954,10 @@
     "city": "Houston",
     "country": "USA",
     "matchDay": 3,
-    "id": 64
+    "id": 64,
+    "score1": 0,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-27",
@@ -777,7 +969,10 @@
     "city": "Boston",
     "country": "USA",
     "matchDay": 3,
-    "id": 65
+    "id": 65,
+    "score1": 1,
+    "score2": 4,
+    "status": "completed"
   },
   {
     "date": "2026-06-27",
@@ -789,7 +984,10 @@
     "city": "Toronto",
     "country": "Canada",
     "matchDay": 3,
-    "id": 66
+    "id": 66,
+    "score1": 5,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-28",
@@ -801,7 +999,10 @@
     "city": "Dallas",
     "country": "USA",
     "matchDay": 3,
-    "id": 67
+    "id": 67,
+    "score1": 3,
+    "score2": 3,
+    "status": "completed"
   },
   {
     "date": "2026-06-28",
@@ -813,7 +1014,10 @@
     "city": "Atlanta",
     "country": "USA",
     "matchDay": 3,
-    "id": 68
+    "id": 68,
+    "score1": 1,
+    "score2": 3,
+    "status": "completed"
   },
   {
     "date": "2026-06-28",
@@ -825,7 +1029,10 @@
     "city": "Miami",
     "country": "USA",
     "matchDay": 3,
-    "id": 69
+    "id": 69,
+    "score1": 0,
+    "score2": 0,
+    "status": "completed"
   },
   {
     "date": "2026-06-28",
@@ -837,7 +1044,10 @@
     "city": "Atlanta",
     "country": "USA",
     "matchDay": 3,
-    "id": 70
+    "id": 70,
+    "score1": 3,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-28",
@@ -849,7 +1059,10 @@
     "city": "Philadelphia",
     "country": "USA",
     "matchDay": 3,
-    "id": 71
+    "id": 71,
+    "score1": 0,
+    "score2": 2,
+    "status": "completed"
   },
   {
     "date": "2026-06-28",
@@ -861,199 +1074,250 @@
     "city": "Dallas",
     "country": "USA",
     "matchDay": 3,
-    "id": 72
+    "id": 72,
+    "score1": 2,
+    "score2": 1,
+    "status": "completed"
   },
   {
     "date": "2026-06-29",
     "time": "01:00",
-    "team1": "2nd Gr. A",
-    "team2": "2nd Gr. B",
+    "team1": "South Africa",
+    "team2": "Canada",
     "group": "Round of 32",
     "venue": "SoFi Stadium",
     "city": "Los Angeles",
     "country": "USA",
     "matchDay": 4,
-    "id": 73
+    "id": 73,
+    "seed1": "2nd Gr. A",
+    "seed2": "2nd Gr. B",
+    "status": "scheduled"
   },
   {
     "date": "2026-06-29",
     "time": "23:00",
-    "team1": "1st Gr. C",
-    "team2": "2nd Gr. F",
+    "team1": "Brazil",
+    "team2": "Japan",
     "group": "Round of 32",
     "venue": "NRG Stadium",
     "city": "Houston",
     "country": "USA",
     "matchDay": 4,
-    "id": 74
+    "id": 74,
+    "seed1": "1st Gr. C",
+    "seed2": "2nd Gr. F",
+    "status": "scheduled"
   },
   {
     "date": "2026-06-30",
     "time": "02:30",
-    "team1": "1st Gr. E",
-    "team2": "3rd Best",
+    "team1": "Germany",
+    "team2": "Paraguay",
     "group": "Round of 32",
     "venue": "Gillette Stadium",
     "city": "Boston",
     "country": "USA",
     "matchDay": 4,
-    "id": 75
+    "id": 75,
+    "seed1": "1st Gr. E",
+    "seed2": "3rd Best",
+    "status": "scheduled"
   },
   {
     "date": "2026-06-30",
     "time": "07:00",
-    "team1": "1st Gr. F",
-    "team2": "2nd Gr. C",
+    "team1": "Netherlands",
+    "team2": "Morocco",
     "group": "Round of 32",
     "venue": "Estadio BBVA",
     "city": "Monterrey",
     "country": "Mexico",
     "matchDay": 4,
-    "id": 76
+    "id": 76,
+    "seed1": "1st Gr. F",
+    "seed2": "2nd Gr. C",
+    "status": "scheduled"
   },
   {
     "date": "2026-06-30",
     "time": "23:00",
-    "team1": "2nd Gr. E",
-    "team2": "2nd Gr. I",
+    "team1": "Ivory Coast",
+    "team2": "Norway",
     "group": "Round of 32",
     "venue": "AT&T Stadium",
     "city": "Dallas",
     "country": "USA",
     "matchDay": 4,
-    "id": 77
+    "id": 77,
+    "seed1": "2nd Gr. E",
+    "seed2": "2nd Gr. I",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-01",
     "time": "03:00",
-    "team1": "1st Gr. I",
-    "team2": "3rd Best",
+    "team1": "France",
+    "team2": "Sweden",
     "group": "Round of 32",
     "venue": "MetLife Stadium",
     "city": "New York/New Jersey",
     "country": "USA",
     "matchDay": 4,
-    "id": 78
+    "id": 78,
+    "seed1": "1st Gr. I",
+    "seed2": "3rd Best",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-02",
     "time": "07:00",
-    "team1": "1st Gr. A",
-    "team2": "3rd Best",
+    "team1": "Mexico",
+    "team2": "Ecuador",
     "group": "Round of 32",
     "venue": "Estadio Azteca",
     "city": "Mexico City",
     "country": "Mexico",
     "matchDay": 4,
-    "id": 79
+    "id": 79,
+    "seed1": "1st Gr. A",
+    "seed2": "3rd Best",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-01",
     "time": "22:00",
-    "team1": "1st Gr. L",
-    "team2": "3rd Best",
+    "team1": "England",
+    "team2": "Congo",
     "group": "Round of 32",
     "venue": "Mercedes-Benz Stadium",
     "city": "Atlanta",
     "country": "USA",
     "matchDay": 4,
-    "id": 80
+    "id": 80,
+    "seed1": "1st Gr. L",
+    "seed2": "3rd Best",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-02",
     "time": "02:00",
-    "team1": "1st Gr. G",
-    "team2": "3rd Best",
+    "team1": "Belgium",
+    "team2": "Senegal",
     "group": "Round of 32",
     "venue": "Lumen Field",
     "city": "Seattle",
     "country": "USA",
     "matchDay": 4,
-    "id": 81
+    "id": 81,
+    "seed1": "1st Gr. G",
+    "seed2": "3rd Best",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-02",
     "time": "06:00",
-    "team1": "1st Gr. D",
-    "team2": "3rd Best",
+    "team1": "USA",
+    "team2": "Bosnia-Herzegovina",
     "group": "Round of 32",
     "venue": "Levi's Stadium",
     "city": "San Francisco",
     "country": "USA",
     "matchDay": 4,
-    "id": 82
+    "id": 82,
+    "seed1": "1st Gr. D",
+    "seed2": "3rd Best",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-03",
     "time": "01:00",
-    "team1": "1st Gr. H",
-    "team2": "2nd Gr. J",
+    "team1": "Spain",
+    "team2": "Austria",
     "group": "Round of 32",
     "venue": "SoFi Stadium",
     "city": "Los Angeles",
     "country": "USA",
     "matchDay": 4,
-    "id": 83
+    "id": 83,
+    "seed1": "1st Gr. H",
+    "seed2": "2nd Gr. J",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-03",
     "time": "05:00",
-    "team1": "2nd Gr. K",
-    "team2": "2nd Gr. L",
+    "team1": "Portugal",
+    "team2": "Croatia",
     "group": "Round of 32",
     "venue": "BMO Field",
     "city": "Toronto",
     "country": "Canada",
     "matchDay": 4,
-    "id": 84
+    "id": 84,
+    "seed1": "2nd Gr. K",
+    "seed2": "2nd Gr. L",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-03",
     "time": "09:00",
-    "team1": "1st Gr. B",
-    "team2": "3rd Best",
+    "team1": "Switzerland",
+    "team2": "Algeria",
     "group": "Round of 32",
     "venue": "BC Place",
     "city": "Vancouver",
     "country": "Canada",
     "matchDay": 4,
-    "id": 85
+    "id": 85,
+    "seed1": "1st Gr. B",
+    "seed2": "3rd Best",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-04",
     "time": "00:00",
-    "team1": "2nd Gr. D",
-    "team2": "2nd Gr. G",
+    "team1": "Australia",
+    "team2": "Egypt",
     "group": "Round of 32",
     "venue": "AT&T Stadium",
     "city": "Dallas",
     "country": "USA",
     "matchDay": 4,
-    "id": 86
+    "id": 86,
+    "seed1": "2nd Gr. D",
+    "seed2": "2nd Gr. G",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-04",
     "time": "04:00",
-    "team1": "1st Gr. J",
-    "team2": "2nd Gr. H",
+    "team1": "Argentina",
+    "team2": "Cape Verde",
     "group": "Round of 32",
     "venue": "Hard Rock Stadium",
     "city": "Miami",
     "country": "USA",
     "matchDay": 4,
-    "id": 87
+    "id": 87,
+    "seed1": "1st Gr. J",
+    "seed2": "2nd Gr. H",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-04",
     "time": "07:30",
-    "team1": "1st Gr. K",
-    "team2": "3rd Best",
+    "team1": "Colombia",
+    "team2": "Ghana",
     "group": "Round of 32",
     "venue": "Arrowhead Stadium",
     "city": "Kansas City",
     "country": "USA",
     "matchDay": 4,
-    "id": 88
+    "id": 88,
+    "seed1": "1st Gr. K",
+    "seed2": "3rd Best",
+    "status": "scheduled"
   },
   {
     "date": "2026-07-04",

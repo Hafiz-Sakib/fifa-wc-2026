@@ -91,9 +91,41 @@ export default function MatchCard({ match }) {
           </span>
         </div>
 
-        {/* VS */}
+        {/* VS / Score */}
         <div className="flex flex-col items-center gap-2 flex-shrink-0">
-          <span className="vs-badge">VS</span>
+          {match.status === "completed" &&
+          match.score1 != null &&
+          match.score2 != null ? (
+            <div className="flex flex-col items-center gap-0.5">
+              <span
+                style={{
+                  fontFamily: "'Barlow Condensed','Hind Siliguri',sans-serif",
+                  fontSize: "1.5rem",
+                  fontWeight: 800,
+                  letterSpacing: "0.04em",
+                  color: "#F4C542",
+                  lineHeight: 1,
+                }}
+              >
+                {match.score1}
+                <span style={{ color: "#475569", margin: "0 4px" }}>–</span>
+                {match.score2}
+              </span>
+              <span
+                style={{
+                  fontSize: "0.55rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "#22C55E",
+                }}
+              >
+                Full Time
+              </span>
+            </div>
+          ) : (
+            <span className="vs-badge">VS</span>
+          )}
           {isFinal && (
             <span
               style={{

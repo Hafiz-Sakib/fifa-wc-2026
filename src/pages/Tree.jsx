@@ -109,12 +109,17 @@ const { groupTeams, knockoutByRound } = parseFixtures();
 ───────────────────────────────────────────── */
 let _thirdBestCounter = 0;
 const R32_SLOTS = knockoutByRound["Round of 32"].map((m, i) => {
-  const s1Is3rd = m.team1 === "3rd Best";
-  const s2Is3rd = m.team2 === "3rd Best";
+  // Prefer the original group-position placeholder (seed1/seed2) when present.
+  // After the group stage these get filled with real team names in team1/team2,
+  // so we keep deriving the predictor bracket from the seeds.
+  const seed1 = m.seed1 ?? m.team1;
+  const seed2 = m.seed2 ?? m.team2;
+  const s1Is3rd = seed1 === "3rd Best";
+  const s2Is3rd = seed2 === "3rd Best";
   return {
     id: `R32_${i + 1}`,
-    seed1: m.team1,
-    seed2: m.team2,
+    seed1,
+    seed2,
     // which index into the "8 best 3rd" array each slot uses
     thirdIdx1: s1Is3rd ? _thirdBestCounter++ : null,
     thirdIdx2: s2Is3rd ? _thirdBestCounter++ : null,
